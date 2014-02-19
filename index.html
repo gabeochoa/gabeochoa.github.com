@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+title: Your New Jekyll Site
+---
 
-  <head>
-    <title>Gabe Ochoa</title>
-  </head>
-
-  <body>
-TEXT
-
-<div id="header"></div>
-<div id="body"></div>
-<div id="footer"></div>
-
-  </body>
-</html>
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
