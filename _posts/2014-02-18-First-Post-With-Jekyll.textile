@@ -1,0 +1,2 @@
+I am trying to use "textile":redcloth.org/textile to write this post hope it works.
+
