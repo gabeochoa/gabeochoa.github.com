@@ -1,8 +1,7 @@
 j = jekyll
 
-
 all:
 	$(j) build
-	$(j) serve 
+	$(j) serve --watch
 	
 
