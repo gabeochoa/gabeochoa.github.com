@@ -31,9 +31,18 @@ a {
     transition: all .35s;
 }
 
+
 a > p
 {
     color: #f05f40;
+}
+a > i:hover, a >i:focus
+{
+    color: #f05f40;
+}
+a:hover > p, a:focus > p
+{
+    color: #040202;
 }
 
 a:hover,
