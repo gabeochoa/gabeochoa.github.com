@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>audio</title>
-    <script src="./audiojs/audio.min.js"></script>
-    <link rel="stylesheet" href="./includes/index.css" media="screen">
-    <script>
-      audiojs.events.ready(function() {
-        audiojs.createAll();
-      });
-    </script>
-  </head>
-  <body>
-    <header>
-      <h1>Gabe's Audio blog</h1>
-    </header>
-
-    <audio src="mp3/may18-test1.mp3" preload="auto"></audio>
-
-  </body>
+	<head>
+		<meta charset="utf-8">
+		<title>audio</title>
+		<script src="./audiojs/audio.min.js"></script>
+		<link rel="stylesheet" href="./includes/index.css" media="screen">
+		<script>
+			audiojs.events.ready(function() {
+				audiojs.createAll();
+			});
+		</script>
+		<style>
+		#post a:link
+		{
+			text-decoration: none;
+		}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>My Summer in the City</h1>
+			<h3> Audio blog</h3>
+		</header>
+		<div id="post">
+			<h2>Episode 5: May 22</h2>
+			<audio src="mp3/may22.mp3" preload="auto"></audio>
+		</div>
+		<div id="post">
+			<h2>Episode 4: May 21</h2>
+			<audio src="mp3/may21.mp3" preload="auto"></audio>
+		</div>
+		<div id="post">
+			<h2>Episode 3: May 20</h2>
+			<audio src="mp3/may20.mp3" preload="auto"></audio>
+		</div>
+		<div id="post">
+			<h2>Episode 2: May 19</h2>
+			<audio src="mp3/may19-edit.mp3" preload="auto"></audio>
+		</div>
+		<div id="post">
+			<h2>Episode 1: May 18</h2>
+			<audio src="mp3/may18-test1.mp3" preload="auto"></audio>
+		</div>
+	</body>
 </html>
