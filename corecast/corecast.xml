@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  
+  <channel>
+
+    <title>CoreCast</title>
+    <description></description>
+    <link></link>
+    <language>en-us</language>
+    <copyright>Copyright 2015</copyright>
+    <lastBuildDate></lastBuildDate>
+    <pubDate></pubDate>
+    <docs></docs>
+    <webMaster></webMaster>
+
+    <itunes:author>gabe</itunes:author>
+    <itunes:subtitle></itunes:subtitle>
+    <itunes:summary> </itunes:summary>
+
+    <itunes:owner>
+           <itunes:name>Gabe O</itunes:name>
+           <itunes:email>gabeochoa1118@gmail.com</itunes:email>
+    </itunes:owner>
+
+<itunes:explicit>No</itunes:explicit>
+
+<itunes:image href=""/>
+    
+<itunes:category text="Technology">
+     <itunes:category text="Podcasting"/>
+</itunes:category>
+
+<item>
+<title>CoreCast Episode 1 </title>
+<link>https://googledrive.com/host/0B-0rvU0jlYJPYVMwUGZ2WE1UX3M/CoreCast-TheBlindPilot.mp3</link>
+<guid>https://googledrive.com/host/0B-0rvU0jlYJPYVMwUGZ2WE1UX3M/CoreCast-TheBlindPilot.mp3</guid>
+<description> </description>
+<enclosure url="https://googledrive.com/host/0B-0rvU0jlYJPYVMwUGZ2WE1UX3M/CoreCast-TheBlindPilot.mp3" type="audio/mpeg"/>
+<category>Podcasts</category>
+<pubDate></pubDate>
+
+<itunes:author>Gabe @ CoreCast</itunes:author>
+
+<itunes:explicit>Yes</itunes:explicit>
+<itunes:subtitle>First Episode of the CoreCast</itunes:subtitle>
+<itunes:summary></itunes:summary>
+<itunes:duration>00:46:43</itunes:duration>
+<itunes:keywords></itunes:keywords>
+
+</item>
+
+</channel>
+
+</rss>
