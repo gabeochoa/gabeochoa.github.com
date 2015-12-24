@@ -5,7 +5,7 @@
         <link>http://delicious.com/gabeochoa/corecast</link>
         <description>CoreCast Episodes</description>
         <atom:link rel="self" type="application/rss+xml" href="http://feeds.delicious.com/v2/rss/gabeochoa/corecast"/>
-        
+
         <item>
             <title>4 - The One Who Got Hired</title>
             <pubDate>Thu, 24 Dec 2015 11:34:46 +0000</pubDate>
@@ -40,12 +40,6 @@
             <source url="http://feeds.delicious.com/v2/rss/gabeochoa">gabeochoa's links</source>
             <description>2 - The Bulgarian</description>
             <category domain="http://delicious.com/gabeochoa/">corecast</category>
-            
-            <itunes:author>Gabe @ CoreCast</itunes:author>
-            <itunes:explicit>No</itunes:explicit>
-            <itunes:subtitle>The Bulgarian</itunes:subtitle>
-            <itunes:summary/>
-            <itunes:keywords/>
         </item>
         
         <item>
@@ -57,13 +51,6 @@
             <source url="http://feeds.delicious.com/v2/rss/gabeochoa">gabeochoa's links</source>
             <description>1 - The Blind Pilot</description>
             <category domain="http://delicious.com/gabeochoa/">corecast</category>
-            
-            <itunes:author>Gabe @ CoreCast</itunes:author>
-            <itunes:explicit>No</itunes:explicit>
-            <itunes:subtitle>First Episode of the CoreCast</itunes:subtitle>
-            <itunes:summary/>
-            <itunes:duration>00:46:43</itunes:duration>
-            <itunes:keywords/>
         </item>
         
         
