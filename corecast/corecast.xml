@@ -41,6 +41,11 @@
             <description>2 - The Bulgarian</description>
             <category domain="http://delicious.com/gabeochoa/">corecast</category>
             
+            <itunes:author>Gabe @ CoreCast</itunes:author>
+            <itunes:explicit>No</itunes:explicit>
+            <itunes:subtitle>The Bulgarian</itunes:subtitle>
+            <itunes:summary/>
+            <itunes:keywords/>
         </item>
         
         <item>
@@ -53,6 +58,12 @@
             <description>1 - The Blind Pilot</description>
             <category domain="http://delicious.com/gabeochoa/">corecast</category>
             
+            <itunes:author>Gabe @ CoreCast</itunes:author>
+            <itunes:explicit>No</itunes:explicit>
+            <itunes:subtitle>First Episode of the CoreCast</itunes:subtitle>
+            <itunes:summary/>
+            <itunes:duration>00:46:43</itunes:duration>
+            <itunes:keywords/>
         </item>
         
         
