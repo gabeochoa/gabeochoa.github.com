@@ -6,6 +6,35 @@
         <description>CoreCast Episodes</description>
         <atom:link rel="self" type="application/rss+xml" href="http://feeds.delicious.com/v2/rss/gabeochoa/corecast"/>
 
+
+        <item>
+            <title>6 - Live From YHack</title>
+            <pubDate>Thu, 24 Dec 2015 12:04:00 +0000</pubDate>
+            <guid isPermaLink="false">http://delicious.com/url/a2d2d4bbb3ad99c9d489a13af66c37db#gabeochoa</guid>
+            <link>https://dl.dropboxusercontent.com/s/sswstk9hd4bctey/6%20-%20Live%20From%20YHack.mp3?dl=0</link>
+            <dc:creator><![CDATA[gabeochoa]]></dc:creator>
+            <comments>http://delicious.com/url/a2d2d4bbb3ad99c9d489a13af66c37db</comments>
+            <wfw:commentRss>http://feeds.delicious.com/v2/rss/url/a2d2d4bbb3ad99c9d489a13af66c37db</wfw:commentRss>
+            <source url="http://feeds.delicious.com/v2/rss/gabeochoa">gabeochoa's links</source>
+            <description>6 - Live From YHack</description>
+            <category domain="http://delicious.com/gabeochoa/">corecast</category>
+            
+        </item>
+        
+        <item>
+            <title>5 - The Man in the Chewy Pajamas</title>
+            <pubDate>Thu, 24 Dec 2015 11:55:24 +0000</pubDate>
+            <guid isPermaLink="false">http://delicious.com/url/42876baa81c5e0ae9b42b2b180f74a9e#gabeochoa</guid>
+            <link>https://dl.dropboxusercontent.com/s/tfmrhxzsvqb5tc7/5%20-%20The%20Man%20in%20the%20Chewy%20Pajamas.mp3?dl=0</link>
+            <dc:creator><![CDATA[gabeochoa]]></dc:creator>
+            <comments>http://delicious.com/url/42876baa81c5e0ae9b42b2b180f74a9e</comments>
+            <wfw:commentRss>http://feeds.delicious.com/v2/rss/url/42876baa81c5e0ae9b42b2b180f74a9e</wfw:commentRss>
+            <source url="http://feeds.delicious.com/v2/rss/gabeochoa">gabeochoa's links</source>
+            <description>5 - The Man in the Chewy Pajamas</description>
+            <category domain="http://delicious.com/gabeochoa/">corecast</category>
+            
+        </item>
+        
         <item>
             <title>4 - The One Who Got Hired</title>
             <pubDate>Thu, 24 Dec 2015 11:34:46 +0000</pubDate>
