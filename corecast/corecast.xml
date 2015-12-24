@@ -1,54 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
-  
-  <channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <channel>
+        <title>CoreCast</title>
+        <link>http://delicious.com/gabeochoa/corecast</link>
+        <description>CoreCast Episodes</description>
+        <atom:link rel="self" type="application/rss+xml" href="http://feeds.delicious.com/v2/rss/gabeochoa/corecast"/>
+        
+        <item>
+            <title>4 - The One Who Got Hired</title>
+            <pubDate>Thu, 24 Dec 2015 11:34:46 +0000</pubDate>
+            <guid isPermaLink="false">http://delicious.com/url/3855b44ea214df3123a9bb9a33deb208#gabeochoa</guid>
+            <link>https://dl.dropboxusercontent.com/s/mw2kuo2wycv9rpy/4%20-%20The%20One%20Who%20Got%20Hired.mp3?dl=0</link>
+            <comments>http://delicious.com/url/3855b44ea214df3123a9bb9a33deb208</comments>
+            <source url="http://feeds.delicious.com/v2/rss/gabeochoa">gabeochoa's links</source>
+            <description>4 - The One Who Got Hired</description>
+            <category domain="http://delicious.com/gabeochoa/">corecast</category>
+            
+        </item>
 
-    <title>CoreCast</title>
-    <description></description>
-    <link></link>
-    <language>en-us</language>
-    <copyright>Copyright 2015</copyright>
-    <lastBuildDate></lastBuildDate>
-    <pubDate></pubDate>
-    <docs></docs>
-    <webMaster></webMaster>
-
-    <itunes:author>gabe</itunes:author>
-    <itunes:subtitle></itunes:subtitle>
-    <itunes:summary> </itunes:summary>
-
-    <itunes:owner>
-           <itunes:name>Gabe O</itunes:name>
-           <itunes:email>gabeochoa1118@gmail.com</itunes:email>
-    </itunes:owner>
-
-<itunes:explicit>No</itunes:explicit>
-
-<itunes:image href=""/>
-    
-<itunes:category text="Technology">
-     <itunes:category text="Podcasting"/>
-</itunes:category>
-
-<item>
-<title>CoreCast Episode 1 </title>
-<link>https://googledrive.com/host/0B-0rvU0jlYJPYVMwUGZ2WE1UX3M/CoreCast-TheBlindPilot.mp3</link>
-<guid>https://googledrive.com/host/0B-0rvU0jlYJPYVMwUGZ2WE1UX3M/CoreCast-TheBlindPilot.mp3</guid>
-<description> </description>
-<enclosure url="https://googledrive.com/host/0B-0rvU0jlYJPYVMwUGZ2WE1UX3M/CoreCast-TheBlindPilot.mp3" type="audio/mpeg"/>
-<category>Podcasts</category>
-<pubDate></pubDate>
-
-<itunes:author>Gabe @ CoreCast</itunes:author>
-
-<itunes:explicit>Yes</itunes:explicit>
-<itunes:subtitle>First Episode of the CoreCast</itunes:subtitle>
-<itunes:summary></itunes:summary>
-<itunes:duration>00:46:43</itunes:duration>
-<itunes:keywords></itunes:keywords>
-
-</item>
-
-</channel>
-
+        <item>
+            <title>3 - The Girl</title>
+            <pubDate>Thu, 24 Dec 2015 11:32:22 +0000</pubDate>
+            <guid isPermaLink="false">http://delicious.com/url/37efb90efa491f49c24bdcd1f489797f#gabeochoa</guid>
+            <link>https://dl.dropboxusercontent.com/s/rom3zjo21m92x8i/3%20-%20The%20Girl.mp3?dl=0</link>
+            <comments>http://delicious.com/url/37efb90efa491f49c24bdcd1f489797f</comments>
+            <wfw:commentRss>http://feeds.delicious.com/v2/rss/url/37efb90efa491f49c24bdcd1f489797f</wfw:commentRss>
+            <source url="http://feeds.delicious.com/v2/rss/gabeochoa">gabeochoa's links</source>
+            <description>3 - The Girl</description>
+            <category domain="http://delicious.com/gabeochoa/">corecast</category>
+            
+        </item>
+        
+        <item>
+            <title>2 - The Bulgarian</title>
+            <pubDate>Thu, 24 Dec 2015 11:26:39 +0000</pubDate>
+            <guid isPermaLink="false">http://delicious.com/url/68b151dc23c2e40e706832ca2ea95813#gabeochoa</guid>
+            <link>https://dl.dropboxusercontent.com/s/2xg8xqw9xt50vkz/2%20-%20The%20Bulgarian.mp3?dl=0</link>
+            <comments>http://delicious.com/url/68b151dc23c2e40e706832ca2ea95813</comments>
+            <source url="http://feeds.delicious.com/v2/rss/gabeochoa">gabeochoa's links</source>
+            <description>2 - The Bulgarian</description>
+            <category domain="http://delicious.com/gabeochoa/">corecast</category>
+            
+        </item>
+        
+        <item>
+            <title>1 - The Blind Pilot</title>
+            <pubDate>Thu, 24 Dec 2015 11:25:51 +0000</pubDate>
+            <guid isPermaLink="false">http://delicious.com/url/65100a7e8475b4a1c4945c27e8f32f76#gabeochoa</guid>
+            <link>https://dl.dropboxusercontent.com/s/0dnd6mkz1up9dhu/1%20-%20The%20Blind%20Pilot.mp3?dl=0</link>
+            <comments>http://delicious.com/url/65100a7e8475b4a1c4945c27e8f32f76</comments>
+            <source url="http://feeds.delicious.com/v2/rss/gabeochoa">gabeochoa's links</source>
+            <description>1 - The Blind Pilot</description>
+            <category domain="http://delicious.com/gabeochoa/">corecast</category>
+            
+        </item>
+        
+        
+    </channel>
 </rss>
