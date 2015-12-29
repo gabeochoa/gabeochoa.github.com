@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
     <channel>
         <title>CoreCast</title>
         <description>CoreCast Episodes</description>
         <atom:link rel="self" type="application/rss+xml" href="http://feeds.delicious.com/v2/rss/gabeochoa/corecast"/>
-
+        <itunes:new-feed-url>http://ochoag.com/corecast/SIH.xml</itunes:new-feed-url>
         <item>
             <title>7A - Mass</title>
             <pubDate>Thu, 28 Dec 2015 12:04:00 +0000</pubDate>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2enclosuresfull.xsl"?> 
+<?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?> 
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" version="2.0"> 
+    <channel> 
+        <title>Special Interest Housing</title> 
+        <description>CoreCast Episodes</description> 
+        <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/BingCoreCast" /> 
+        <feedburner:info uri="bingcorecast" /> 
+        <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /> 
+        <media:thumbnail url="http://i.imgur.com/g0NFdn3.jpg" /> 
+        <media:keywords>corecast,binghamton,core,special,interest,housing</media:keywords>
+        <media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Games &amp; Hobbies/Video Games</media:category> 
+        <media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Education/Higher Education</media:category> 
+        <itunes:author>CoRE</itunes:author> 
+        <itunes:explicit>no</itunes:explicit> 
+        <itunes:image href="http://i.imgur.com/g0NFdn3.jpg" /> 
+        <itunes:keywords>corecast,binghamton,core,special,interest,housing</itunes:keywords>
+        <itunes:subtitle>A Podcast where Taylor and I (Gabe) talk about whatever comes to mind, with whomever we can pull away.</itunes:subtitle> 
+        <itunes:summary>A Podcast where Taylor and I (Gabe) talk about whatever comes to mind, with whomever we can pull away.</itunes:summary> 
+        <itunes:category text="Games &amp; Hobbies"> 
+            <itunes:category text="Video Games" /> 
+        </itunes:category> 
+        <itunes:category text="Education"> 
+            <itunes:category text="Higher Education" /> 
+        </itunes:category> 
+        <item> 
+            <title>7A - Mass</title> 
+            <pubDate>Thu, 28 Dec 2015 12:04:00 +0000</pubDate> 
+            <guid isPermaLink="false">http://delicious.com/url/a2d2d4bbb3ad99c9d489a13af66c37db#gabeochoa</guid>
+            <link>http://feedproxy.google.com/~r/BingCoreCast/~3/0M5Z6srfGfs/7A%20-%20Mass.mp3</link> 
+            <comments>http://delicious.com/url/a2d2d4bbb3ad99c9d489a13af66c37db</comments>
+            <source url="http://feeds.delicious.com/v2/rss/gabeochoa">gabeochoa's links</source> 
+            <description>7A - Mass</description> 
+            <category domain="http://delicious.com/gabeochoa/">corecast</category> 
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">CoRE</dc:creator> 
+            <enclosure url="https://dl.dropboxusercontent.com/s/uca0k3z7f6rq62e/7A%20-%20Mass.mp3?dl=0" length="74671087" type="audio/mpeg" /> 
+            <media:content url="https://dl.dropboxusercontent.com/s/uca0k3z7f6rq62e/7A%20-%20Mass.mp3?dl=0" fileSize="74671087" type="audio/mpeg" /> 
+            <itunes:explicit>no</itunes:explicit> 
+            <itunes:subtitle>7A - Mass</itunes:subtitle> 
+            <itunes:author>CoRE</itunes:author> 
+            <itunes:summary>7A - Mass</itunes:summary> 
+            <itunes:keywords>corecast,binghamton,core,special,interest,housing</itunes:keywords>
+            <feedburner:origLink>https://dl.dropboxusercontent.com/s/uca0k3z7f6rq62e/7A%20-%20Mass.mp3?dl=0</feedburner:origLink> 
+        </item> 
+        <item> 
+            <title>6 - Live From YHack</title> 
+            <pubDate>Thu, 24 Dec 2015 12:04:00 +0000</pubDate> 
+            <guid isPermaLink="false">http://delicious.com/url/a2d2d4bbb3ad99c9d489a13af66c37db#gabeochoa</guid>
+            <link>http://feedproxy.google.com/~r/BingCoreCast/~3/-hY6iAIkUVg/6%20-%20Live%20From%20YHack.mp3</link> 
+            <comments>http://delicious.com/url/a2d2d4bbb3ad99c9d489a13af66c37db</comments>
+            <source url="http://feeds.delicious.com/v2/rss/gabeochoa">gabeochoa's links</source> 
+            <description>6 - Live From YHack</description> 
+            <category domain="http://delicious.com/gabeochoa/">corecast</category> 
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">CoRE</dc:creator> 
+            <enclosure url="https://dl.dropboxusercontent.com/s/sswstk9hd4bctey/6%20-%20Live%20From%20YHack.mp3?dl=0" length="69698957" type="audio/mpeg" /> 
+            <media:content url="https://dl.dropboxusercontent.com/s/sswstk9hd4bctey/6%20-%20Live%20From%20YHack.mp3?dl=0" fileSize="69698957" type="audio/mpeg" /> 
+            <itunes:explicit>no</itunes:explicit> 
+            <itunes:subtitle>6 - Live From YHack</itunes:subtitle> 
+            <itunes:author>CoRE</itunes:author> 
+            <itunes:summary>6 - Live From YHack</itunes:summary> 
+            <itunes:keywords>corecast,binghamton,core,special,interest,housing</itunes:keywords>
+            <feedburner:origLink>https://dl.dropboxusercontent.com/s/sswstk9hd4bctey/6%20-%20Live%20From%20YHack.mp3?dl=0</feedburner:origLink> 
+        </item> 
+        <item> 
+            <title>5 - The Man in the Chewy Pajamas</title> 
+            <pubDate>Thu, 24 Dec 2015 11:55:24 +0000</pubDate> 
+            <guid isPermaLink="false">http://delicious.com/url/42876baa81c5e0ae9b42b2b180f74a9e#gabeochoa</guid>
+            <link>http://feedproxy.google.com/~r/BingCoreCast/~3/ORVH-oauXiw/5%20-%20The%20Man%20in%20the%20Chewy%20Pajamas.mp3</link> 
+            <comments>http://delicious.com/url/42876baa81c5e0ae9b42b2b180f74a9e</comments>
+            <source url="http://feeds.delicious.com/v2/rss/gabeochoa">gabeochoa's links</source> 
+            <description>5 - The Man in the Chewy Pajamas</description> 
+            <category domain="http://delicious.com/gabeochoa/">corecast</category> 
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">CoRE</dc:creator> 
+            <enclosure url="https://dl.dropboxusercontent.com/s/tfmrhxzsvqb5tc7/5%20-%20The%20Man%20in%20the%20Chewy%20Pajamas.mp3?dl=0" length="70192011" type="audio/mpeg" /> 
+            <media:content url="https://dl.dropboxusercontent.com/s/tfmrhxzsvqb5tc7/5%20-%20The%20Man%20in%20the%20Chewy%20Pajamas.mp3?dl=0" fileSize="70192011" type="audio/mpeg" /> 
+            <itunes:explicit>no</itunes:explicit> 
+            <itunes:subtitle>5 - The Man in the Chewy Pajamas</itunes:subtitle> 
+            <itunes:author>CoRE</itunes:author> 
+            <itunes:summary>5 - The Man in the Chewy Pajamas</itunes:summary> 
+            <itunes:keywords>corecast,binghamton,core,special,interest,housing</itunes:keywords>
+            <feedburner:origLink>https://dl.dropboxusercontent.com/s/tfmrhxzsvqb5tc7/5%20-%20The%20Man%20in%20the%20Chewy%20Pajamas.mp3?dl=0</feedburner:origLink> 
+        </item> 
+        <item> 
+            <title>4 - The One Who Got Hired</title> 
+            <pubDate>Thu, 24 Dec 2015 11:34:46 +0000</pubDate> 
+            <guid isPermaLink="false">http://delicious.com/url/3855b44ea214df3123a9bb9a33deb208#gabeochoa</guid>
+            <link>http://feedproxy.google.com/~r/BingCoreCast/~3/j0ZeKCloY98/4%20-%20The%20One%20Who%20Got%20Hired.mp3</link> 
+            <comments>http://delicious.com/url/3855b44ea214df3123a9bb9a33deb208</comments>
+            <source url="http://feeds.delicious.com/v2/rss/gabeochoa">gabeochoa's links</source> 
+            <description>4 - The One Who Got Hired</description> 
+            <category domain="http://delicious.com/gabeochoa/">corecast</category> 
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">CoRE</dc:creator> 
+            <enclosure url="https://dl.dropboxusercontent.com/s/mw2kuo2wycv9rpy/4%20-%20The%20One%20Who%20Got%20Hired.mp3?dl=0" length="158688568" type="audio/mpeg" /> 
+            <media:content url="https://dl.dropboxusercontent.com/s/mw2kuo2wycv9rpy/4%20-%20The%20One%20Who%20Got%20Hired.mp3?dl=0" fileSize="158688568" type="audio/mpeg" /> 
+            <itunes:explicit>no</itunes:explicit> 
+            <itunes:subtitle>4 - The One Who Got Hired</itunes:subtitle> 
+            <itunes:author>CoRE</itunes:author> 
+            <itunes:summary>4 - The One Who Got Hired</itunes:summary> 
+            <itunes:keywords>corecast,binghamton,core,special,interest,housing</itunes:keywords>
+            <feedburner:origLink>https://dl.dropboxusercontent.com/s/mw2kuo2wycv9rpy/4%20-%20The%20One%20Who%20Got%20Hired.mp3?dl=0</feedburner:origLink> 
+        </item> 
+        <item> 
+            <title>3 - The Girl</title> 
+            <pubDate>Thu, 24 Dec 2015 11:32:22 +0000</pubDate> 
+            <guid isPermaLink="false">http://delicious.com/url/37efb90efa491f49c24bdcd1f489797f#gabeochoa</guid>
+            <link>http://feedproxy.google.com/~r/BingCoreCast/~3/F_rY5kA--6Q/3%20-%20The%20Girl.mp3</link> 
+            <comments>http://delicious.com/url/37efb90efa491f49c24bdcd1f489797f</comments>
+            <wfw:commentRss>http://feeds.delicious.com/v2/rss/url/37efb90efa491f49c24bdcd1f489797f</wfw:commentRss>
+            <source url="http://feeds.delicious.com/v2/rss/gabeochoa">gabeochoa's links</source> 
+            <description>3 - The Girl</description> 
+            <category domain="http://delicious.com/gabeochoa/">corecast</category> 
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">CoRE</dc:creator> 
+            <enclosure url="https://dl.dropboxusercontent.com/s/rom3zjo21m92x8i/3%20-%20The%20Girl.mp3?dl=0" length="47760612" type="audio/mpeg" /> 
+            <media:content url="https://dl.dropboxusercontent.com/s/rom3zjo21m92x8i/3%20-%20The%20Girl.mp3?dl=0" fileSize="47760612" type="audio/mpeg" /> 
+            <itunes:explicit>no</itunes:explicit> 
+            <itunes:subtitle>3 - The Girl</itunes:subtitle> 
+            <itunes:author>CoRE</itunes:author> 
+            <itunes:summary>3 - The Girl</itunes:summary> 
+            <itunes:keywords>corecast,binghamton,core,special,interest,housing</itunes:keywords>
+            <feedburner:origLink>https://dl.dropboxusercontent.com/s/rom3zjo21m92x8i/3%20-%20The%20Girl.mp3?dl=0</feedburner:origLink> 
+        </item> 
+        <item> 
+            <title>2 - The Bulgarian</title> 
+            <pubDate>Thu, 24 Dec 2015 11:26:39 +0000</pubDate> 
+            <guid isPermaLink="false">http://delicious.com/url/68b151dc23c2e40e706832ca2ea95813#gabeochoa</guid>
+            <link>http://feedproxy.google.com/~r/BingCoreCast/~3/1PYBm9Cf8Kg/2%20-%20The%20Bulgarian.mp3</link> 
+            <comments>http://delicious.com/url/68b151dc23c2e40e706832ca2ea95813</comments>
+            <source url="http://feeds.delicious.com/v2/rss/gabeochoa">gabeochoa's links</source> 
+            <description>2 - The Bulgarian</description> 
+            <category domain="http://delicious.com/gabeochoa/">corecast</category> 
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">CoRE</dc:creator> 
+            <enclosure url="https://dl.dropboxusercontent.com/s/2xg8xqw9xt50vkz/2%20-%20The%20Bulgarian.mp3?dl=0" length="53515975" type="audio/mpeg" /> 
+            <media:content url="https://dl.dropboxusercontent.com/s/2xg8xqw9xt50vkz/2%20-%20The%20Bulgarian.mp3?dl=0" fileSize="53515975" type="audio/mpeg" />
+            <itunes:explicit>no</itunes:explicit> 
+            <itunes:subtitle>2 - The Bulgarian</itunes:subtitle> 
+            <itunes:author>CoRE</itunes:author> 
+            <itunes:summary>2 - The Bulgarian</itunes:summary> 
+            <itunes:keywords>corecast,binghamton,core,special,interest,housing</itunes:keywords>
+            <feedburner:origLink>https://dl.dropboxusercontent.com/s/2xg8xqw9xt50vkz/2%20-%20The%20Bulgarian.mp3?dl=0</feedburner:origLink> 
+        </item> 
+        <item> 
+            <title>1 - The Blind Pilot</title> 
+            <pubDate>Thu, 24 Dec 2015 11:25:51 +0000</pubDate> 
+            <guid isPermaLink="false">http://delicious.com/url/65100a7e8475b4a1c4945c27e8f32f76#gabeochoa</guid>
+            <link>http://feedproxy.google.com/~r/BingCoreCast/~3/nRDyeS5l078/1%20-%20The%20Blind%20Pilot.mp3</link> 
+            <comments>http://delicious.com/url/65100a7e8475b4a1c4945c27e8f32f76</comments>
+            <source url="http://feeds.delicious.com/v2/rss/gabeochoa">gabeochoa's links</source> 
+            <description>1 - The Blind Pilot</description> 
+            <category domain="http://delicious.com/gabeochoa/">corecast</category> 
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">CoRE</dc:creator> 
+            <enclosure url="https://dl.dropboxusercontent.com/s/0dnd6mkz1up9dhu/1%20-%20The%20Blind%20Pilot.mp3?dl=0" length="31696351" type="audio/mpeg" /> 
+            <media:content url="https://dl.dropboxusercontent.com/s/0dnd6mkz1up9dhu/1%20-%20The%20Blind%20Pilot.mp3?dl=0" fileSize="31696351" type="audio/mpeg" /> 
+            <itunes:explicit>no</itunes:explicit> 
+            <itunes:subtitle>1 - The Blind Pilot</itunes:subtitle> 
+            <itunes:author>CoRE</itunes:author> 
+            <itunes:summary>1 - The Blind Pilot</itunes:summary> 
+            <itunes:keywords>corecast,binghamton,core,special,interest,housing</itunes:keywords>
+            <feedburner:origLink>https://dl.dropboxusercontent.com/s/0dnd6mkz1up9dhu/1%20-%20The%20Blind%20Pilot.mp3?dl=0</feedburner:origLink> 
+        </item> 
+        <language>en-us</language> 
+        <media:credit role="author">CoRE</media:credit> 
+        <media:rating>nonadult</media:rating> 
+    </channel> 
+</rss> 
