@@ -6,6 +6,19 @@
         <description>CoreCast Episodes</description>
         <atom:link rel="self" type="application/rss+xml" href="http://feeds.delicious.com/v2/rss/gabeochoa/corecast"/>
 
+        <item>
+            <title>7A - Mass</title>
+            <pubDate>Thu, 28 Dec 2015 12:04:00 +0000</pubDate>
+            <guid isPermaLink="false">http://delicious.com/url/a2d2d4bbb3ad99c9d489a13af66c37db#gabeochoa</guid>
+            <link>https://dl.dropboxusercontent.com/s/uca0k3z7f6rq62e/7A%20-%20Mass.mp3?dl=0</link>
+            <dc:creator><![CDATA[gabeochoa]]></dc:creator>
+            <comments>http://delicious.com/url/a2d2d4bbb3ad99c9d489a13af66c37db</comments>
+            <wfw:commentRss>http://feeds.delicious.com/v2/rss/url/a2d2d4bbb3ad99c9d489a13af66c37db</wfw:commentRss>
+            <source url="http://feeds.delicious.com/v2/rss/gabeochoa">gabeochoa's links</source>
+            <description>7A - Mass</description>
+            <category domain="http://delicious.com/gabeochoa/">corecast</category>
+            
+        </item>
 
         <item>
             <title>6 - Live From YHack</title>
