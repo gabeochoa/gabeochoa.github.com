@@ -24,6 +24,24 @@
         <itunes:category text="Education"> 
             <itunes:category text="Higher Education" /> 
         </itunes:category> 
+
+
+        <item>
+            <title>7B - SubVocalization</title>
+            <pubDate>Fri, 1 Jan 2016 12:04:00 +0000</pubDate>
+            <link>https://dl.dropboxusercontent.com/s/0vzkgagvupgm9sd/7B%20-%20SubVocalization.mp3?dl=0</link>
+            <description>7B - SubVocalization</description>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">CoRE</dc:creator> 
+            <enclosure url="https://dl.dropboxusercontent.com/s/0vzkgagvupgm9sd/7B%20-%20SubVocalization.mp3?dl=0" length="74671087" type="audio/mpeg" /> 
+            <media:content url="https://dl.dropboxusercontent.com/s/0vzkgagvupgm9sd/7B%20-%20SubVocalization.mp3?dl=0" fileSize="74671087" type="audio/mpeg" /> 
+            <itunes:explicit>no</itunes:explicit> 
+            <itunes:subtitle>7B - SubVocalization</itunes:subtitle> 
+            <itunes:author>CoRE</itunes:author> 
+            <itunes:summary>7B - SubVocalization</itunes:summary> 
+            <itunes:keywords>corecast,binghamton,core,special,interest,housing</itunes:keywords>
+            <feedburner:origLink>https://dl.dropboxusercontent.com/s/0vzkgagvupgm9sd/7B%20-%20SubVocalization.mp3?dl=0</feedburner:origLink> 
+        </item>
+
         <item> 
             <title>7A - Mass</title> 
             <pubDate>Thu, 28 Dec 2015 12:04:00 +0000</pubDate> 

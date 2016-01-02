@@ -5,6 +5,15 @@
         <description>CoreCast Episodes</description>
         <atom:link rel="self" type="application/rss+xml" href="http://feeds.delicious.com/v2/rss/gabeochoa/corecast"/>
         <itunes:new-feed-url>http://ochoag.com/corecast/SIH.xml</itunes:new-feed-url>
+        
+
+        <item>
+            <title>7B - SubVocalization</title>
+            <pubDate>Fri, 1 Jan 2016 12:04:00 +0000</pubDate>
+            <link>https://dl.dropboxusercontent.com/s/0vzkgagvupgm9sd/7B%20-%20SubVocalization.mp3?dl=0</link>
+            <description>7B - SubVocalization</description>
+        </item>
+
         <item>
             <title>7A - Mass</title>
             <pubDate>Thu, 28 Dec 2015 12:04:00 +0000</pubDate>
@@ -14,7 +23,6 @@
             <source url="http://feeds.delicious.com/v2/rss/gabeochoa">gabeochoa's links</source>
             <description>7A - Mass</description>
             <category domain="http://delicious.com/gabeochoa/">corecast</category>
-            
         </item>
 
         <item>
