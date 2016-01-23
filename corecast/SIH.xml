@@ -31,7 +31,7 @@
             <description>7C - Taylor&apos;s Math Sitcom</description>
             <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">CoRE</dc:creator> 
             <enclosure url="https://www.dropbox.com/s/4lq4dus58a79lsn/7C%20-%20Taylors%20Math%20Sitcom.mp3?dl=0" length="47472107" type="audio/mpeg" /> 
-            <media:content url="https://www.dropbox.com/s/4lq4dus58a79lsn/7C%20-%20Taylors%20Math%20Sitcom.mp3?dl=0" length="47472107" type="audio/mpeg" /> 
+            <media:content url="https://www.dropbox.com/s/4lq4dus58a79lsn/7C%20-%20Taylors%20Math%20Sitcom.mp3?dl=0" fileSize="47472107" type="audio/mpeg" /> 
             <itunes:explicit>no</itunes:explicit> 
             <itunes:subtitle>7C - Taylor&apos;s Math Sitcom</itunes:subtitle> 
             <itunes:author>CoRE</itunes:author> 
