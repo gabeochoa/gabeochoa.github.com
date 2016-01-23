@@ -25,6 +25,23 @@
 
 
         <item>
+            <title>0xCC - I had a burrito</title>
+            <pubDate>Fri, 8 Jan 2016 12:04:00 +0000</pubDate>
+            <link>https://www.dropbox.com/s/sk9dxk80xrjryv9/0xCC%20-%20I%20had%20a%20burrito.mp3?dl=0</link>
+            <description>CoreCast Byte: Alex and I eat a burrito</description>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">CoRE</dc:creator> 
+            <enclosure url="https://www.dropbox.com/s/sk9dxk80xrjryv9/0xCC%20-%20I%20had%20a%20burrito.mp3?dl=0" length="1061615" type="audio/mpeg" /> 
+            <media:content url="https://www.dropbox.com/s/sk9dxk80xrjryv9/0xCC%20-%20I%20had%20a%20burrito.mp3?dl=0" fileSize="1061615" type="audio/mpeg" /> 
+            <itunes:explicit>no</itunes:explicit> 
+            <itunes:subtitle>CoreCast Byte: Alex and I eat a burrito</itunes:subtitle> 
+            <itunes:author>CoRE</itunes:author> 
+            <itunes:summary>CoreCast Byte: Alex and I eat a burrito</itunes:summary> 
+            <itunes:keywords>corecast,binghamton,core,byte,special,interest,housing</itunes:keywords>
+            <feedburner:origLink>https://www.dropbox.com/s/sk9dxk80xrjryv9/0xCC%20-%20I%20had%20a%20burrito.mp3?dl=0</feedburner:origLink> 
+        </item>
+
+
+        <item>
             <title>7C - Taylor&apos;s Math Sitcom</title>
             <pubDate>Fri, 8 Jan 2016 12:04:00 +0000</pubDate>
             <link>https://www.dropbox.com/s/4lq4dus58a79lsn/7C%20-%20Taylors%20Math%20Sitcom.mp3?dl=0</link>
