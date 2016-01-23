@@ -27,6 +27,24 @@
 
 
         <item>
+            <title>7C - Taylor&apos;s Math Sitcom</title>
+            <pubDate>Fri, 8 Jan 2016 12:04:00 +0000</pubDate>
+            <link>https://dl.dropboxusercontent.com/s/mpznt97jx6guw85/7C%20-%20Taylor%27s%20Math%20Sitcom.mp3?dl=0</link>
+            <description>7C - Taylor&apos;s Math Sitcom</description>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">CoRE</dc:creator> 
+            <enclosure url="https://dl.dropboxusercontent.com/s/mpznt97jx6guw85/7C%20-%20Taylor%27s%20Math%20Sitcom.mp3?dl=0" length="47471689" type="audio/mpeg" /> 
+            <media:content url="https://dl.dropboxusercontent.com/s/mpznt97jx6guw85/7C%20-%20Taylor%27s%20Math%20Sitcom.mp3?dl=0" length="47471689" type="audio/mpeg" /> 
+            
+            <itunes:explicit>no</itunes:explicit> 
+            <itunes:subtitle>7C - Taylor&apos;s Math Sitcom</itunes:subtitle> 
+            <itunes:author>CoRE</itunes:author> 
+            <itunes:summary>7C - Taylor&apos;s Math Sitcom</itunes:summary> 
+            <itunes:keywords>corecast,binghamton,core,special,interest,housing</itunes:keywords>
+            <feedburner:origLink>https://dl.dropboxusercontent.com/s/mpznt97jx6guw85/7C%20-%20Taylor%27s%20Math%20Sitcom.mp3?dl=0</feedburner:origLink> 
+        </item>
+
+
+        <item>
             <title>7B - SubVocalization</title>
             <pubDate>Fri, 1 Jan 2016 12:04:00 +0000</pubDate>
             <link>https://dl.dropboxusercontent.com/s/0vzkgagvupgm9sd/7B%20-%20SubVocalization.mp3?dl=0</link>
@@ -61,6 +79,7 @@
             <itunes:keywords>corecast,binghamton,core,special,interest,housing</itunes:keywords>
             <feedburner:origLink>https://dl.dropboxusercontent.com/s/uca0k3z7f6rq62e/7A%20-%20Mass.mp3?dl=0</feedburner:origLink> 
         </item> 
+
         <item> 
             <title>6 - Live From YHack</title> 
             <pubDate>Thu, 24 Dec 2015 12:04:00 +0000</pubDate> 
@@ -71,6 +90,7 @@
             <description>6 - Live From YHack</description> 
             <category domain="http://delicious.com/gabeochoa/">corecast</category> 
             <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">CoRE</dc:creator> 
+           
             <enclosure url="https://dl.dropboxusercontent.com/s/sswstk9hd4bctey/6%20-%20Live%20From%20YHack.mp3?dl=0" length="69698957" type="audio/mpeg" /> 
             <media:content url="https://dl.dropboxusercontent.com/s/sswstk9hd4bctey/6%20-%20Live%20From%20YHack.mp3?dl=0" fileSize="69698957" type="audio/mpeg" /> 
             <itunes:explicit>no</itunes:explicit> 
