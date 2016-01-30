@@ -24,12 +24,28 @@
         </itunes:category> 
 
 
+        <item>
+            <title>0xCC - The Former IHOP</title>
+            <pubDate>Fri, 30 Jan 2016 12:05:00 +0000</pubDate>
+            <link>https://www.dropbox.com/s/btgqm2swk85zp8h/0xCC%20-%20The%20Former%20IHOP.mp3?dl=0</link>
+            <description>CoreCast Byte: Simeon visits a former IHOP establishment</description>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">CoRE</dc:creator> 
+            <enclosure url="https://www.dropbox.com/s/btgqm2swk85zp8h/0xCC%20-%20The%20Former%20IHOP.mp3?dl=0" length="20821684" type="audio/mpeg" /> 
+            <media:content url="https://www.dropbox.com/s/btgqm2swk85zp8h/0xCC%20-%20The%20Former%20IHOP.mp3?dl=0" fileSize="20821684" type="audio/mpeg" /> 
+            <itunes:explicit>no</itunes:explicit> 
+            <itunes:subtitle>CoreCast Byte: Simeon visits a former IHOP establishment</itunes:subtitle> 
+            <itunes:author>CoRE</itunes:author> 
+            <itunes:summary>CoreCast Byte: Simeon visits a former IHOP establishment</itunes:summary> 
+            <itunes:keywords>corecast,binghamton,core,byte,special,interest,housing</itunes:keywords>
+            <feedburner:origLink>https://www.dropbox.com/s/btgqm2swk85zp8h/0xCC%20-%20The%20Former%20IHOP.mp3?dl=0</feedburner:origLink> 
+        </item>
+
 
         <item>
             <title>8 - Nothing Bad Has Ever Happened To You</title>
             <pubDate>Fri, 30 Jan 2016 12:04:00 +0000</pubDate>
             <link>https://www.dropbox.com/s/d9zzq7ozfgsocxf/8%20-%20Nothing%20Bad%20Has%20Ever%20Happend%20To%20You.mp3?dl=0</link>
-            <description>7C - Taylor&apos;s Math Sitcom</description>
+            <description>8 - Nothing Bad Has Ever Happened To You</description>
             <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">CoRE</dc:creator> 
             <enclosure url="https://www.dropbox.com/s/d9zzq7ozfgsocxf/8%20-%20Nothing%20Bad%20Has%20Ever%20Happend%20To%20You.mp3?dl=0" length="50403504" type="audio/mpeg" /> 
             <media:content url="https://www.dropbox.com/s/d9zzq7ozfgsocxf/8%20-%20Nothing%20Bad%20Has%20Ever%20Happend%20To%20You.mp3?dl=0" fileSize="50403504" type="audio/mpeg" /> 
