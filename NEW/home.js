@@ -2,7 +2,7 @@
 
 class Hero extends ReactDOM.Component {
 
-    render() {
+    render: function() {
         const _style = {};
         if (this.props.backgroundImage) {
             _style.backgroundImage = 'url(${this.props.backgroundImage})';
@@ -17,7 +17,7 @@ class Hero extends ReactDOM.Component {
 
 class Page extends ReactDOM.Component {
         
-    render() {
+    render: function() {
         return (
         <Hero backgroundImage="img/hero-bg-01.jpg">
             <h1 className="display-4"> Declarative Landing Pages for React.js </h1>
