@@ -1,4 +1,4 @@
-class Hero extends React.Component {
+class Hero extends ReactDOM.Component {
 
     render() {
         const _style = {};
@@ -13,7 +13,7 @@ class Hero extends React.Component {
     }
 };
 
-class Page extends React.Component {
+class Page extends ReactDOM.Component {
         
     render() {
         return (
