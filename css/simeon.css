@@ -1,0 +1,115 @@
+/* The Pillar Grid */
+/* Use this to put your content in "boxes" */
+.pillar, .pillars {
+	width: 100%;
+	float: left;
+	box-sizing: border-box;
+}
+
+/* When screen is tight to trigger responsiveness */
+@media (min-width: 1120px) {
+	.container {
+		max-width: 1100px;
+	}
+	.container-fluid {
+		max-width: 100%;
+	}
+	.one.pillar, .one.pillars { width: 8.33333333333%; }
+	.two.pillars	{ width: 16.6666666666%; }
+	.three.pillars	{ width: 25%;            }
+	.four.pillars	{ width: 33.3333333333%; }
+	.five.pillars	{ width: 41.6666666666%; }
+	.six.pillars	{ width: 50%;            }
+	.seven.pillars	{ width: 58.3333333333%; }
+	.eight.pillars	{ width: 66.6666666667%; }
+	.nine.pillars	{ width: 75%;            }
+	.ten.pillars	{ width: 83.3333333333%; }
+	.eleven.pillars	{ width: 91.6666666666%; }
+	.twelve.pillars	{ width: 100%; }
+}
+
+.container:after, .row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.container {
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container-fluid {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+}
+.pillars {
+	width: 100%;
+	float: left;
+	box-sizing: border-box;
+	background-color: rgb(0,0,0,.2);
+}
+
+
+/* Some Card CSS */
+.card {
+	margin: 5px;
+	border-radius: 0px;
+	position: relative;
+	height: 300px;
+	cursor: pointer;
+}
+	.card img {
+		border-radius: 0px;
+		opacity: .3;
+	}
+	.card .body {
+		padding: 20px;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		top: 0px;
+		right: 0px;
+		border-radius: 0px;
+		background: -webkit-linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,.7));
+		background: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,.7));
+	}
+	.card .body h2 {
+		margin: 0px; 
+		letter-spacing: 1px;
+		font-size: 2.2rem;
+		color: #FFFFFF;
+		text-transform: uppercase;
+	}
+	.card .body p { 
+		margin: 0px; 
+		letter-spacing: 2px;
+		font-size: .8rem;
+		color: #ccc;
+		text-transform: uppercase;
+	}
+	.card .body p span.tag {
+		text-transform: none;
+		font-style: italic;
+		color: #8085FF;
+		font-size: .9rem;
+	}
+	.card .content {
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+		top: 31%;
+		padding: 20px;
+		text-align: center;
+	}
+
+
+/* The CSS for your icons */
+#contact {
+	text-align: center;
+}

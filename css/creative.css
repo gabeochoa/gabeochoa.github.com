@@ -2,109 +2,11 @@
     bootstrap combined(ish) with normalize.css
 */
 
-.bg-car {
-    background: url(../img/p-car.png);
-    background-size: cover;
-    background-position: bottom center;
-}
-.bg-camera {
-    background: url(../img/p-car.png);
-    background-size: cover;
-    background-position: center;
-}
-
-.card {
-    margin: 5px;
-    border-radius: 0px;
-    position: relative;
-    height: 300px;
-    cursor: pointer;
-}
-
-    .card img {
-        border-radius: 0px;
-        opacity: .3;
-    }
-    .card .body {
-        padding: 20px;
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        top: 0px;
-        right: 0px;
-        border-radius: 0px;
-        background: -webkit-linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,.7));
-        background: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,.7));
-    }
-    .card .body h2 {
-        margin: 0px; 
-        letter-spacing: 1px;
-        font-size: 2.2rem;
-        color: #FFFFFF;
-        text-transform: uppercase;
-    }
-    .card .body p { 
-        margin: 0px; 
-        letter-spacing: 2px;
-        font-size: .8rem;
-        color: #ccc;
-        text-transform: uppercase;
-    }
-    .card .body p span.tag {
-        text-transform: none;
-        font-style: italic;
-        color: #8085FF;
-        font-size: .9rem;
-    }
-    .card .content{
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        right: 0px;
-        top: 31%;
-        padding: 20px;
-        text-align: center;
-    }
-
-.columns:first-child .card { margin-left: 0px; }
-.columns:last-child .card { margin-right: 0px; }
-
-.container {
-    position: relative;
-    width: 100%;
-    min-height: auto;
-    color: #fff;
-}
-.one.columns    { width: 8.33333333333%; }
-.two.columns    { width: 16.6666666666%; }
-.three.columns  { width: 25%;            }
-.four.columns   { width: 33.3333333333%; }
-.five.columns   { width: 41.6666666666%; }
-.six.columns    { width: 50%;            }
-.seven.columns  { width: 58.3333333333%; }
-.eight.columns  { width: 66.6666666667%; }
-.nine.columns   { width: 75%;            }
-.ten.columns    { width: 83.3333333333%; }
-.eleven.columns { width: 91.6666666666%; }
-.twelve.columns { width: 100%; }
 
 
-a {
-    text-decoration:none;
+.section-heading {
+    text-align: center;
 }
-h2.section {
-    letter-spacing: 3px;
-    font-size: 3rem;
-    color: #777;
-    padding: 50px 0px;
-    font-weight: 100;
-    text-align:center;
-}
-.row
-{
-    display: table;
-}
-
 /*Stolen code VVV*/
 
 html,
