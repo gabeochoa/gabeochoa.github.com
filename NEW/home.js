@@ -14,7 +14,7 @@ class Hero extends React.Component {
 }
 
 class Page extends React.Component{
-    render(){
+    render() {
         return(
         <Hero backgroundImage="img/hero-bg-01.jpg">
             <h1 className="display-4"> Declarative Landing Pages for React.js </h1>
