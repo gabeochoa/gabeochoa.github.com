@@ -10,11 +10,11 @@ body{
 svg path{
   stroke: #000;
   stroke-width: 1px;
-  stroke: rgba(0,0,0,1);
+  /*stroke: rgba(0,0,0,1);*/
 }
 svg{
   border: 1px solid #DED8BF;
-  background-color: #f4f4d9;
+  background-color: #000000 ;
   width: 1200px;
   height: 472px;
 }
@@ -85,11 +85,16 @@ li{
       }).surfaceColor(function(d){
         var c=d3.hsl((d+100), 0.6, 0.5).rgb();
         //var c = d3.hsl("steelblue"); 
-        var strr = "rgba("+parseInt(c.r)+","+parseInt(c.g)+","+parseInt(c.b)+", .1)";
-        console.log(strr);
+        var strr = "rgba("+parseInt(c.r)+","+parseInt(c.g)+","+parseInt(c.b)+", 0)";
+        //console.log(strr);
+        return strr;
+      }).strokeColor(function(d){
+        var c=d3.hsl((d+100), 0.6, 0.5).rgb();
+        //var c = d3.hsl("steelblue"); 
+        var strr = "rgba("+parseInt(c.r)+","+parseInt(c.g)+","+parseInt(c.b)+", 1)";
+        //console.log(strr);
         return strr;
       });
-
   svg.on("mousedown",function(){
     drag=[d3.mouse(this),yaw,pitch];
   }).on("mouseup",function(){

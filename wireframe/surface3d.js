@@ -68,10 +68,11 @@
       d0.sort(function(a, b){return b.depth-a.depth});
       var dr=node.selectAll('path').data(d0);
       dr.enter().append("path");
+      
       if(trans){
-        dr=dr.transition().delay(trans.delay()).duration(trans.duration());
+       // dr=dr.transition().delay(trans.delay()).duration(trans.duration());
       }
-      dr.attr("d",function(d){return d.path;});
+      dr.attr("d",function(d){return d.path;}).attr("stroke-width", 2).style("stroke", function(d) {return strokeColorFunc(d.data)});
       if(colorFunction){
         dr.attr("fill",function(d){return colorFunction(d.data)});
       }
@@ -103,6 +104,14 @@
       timer=setTimeout(renderSurface);
       return this;
     };
+    this.strokeColor = function(callback)
+    {
+      strokeColorFunc=callback;
+      if(timer) clearTimeout(timer);
+      timer=setTimeout(renderSurface);
+      return this;
+
+    }
     this.surfaceHeight=function(callback){
       heightFunction=callback;
       if(timer) clearTimeout(timer);
@@ -115,6 +124,7 @@
       heightFunction=null;
       transition.surfaceHeight=this.surfaceHeight;
       transition.surfaceColor=this.surfaceColor;
+      transition.strokeColor = this.strokeColor
       trans=transition;
       return transition;
     };
@@ -130,6 +140,7 @@
     var surface=this.node().__surface__;
     this.turntable=surface.setTurtable;
     this.surfaceColor=surface.surfaceColor;
+    this.strokeColor=surface.strokeColor;
     this.surfaceHeight=surface.surfaceHeight;
     this.zoom=surface.setZoom;
     surface.setHeight(height);
