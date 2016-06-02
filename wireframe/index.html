@@ -10,7 +10,7 @@ body{
 svg path{
   stroke: #000;
   stroke-width: 1px;
-  stroke: rgba(0,0,0,0.2);
+  stroke: rgba(0,0,0,1);
 }
 svg{
   border: 1px solid #DED8BF;
@@ -49,6 +49,7 @@ li{
 </head>
 <body>
   <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="https://d3js.org/d3-color.v0.4.min.js"></script>
   <script src="surface3d.js"></script>
   <script src="noise.js"></script>
   <script src="noisegenerator.js"></script>
@@ -83,7 +84,10 @@ li{
         return d;
       }).surfaceColor(function(d){
         var c=d3.hsl((d+100), 0.6, 0.5).rgb();
-        return "rgb("+parseInt(c.r)+","+parseInt(c.g)+","+parseInt(c.b)+")";
+        //var c = d3.hsl("steelblue"); 
+        var strr = "rgba("+parseInt(c.r)+","+parseInt(c.g)+","+parseInt(c.b)+", .1)";
+        console.log(strr);
+        return strr;
       });
 
   svg.on("mousedown",function(){
