@@ -11,17 +11,20 @@ class Hero extends React.Component {
             <div>
         );
     }
-}
+};
 
 class Page extends React.Component {
         
-    return (
+    render() {
+
+        return (
         <Hero backgroundImage="img/hero-bg-01.jpg">
                     <h1 className="display-4"> Declarative Landing Pages for React.js </h1>
                     <p className="lead">Build a beautiful landing page in less than an hour.
                     No more redundant code. Easily extensible.</p>
         </Hero>
-    );
+        );
+    }
 };
 
 ReactDOM.render(<Page/>, document.getElementById("container"));
