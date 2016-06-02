@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 class Hero extends React.Component {
 
-  static propTypes = {
+  static propTypes{
     backgroundImage: React.PropTypes.string,
   };
 
