@@ -15,8 +15,8 @@ svg path{
 svg{
   border: 1px solid #DED8BF;
   background-color: #f4f4d9;
-  width: 700px;
-  height: 400px;
+  width: 1200px;
+  height: 472px;
 }
 h1{
   font-weight: normal;
@@ -48,8 +48,6 @@ li{
 </style>
 </head>
 <body>
-  <h1>D3.js Surface Plots</h1>
-  <p>Drag graph to change view</p>
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <script src="surface3d.js"></script>
   <script src="noise.js"></script>
@@ -57,39 +55,24 @@ li{
   <script>
   var yaw=0.5,pitch=0.5, width=700, height=400, drag=false;
 
+  //width, height, seed, scale, octaves, persistance, lacunarity, offset)
+  heightmap = Generate(20, 20, 0, 10, 1, .5, 2, [0,0]);
+  scale = 100;
   function dataFromFormular(func){
     var output=[];
     for(var x=0;x<20;x++){
       var f0=[];            
       output.push(f0);
       for(var y=0;y<20;y++){
-          f0.push(func(x,y));
+          f0.push(1-heightmap[x][y] * scale);
       }
     }
     return output;
   }
-  //width, height, seed, scale, octaves, persistance, lacunarity, offset)
-  heightmap = Generate(20, 20, 0, 10, 1, .5, 2, [0,0]);
   var surfaces=[
     {
       name: 'Dataset 1',
-      data: dataFromFormular(function(x,y){
-          var ret =1 - heightmap[x][y]*100
-          console.log(ret);
-          return ret;
-        })
-    },
-    {
-      name: 'Dataset 2',
-      data: dataFromFormular(function(x,y){
-          return Math.cos(x/15*Math.PI)*Math.cos(y/15*Math.PI)*60+Math.cos(x/8*Math.PI)*Math.cos(y/10*Math.PI)*40;
-        })
-    },
-    {
-      name: 'Dataset 3',
-      data: dataFromFormular(function(x,y){
-          return -(Math.cos(Math.sqrt(x*x+y*y)/6*Math.PI)+1)*300/(Math.pow(x*x+y*y+1,0.3)+1)+50;
-        })
+      data: dataFromFormular()
     }
   ];
   var selected=surfaces[0];
