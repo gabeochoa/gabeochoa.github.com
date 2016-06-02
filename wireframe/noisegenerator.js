@@ -33,8 +33,8 @@ function Generate(width, height, seed, scale, octaves, persistance, lacunarity, 
         frequency = 1;
 
         for (i = 0; i < octaves; i++) {
-            offsetX = generateRandom(-100000, 100000) + offset[0];
-            offsetY = generateRandom(-100000, 100000) - offset[1];
+            offsetX = generateRandom(-1000000, 1000000) + offset[0];
+            offsetY = generateRandom(-1000000, 1000000) - offset[1];
             octaveOffsets [i] = [offsetX, offsetY];
 
             maxPossibleHeight += amplitude;
@@ -84,7 +84,7 @@ function Generate(width, height, seed, scale, octaves, persistance, lacunarity, 
             for (x = 0; x < width; x++) 
             {
                 normalizedHeight = (noiseMap[x][y] + 1) / (maxPossibleHeight/0.9);
-                noiseMap [x][y] = myclamp(normalizedHeight,0, Number.MaxValue);
+                noiseMap [x][y] = myclamp(normalizedHeight,Number.MinValue/scale, Number.MaxValue);
             }
         }
 
