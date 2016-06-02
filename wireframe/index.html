@@ -68,8 +68,11 @@ li{
   <script src="noisegenerator.js"></script>
   <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
   <script>
+  var zoom = d3.behavior.zoom()
+    .scaleExtent([.01, 10])
+    .on("zoom", zoomed);
 
-  var yaw=0.5,pitch=0.5, width=$(window).width()+100, height=$(window).height()+100, drag=false;
+  var yaw=15,pitch=0.75, width=$(window).width()+100, height=$(window).height()+100, drag=false;
 
   //width, height, seed, scale, octaves, persistance, lacunarity, offset)
   seed = 0;
@@ -85,22 +88,29 @@ li{
   minHeight = -Number.MinValue;
   heightmap = Generate(caluW, caluH, seed, scale, octaves, persistance, lacunarity, [0,0], minHeight, maxHeight);
   scale = 100
+
   function dataFromFormular(func){
     var output=[];
     for(var x=0;x<caluW;x++){
       var f0=[];            
       output.push(f0);
       for(var y=0;y<caluH;y++){
-          f0.push((1-heightmap[x][y]) * scale);
+          x = x % caluW;
+          y = y % caluH;
+          out = 0;
+          if(heightmap === undefined || heightmap[x] === undefined)
+            out = 0;
+          else
+            out = heightmap[x][y]; 
+          f0.push((1-out) * scale);
       }
     }
     return output;
   }
-
   var svg=d3.select('body')
           .append('svg')
             .attr('height',height)
-            .attr('width',width);
+            .attr('width',width).call(zoom);
 
   var group = svg.append("g");
 
@@ -170,6 +180,9 @@ li{
 
 // });
   
-//   </script>
+function zoomed() {
+  group.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+}
+  </script>
 </body>
 </html>
