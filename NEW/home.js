@@ -1,6 +1,5 @@
-"use strict";
+class Hero extends ReactDOM.Component {
 
-var Hero = React.createClass({
     render() {
         const _style = {};
         if (this.props.backgroundImage) {
@@ -12,19 +11,23 @@ var Hero = React.createClass({
             <div>
         );
     }
-});
+};
 
-var Page = React.createClass({
+class Page extends ReactDOM.Component {
         
     render() {
-        return (
+        return <h1>hello</h1>;
+    }
+};
+
+ReactDOM.render(<Page/>, document.getElementById("container"));
+
+/*
+return (
         <Hero backgroundImage="img/hero-bg-01.jpg">
             <h1 className="display-4"> Declarative Landing Pages for React.js </h1>
             <p className="lead">Build a beautiful landing page in less than an hour.
                    No more redundant code. Easily extensible.</p>
         </Hero>
         );
-    }
-});
-
-ReactDOM.render(React.createElement(Page), document.getElementById("container"));
+        */
