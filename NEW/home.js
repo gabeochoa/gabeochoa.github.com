@@ -1,6 +1,3 @@
-import React from "react";
-import { Link } from "react-router";
-
 class Hero extends React.Component {
 
   render() {
