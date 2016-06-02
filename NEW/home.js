@@ -15,9 +15,9 @@ class Hero extends ReactDOM.Component {
     }
 };
 
-var Page = ReactDOM.createClass({
+var Page = React.createClass({
         
-    render: function() {
+    render() {
         return (
         <Hero backgroundImage="img/hero-bg-01.jpg">
             <h1 className="display-4"> Declarative Landing Pages for React.js </h1>
