@@ -69,16 +69,7 @@ li{
     }
     return output;
   }
-  var surfaces=[
-    {
-      name: 'Dataset 1',
-      data: dataFromFormular()
-    }
-  ];
-  var selected=surfaces[0];
 
-  var ul=d3.select('body')
-           .append('ul');
   var svg=d3.select('body')
           .append('svg')
             .attr('height',height)
@@ -86,7 +77,7 @@ li{
 
   var group = svg.append("g");
 
-  var md=group.data([surfaces[0].data])
+  var md=group.data([dataFromFormular()])
     .surface3D(width,height)
       .surfaceHeight(function(d){ 
         return d;
@@ -94,22 +85,6 @@ li{
         var c=d3.hsl((d+100), 0.6, 0.5).rgb();
         return "rgb("+parseInt(c.r)+","+parseInt(c.g)+","+parseInt(c.b)+")";
       });
-
-  ul.selectAll('li')
-    .data(surfaces)
-      .enter().append('li')
-        .html(function(d){
-          return d.name
-        }).on('mousedown',function(){
-          md.data([d3.select(this).datum().data]).surface3D()
-            .transition().duration(500)
-            .surfaceHeight(function(d){
-              return d;
-            }).surfaceColor(function(d){
-              var c=d3.hsl((d+100), 0.6, 0.5).rgb();
-              return "rgb("+parseInt(c.r)+","+parseInt(c.g)+","+parseInt(c.b)+")";
-            });
-        });
 
   svg.on("mousedown",function(){
     drag=[d3.mouse(this),yaw,pitch];
