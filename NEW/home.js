@@ -15,7 +15,7 @@ class Hero extends ReactDOM.Component {
     }
 };
 
-class Page extends ReactDOM.Component {
+var Page = ReactDOM.createClass({
         
     render: function() {
         return (
@@ -26,6 +26,6 @@ class Page extends ReactDOM.Component {
         </Hero>
         );
     }
-};
+});
 
-ReactDOM.render(React.createElement(Page), mountNode);//, document.getElementById("container"));
+ReactDOM.render(React.createElement(Page), document.getElementById("container"));
