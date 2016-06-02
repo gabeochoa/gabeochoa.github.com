@@ -1,3 +1,5 @@
+"use strict";
+
 class Hero extends ReactDOM.Component {
 
     render() {
@@ -26,4 +28,4 @@ class Page extends ReactDOM.Component {
     }
 };
 
-ReactDOM.render(<Page/>, document.getElementById("container"));
+ReactDOM.render(React.createElement(Page), mountNode);//, document.getElementById("container"));
