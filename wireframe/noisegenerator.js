@@ -22,7 +22,7 @@ function myclamp(v, a,b)
     return v;
 }
 
-function Generate(width, height, seed, scale, octaves, persistance, lacunarity, offset)
+function Generate(width, height, seed, scale, octaves, persistance, lacunarity, offset, minHeight, maxHeight)
 {
 //normalizemode = local;
 // float persistance, float lacunarity, Vector2 offset, NormalizeMode normalizeMode) {
@@ -84,7 +84,7 @@ function Generate(width, height, seed, scale, octaves, persistance, lacunarity, 
             for (x = 0; x < width; x++) 
             {
                 normalizedHeight = (noiseMap[x][y] + 1) / (maxPossibleHeight/0.9);
-                noiseMap [x][y] = myclamp(normalizedHeight,Number.MinValue/scale, Number.MaxValue);
+                noiseMap [x][y] = myclamp(normalizedHeight,minHeight, maxHeight);
             }
         }
 
