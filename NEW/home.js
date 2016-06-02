@@ -27,4 +27,4 @@ class Page extends React.Component{
     }
 };
 
-React.render(<Page/>, document.getElementById("container"));
+ReactDOM.render(<Page/>, document.getElementById("container"));
