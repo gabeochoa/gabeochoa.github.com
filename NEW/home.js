@@ -1,8 +1,7 @@
 "use strict";
 
-class Hero extends ReactDOM.Component {
-
-    render: function() {
+var Hero = React.createClass({
+    render() {
         const _style = {};
         if (this.props.backgroundImage) {
             _style.backgroundImage = 'url(${this.props.backgroundImage})';
