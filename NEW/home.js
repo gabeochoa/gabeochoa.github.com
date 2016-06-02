@@ -7,10 +7,8 @@ class Hero extends React.Component {
     }
     return (
       <div {... this.props} style={_style}>
-        <Container>
-          { this.props.children }
-        </Container>
-      </div>
+        { this.props.children }
+      <div>
     );
   }
 }
