@@ -48,23 +48,45 @@ li{
 </style>
 </head>
 <body>
+  <!--
+  <form>
+      <fieldset>
+        <legend>Parameters</legend>
+        <p>
+          <label>Text box</label>
+          <input type = "text" id = "myText"
+                 value = "text here" />
+        </p>
+      </fieldset>
+      <div id="svgdataurl"></div>
+      <div id="pngdataurl"></div>
+    </form>
+    <button id="save">Save</button>
+    <canvas></canvas>
+    !-->
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <script src="https://d3js.org/d3-color.v0.4.min.js"></script>
   <script src="surface3d.js"></script>
   <script src="noise.js"></script>
   <script src="noisegenerator.js"></script>
+  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
   <script>
+
   var yaw=0.5,pitch=0.5, width=1200, height=720, drag=false;
 
   //width, height, seed, scale, octaves, persistance, lacunarity, offset)
-  heightmap = Generate(20, 20, 0, 10, 1, .5, 2, [0,0]);
+  persistance = 0.5;//lower means more points?
+  lacunarity = 2;
+  caluW = width/10
+  caluH = height/10
+  heightmap = Generate(caluW, caluH, 0, 3, 8, persistance, lacunarity, [0,0]);
   scale = 100;
   function dataFromFormular(func){
     var output=[];
-    for(var x=0;x<20;x++){
+    for(var x=0;x<caluW;x++){
       var f0=[];            
       output.push(f0);
-      for(var y=0;y<20;y++){
+      for(var y=0;y<caluH;y++){
           f0.push(1-heightmap[x][y] * scale);
       }
     }
@@ -108,7 +130,46 @@ li{
       md.turntable(yaw,pitch);
     }
   });
+
+//   jQuery.fn.outerHTML = function() {
+//     return jQuery('<div />').append(this.eq(0).clone()).html();
+// }
+    
+//   d3.select("#save").on("click", function(){
+//   var html = d3.select("svg")
+//         .attr("version", 1.1)
+//         .attr("xmlns", "http://www.w3.org/2000/svg")
+//         .node().parentNode.innerHTML;
+
+//   //console.log(html);
+//   var imgsrc = 'data:image/svg+xml;base64,'+ btoa(html);
+//   var img = '<img src="'+imgsrc+'"/>'; 
+//   d3.select("#svgdataurl").html(img);
+
+
+//   var canvas = document.querySelector("canvas"),
+//     context = canvas.getContext("2D");
+
+//   var image = new Image;
+//   image.onload = function() {
+//     console.log('sdlaskjds');
+//     context.drawImage(image, 0, 0);
+
+//     var canvasdata = canvas.toDataURL("image/png");
+
+//     var pngimg = '<img src="'+canvasdata+'">'; 
+//       d3.select("#pngdataurl").html(pngimg);
+
+//     var a = document.createElement("a");
+//     a.download = "sample.png";
+//     a.href = canvasdata;
+//     a.click();
+//   };
+//   image.src = imgsrc;
+//   d3.select("#svgdataurl").html(image);
+
+// });
   
-  </script>
+//   </script>
 </body>
 </html>
