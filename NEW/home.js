@@ -12,7 +12,7 @@ var Hero = React.createClass({
             <div>
         );
     }
-};
+});
 
 var Page = React.createClass({
         
