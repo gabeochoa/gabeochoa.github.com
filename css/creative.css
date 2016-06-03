@@ -3,7 +3,6 @@
 */
 
 
-
 .section-heading {
     text-align: center;
 }
@@ -31,6 +30,7 @@ hr.light {
 }
 
 a {
+    text-decoration : none;
     color: #040202;/*#f05f40;*/
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
