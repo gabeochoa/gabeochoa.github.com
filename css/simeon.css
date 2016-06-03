@@ -113,3 +113,32 @@
 #contact {
 	text-align: center;
 }
+
+
+.bg-hero { 
+	background: url(../img/hero.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.bg-car {
+	background: url(../img/p-car.png);
+	background-size: cover;
+	background-position: bottom center;
+}
+.bg-camera {
+	background: url(../img/p-camera.png);
+	background-size: cover;
+	background-position: center;
+}
+.bg-uberq {
+	background: url(../img/p-uberq.png);
+	background-size: cover;
+	background-position: center;
+}
+.bg-moonbeam {
+	background: url(../img/p-moonbeam.png);
+	background-size: cover;
+	background-position: center;
+}
+
+
