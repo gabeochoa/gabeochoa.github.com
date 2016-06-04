@@ -21,26 +21,6 @@ data =
         "link": "https://github.com/gabeochoa/HistoryGenie",
         "descr":""
     },
-    {
-        "name": "Empty",
-        "link": "https://github.com/gabeochoa/",
-        "descr":""
-    },
-    {
-        "name": "Empty",
-        "link": "https://github.com/gabeochoa/",
-        "descr":""
-    },
-    {
-        "name": "Empty",
-        "link": "https://github.com/gabeochoa/",
-        "descr":""
-    },
-    {
-        "name": "Empty",
-        "link": "https://github.com/gabeochoa/",
-        "descr":""
-    },
 ];
 rowswanted = 4;
 
