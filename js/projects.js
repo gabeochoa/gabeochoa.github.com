@@ -22,7 +22,7 @@ data =
         "descr":""
     },
 ];
-rowswanted = 4;
+rowswanted = 2;
 
 
 //called as:
