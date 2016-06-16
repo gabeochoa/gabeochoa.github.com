@@ -8,8 +8,8 @@
         <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /> 
         <media:thumbnail url="http://i.imgur.com/g0NFdn3.jpg" /> 
         <media:keywords>corecast,binghamton,core,special,interest,housing</media:keywords>
-        <media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Games &amp; Hobbies/Video Games</media:category> 
-        <media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Education/Higher Education</media:category> 
+        <media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Games &amp; Hobbies/Hobbies</media:category> 
+        <media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Technology/IT News</media:category> 
         <itunes:author>CoRE</itunes:author> 
         <itunes:explicit>no</itunes:explicit> 
         <itunes:image href="http://i.imgur.com/g0NFdn3.jpg" /> 
@@ -17,10 +17,10 @@
         <itunes:subtitle>A Podcast where Taylor and I (Gabe) talk about whatever comes to mind, with whomever we can pull away.</itunes:subtitle> 
         <itunes:summary>A Podcast where Taylor and I (Gabe) talk about whatever comes to mind, with whomever we can pull away.</itunes:summary> 
         <itunes:category text="Games &amp; Hobbies"> 
-            <itunes:category text="Video Games" /> 
+            <itunes:category text="Hobbies" /> 
         </itunes:category> 
-        <itunes:category text="Education"> 
-            <itunes:category text="Higher Education" /> 
+        <itunes:category text="Technology"> 
+            <itunes:category text="IT News" /> 
         </itunes:category> 
 
         <item>
