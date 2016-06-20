@@ -11,6 +11,8 @@
         <media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Games &amp; Hobbies/Hobbies</media:category> 
         <media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Technology/IT News</media:category> 
         <itunes:author>CoRE</itunes:author> 
+        <googleplay:author>CoRE</googleplay:author> 
+        <googleplay:email>gabe1118@yahoo.com</googleplay:email> 
         <itunes:explicit>no</itunes:explicit> 
         <itunes:image href="http://i.imgur.com/g0NFdn3.jpg" /> 
         <itunes:keywords>corecast,binghamton,core,special,interest,housing</itunes:keywords>
