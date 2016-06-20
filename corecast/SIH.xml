@@ -30,7 +30,7 @@
         <itunes:category text="Technology"> 
             <itunes:category text="IT News" /> 
         </itunes:category> 
-        <link href="http://core.binghamton.edu/~corecast/">
+        <link>http://core.binghamton.edu/~corecast/"</link>
 
         <item>
             <title>0xCC - Peer Pressure</title>
