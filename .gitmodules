@@ -1,0 +1,3 @@
+[submodule "employment-compression"]
+	path = employment-compression
+	url = https://github.com/gabeochoa/employment-compression
