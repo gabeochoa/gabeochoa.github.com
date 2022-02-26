@@ -112,9 +112,14 @@
 
         update_fire(x, y) {
           this.lifetime--;
-          // if (grid.empty(x, y)) {
-          //   grid.place(x, y, Material.Fire);
-          // }
+          if(this.lifetime > 0.9 * LIFETIME){ return ;}
+          for (var i = 0; i < 8; i++) {
+            if(grid.matching(x + dx[i], y + dy[i], Material.Wood)){
+              if(Math.random() > 0.9){
+                grid.place(x + dx[i], y + dy[i], Material.Fire);
+              }
+            }
+          }
         }
 
         update(x, y) {
