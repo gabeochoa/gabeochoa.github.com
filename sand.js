@@ -293,15 +293,11 @@ output.addEventListener('mouseup', function(e) {
 
 window.addEventListener("keydown", 
     (event) =>  {
-        var keyMap = {
-          68: 'D',
-          65: 'A',
-          87: 'W',
-          83: 'S'
-        }
-        var key = keyMap[event.keyCode]
-        if(key == 'S') setSelectedMaterial(Material.Sand);
-        if(key == 'W') setSelectedMaterial(Material.Water);
+        let key = event.key;
+        if(key == 's') setSelectedMaterial(Material.Sand);
+        if(key == 'w') setSelectedMaterial(Material.Water);
+        if(key == 'e') setSelectedMaterial(Material.Empty);
+        if(key == 'b') setSelectedMaterial(Material.BlackHole);
     }
     , false)
 
