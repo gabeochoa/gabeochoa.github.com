@@ -30,7 +30,8 @@
         BlackHole: "BlackHole",
         Wood: "Wood",
         Cloud: "Cloud",
-        Fire: "Fire"
+        Fire: "Fire",
+        Smoke: "Smoke",
       };
 
       LIFETIME = 100;
@@ -110,15 +111,60 @@
           }
         }
 
+        place_if_empty(x, y, m){
+          if(grid.empty(x, y)){
+            grid.place(x, y, m)
+            return true;
+          }
+          return false;
+        }
+
         update_fire(x, y) {
           this.lifetime--;
+
+          for (var i = 0; i < 8; i++) {
+            if(this.place_if_empty(x+dx[i], y+dy[i], Material.Smoke)){
+              break;
+            }
+          }
+
+          // only burn if not our first update 
           if(this.lifetime > 0.9 * LIFETIME){ return ;}
+
           for (var i = 0; i < 8; i++) {
             if(grid.matching(x + dx[i], y + dy[i], Material.Wood)){
               if(Math.random() > 0.9){
                 grid.place(x + dx[i], y + dy[i], Material.Fire);
               }
             }
+          }
+        }
+
+        update_smoke(x, y){
+          this.lifetime --;
+              if (grid.empty(x, y - 1)) {
+                grid.swap(x, y, x, y - 1);
+              } else if (grid.empty(x - 1, y - 1)) {
+                grid.swap(x, y, x - 1, y - 1);
+              } else if (grid.empty(x + 1, y - 1)) {
+                grid.swap(x, y, x + 1, y - 1);
+          } else {
+            if (this.heading == 0) {
+              let spread = grid_w;
+              let dir = Math.random() < 0.5;
+              this.heading = dir ? spread : -spread;
+            }
+            this.heading--;
+
+            // Check the tile in the direction we are heading
+            let step = Math.sign(this.heading);
+            // We hit a non empty tile, stop moving
+            if (!grid.empty(x + step, y)) {
+              this.heading = 0;
+              return;
+            }
+            // its empty move there
+            grid.swap(x, y, x + step, y);
           }
         }
 
@@ -180,6 +226,9 @@
             case Material.Fire:
               this.update_fire(x, y);
               break;
+            case Material.Smoke:
+              this.update_smoke(x, y);
+              break;
             case Material.Empty:
             default:
               break;
@@ -203,6 +252,8 @@
               return [255, 250, 250];
             case Material.Fire:
               return [255, 0, 0];
+            case Material.Smoke:
+              return [55, 55, 55];
           }
         }
       }
