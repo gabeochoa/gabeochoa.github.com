@@ -18,7 +18,7 @@ var Material = {
 
 class Tile {
     constructor(){
-        this.material = Material.Sand;
+        this.material = Material.Empty;
         this.lifetime = 1000;
         this.updated = false;
     }
