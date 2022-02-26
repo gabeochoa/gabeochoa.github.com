@@ -251,9 +251,12 @@ function loop(timestamp) {
 
 scale = 5;//2;
 
+iw = window.innerWidth - 50;
+ih = window.innerHeight - 50;
+
 canvas = document.getElementById("src");
-canvas.width = window.innerWidth / scale;
-canvas.height = window.innerHeight / scale ;
+canvas.width = iw / scale;
+canvas.height = ih / scale ;
 ctx = canvas.getContext('2d');
 canvas.style.display = 'none';
 
@@ -261,8 +264,8 @@ grid_w = canvas.width;
 grid_h = canvas.height;
 
 output = document.getElementById("dst");
-output.width = window.innerWidth;
-output.height = window.innerHeight;
+output.width = iw;
+output.height = ih;
 outctx = output.getContext('2d');
 outctx.imageSmoothingEnabled = false;
 outctx.scale(scale, scale);
