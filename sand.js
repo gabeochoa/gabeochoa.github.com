@@ -13,6 +13,7 @@ var Material = {
     Sand: 'Sand',
     Water: 'Water',
     BlackHole : 'BlackHole',
+    Wood: 'Wood',
 };
 
 class Tile {
@@ -103,6 +104,7 @@ class Tile {
                 }
                 break;
             case Material.Empty:
+            default:
                 break;
         }
     }
@@ -118,6 +120,8 @@ class Tile {
                 return [10, 10, 250];
             case Material.BlackHole:
                 return [100, 10, 200];
+            case Material.Wood:
+                return [102, 50, 0];
         }
     }
 }
@@ -199,7 +203,7 @@ function update(progress) {
 
 
     if(mouse){
-        if(scale > 5){
+        if(scale <= 5){
             for(var i=0; i<9; i++){
                 grid.place(mp[0] + dx[i], mp[1] + dy[i], selectedMaterial);
             }
@@ -245,7 +249,7 @@ function loop(timestamp) {
 
 }
 
-scale = 5;
+scale = 5;//2;
 
 canvas = document.getElementById("src");
 canvas.width = window.innerWidth / scale;
@@ -298,6 +302,7 @@ window.addEventListener("keydown",
         if(key == 'w') setSelectedMaterial(Material.Water);
         if(key == 'e') setSelectedMaterial(Material.Empty);
         if(key == 'b') setSelectedMaterial(Material.BlackHole);
+        if(key == 't') setSelectedMaterial(Material.Wood);
     }
     , false)
 
