@@ -1,5 +1,4 @@
 
-
 function clone(obj) {
     if (null == obj || "object" != typeof obj) return obj;
     var copy = new obj.constructor();
@@ -13,6 +12,7 @@ var Material = {
     Empty: 'Empty',
     Sand: 'Sand',
     Water: 'Water',
+    BlackHole : 'BlackHole',
 };
 
 class Tile {
@@ -26,6 +26,15 @@ class Tile {
         if(this.updated) return;
         this.updated = true;
         switch(this.material){
+            case Material.BlackHole:
+                {
+                    for(var i=0; i < 8; i++){
+                        if(!grid.empty(x + dx[i], y+dy[i])){
+                            grid.clear(x+dx[i], y+dy[i]);
+                        }
+                    }
+                }
+                break;
             case Material.Sand:
                 {
                     if(grid.empty(x, y+1)){
@@ -50,7 +59,7 @@ class Tile {
                 break;
             case Material.Water:
                 {
-                    if(grid.empty(x, y+1)){
+                   if(grid.empty(x, y+1)){
                         grid.swap(x, y, x, y+1);
                     }
                     else if(grid.empty(x-1, y+1)){
@@ -65,7 +74,12 @@ class Tile {
                         let d = 0;
                         if(dir){
                             for(let i = 1; i<spread; i++){
+                                // Something in our way
                                 if(!grid.empty(x + i, y)){
+                                    break;
+                                }
+                                // Can fall now
+                                if(grid.empty(x + i, y+1)){
                                     break;
                                 }
                                 d = x+i;
@@ -74,6 +88,9 @@ class Tile {
                         else{
                             for(let i = 1; i<spread; i++){
                                 if(!grid.empty(x - i, y)){
+                                    break;
+                                }
+                                if(grid.empty(x - i, y+1)){
                                     break;
                                 }
                                 d = x-i;
@@ -99,6 +116,8 @@ class Tile {
                 return [189, 183, 107];
             case Material.Water:
                 return [10, 10, 250];
+            case Material.BlackHole:
+                return [100, 10, 200];
         }
     }
 }
@@ -133,6 +152,11 @@ class Grid {
         this.data[this.xy(x, y)].material = p;
     }
 
+    clear(x, y){
+        if(!this.in(x, y)) return;
+        this.at(x, y).material = Material.Empty;
+    }
+
     empty(x, y){
         if(!this.in(x, y)) return false;
         return this.at(x, y).material == Material.Empty;
@@ -150,6 +174,11 @@ class Grid {
         this.data[this.xy(a, b)] = clone(me);
     }
 
+}
+
+function setSelectedMaterial(mat){
+    selectedMaterial = mat;
+    dropdown.selectedIndex = Object.keys(Material).indexOf(mat);
 }
 
 function update(progress) {
@@ -170,8 +199,13 @@ function update(progress) {
 
 
     if(mouse){
-        for(var i=0; i<9; i++){
-            grid.place(mp[0] + dx[i], mp[1] + dy[i], selectedMaterial);
+        if(scale > 5){
+            for(var i=0; i<9; i++){
+                grid.place(mp[0] + dx[i], mp[1] + dy[i], selectedMaterial);
+            }
+        }
+        else{
+            grid.place(mp[0], mp[1], selectedMaterial);
         }
     }
 
@@ -191,6 +225,9 @@ function draw() {
     }
     ctx.clearRect(0, 0, grid_w, grid_h);
     ctx.putImageData(image, 0, 0);
+
+    // 
+    outctx.drawImage(canvas, 0, 0);
 }
 
 var lastRender = 0
@@ -208,12 +245,25 @@ function loop(timestamp) {
 
 }
 
-canvas = document.getElementById("can");
-canvas.width = 200;//window.innerWidth ;
-canvas.height = 200;// window.innerHeight ;
+scale = 5;
+
+canvas = document.getElementById("src");
+canvas.width = window.innerWidth / scale;
+canvas.height = window.innerHeight / scale ;
+ctx = canvas.getContext('2d');
+canvas.style.display = 'none';
+
 grid_w = canvas.width;
 grid_h = canvas.height;
-ctx = canvas.getContext('2d');
+
+output = document.getElementById("dst");
+output.width = window.innerWidth;
+output.height = window.innerHeight;
+outctx = output.getContext('2d');
+outctx.imageSmoothingEnabled = false;
+outctx.scale(scale, scale);
+
+
 frame = 0
 grid = new Grid(grid_w, grid_h);
 
@@ -225,46 +275,38 @@ const dy = [-1, -1, -1, 0, 0, 1, 1, 1];
 
 let mouse = false;
 let mp = [0, 0];
-canvas.addEventListener('mousedown', function(e) {
-    const rect = canvas.getBoundingClientRect()
-    const x = event.clientX - rect.left
-    const y = event.clientY - rect.top
+output.addEventListener('mousedown', function(e) {
     mouse = true;
 })
 
-canvas.addEventListener('mousemove', function(e) {
-    const rect = canvas.getBoundingClientRect()
+output.addEventListener('mousemove', function(e) {
+    const rect = output.getBoundingClientRect()
     const x = event.clientX - rect.left
     const y = event.clientY - rect.top
-    mp = [Math.floor(x),Math.floor(y)];
-
+    mp = [Math.floor(x / scale),Math.floor(y/ scale)];
 })
 
-canvas.addEventListener('mouseup', function(e) {
+output.addEventListener('mouseup', function(e) {
     mouse = false;
 })
 
-function setSelectedMaterial(mat){
-    selectedMaterial = mat;
-    dropdown.selectedIndex = Object.keys(Material).indexOf(mat);
-}
 
-function keydown(event) {
-    var keyMap = {
-      68: 'D',
-      65: 'A',
-      87: 'W',
-      83: 'S'
+window.addEventListener("keydown", 
+    (event) =>  {
+        var keyMap = {
+          68: 'D',
+          65: 'A',
+          87: 'W',
+          83: 'S'
+        }
+        var key = keyMap[event.keyCode]
+        if(key == 'S') setSelectedMaterial(Material.Sand);
+        if(key == 'W') setSelectedMaterial(Material.Water);
     }
-    var key = keyMap[event.keyCode]
-    if(key == 'S') setSelectedMaterial(Material.Sand);
-    if(key == 'W') setSelectedMaterial(Material.Water);
-}
-window.addEventListener("keydown", keydown, false)
+    , false)
 
 
 dropdown = document.getElementById("tool");
-
 {
     const types = Object.keys(Material);
     for(type of types){
