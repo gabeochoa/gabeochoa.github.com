@@ -18,10 +18,25 @@ var Material = {
 
 class Tile {
     constructor(){
-        this.material = Material.Empty;
+        this.material = Material.Sand;
         this.lifetime = 1000;
         this.updated = false;
     }
+
+    toward(x, y, a, b){
+        // translate a,b to center
+        let nx = x - a;
+        let ny = y - b;
+
+        if(nx < 0) nx+=1;
+        else nx -= 1;
+
+        if(ny < 0) nx+=1
+        else ny += 1;
+
+        return [nx+a, ny+b];
+    }
+
 
     update(x, y){
         if(this.updated) return;
@@ -29,9 +44,36 @@ class Tile {
         switch(this.material){
             case Material.BlackHole:
                 {
-                    for(var i=0; i < 8; i++){
-                        if(!grid.empty(x + dx[i], y+dy[i])){
-                            grid.clear(x+dx[i], y+dy[i]);
+
+                    let n = [];
+                    for(var i =0; i<8;i++) {
+                        n.push([x+dx[i], y+dy[i]]);
+                        grid.clear(x+dx[i], y+dy[i]);
+                    }
+
+                    let pullD = 4;
+                    let top = y - pullD
+                    let bottom = y + pullD
+                    let moved = [];
+                    for (var j = top; j <= bottom; j++) {
+                        let yd  = j - y;
+                        let xd  = Math.sqrt(pullD * pullD - yd * yd);
+                        let left = Math.ceil(x - xd);
+                        let right = Math.floor(x + xd);
+
+                        for (var i = left; i <= right; i++) {
+                            if(!grid.empty(i, j) && !grid.matching(i, j, Material.BlackHole)){
+                                if(
+                                    n.some(e => e[0] == i && e[1] == j) || 
+                                    moved.some(e => e[0] == i && e[1] == j) ){ 
+                                    continue 
+                                }
+                                else{
+                                    let newpos = this.toward(i, j, x, y);
+                                    moved.push(newpos);
+                                    grid.swap(i, j, ...newpos);
+                                }
+                            }
                         }
                     }
                 }
@@ -126,6 +168,24 @@ class Tile {
     }
 }
 
+function circle(x, y, r, m) {
+    let top = y - r
+    let bottom = y + r
+    let moved = [];
+    for (var j = top; j <= bottom; j++) {
+        let yd  = j - y;
+        let xd  = Math.sqrt(r * r - yd * yd);
+        let left = Math.ceil(x - xd);
+        let right = Math.floor(x + xd);
+
+        for (var i = left; i <= right; i++) {
+            grid.place(i, j, m);
+        }
+    }
+
+}
+
+
 class Grid {
     constructor(w, h){
         this.w = w;
@@ -172,6 +232,8 @@ class Grid {
     }
 
     swap(x, y, a, b){
+        if(!this.in(x, y)) return false;
+        if(!this.in(a, b)) return false;
         let me = this.at(x, y);
         let them = this.at(a, b);
         this.data[this.xy(x, y)] = clone(them);
@@ -203,14 +265,7 @@ function update(progress) {
 
 
     if(mouse){
-        if(scale <= 5){
-            for(var i=0; i<9; i++){
-                grid.place(mp[0] + dx[i], mp[1] + dy[i], selectedMaterial);
-            }
-        }
-        else{
-            grid.place(mp[0], mp[1], selectedMaterial);
-        }
+        circle(mp[0], mp[1], penRadius-1, selectedMaterial);
     }
 
 }
@@ -249,7 +304,7 @@ function loop(timestamp) {
 
 }
 
-scale = 5;//2;
+scale = 10;
 
 iw = window.innerWidth - 50;
 ih = window.innerHeight - 50;
@@ -274,6 +329,7 @@ outctx.scale(scale, scale);
 frame = 0
 grid = new Grid(grid_w, grid_h);
 
+penRadius = 2;
 selectedMaterial = Material.Sand;
 
 const dx = [-1, 0, 1, -1, 1, -1, 0, 1];
@@ -306,6 +362,8 @@ window.addEventListener("keydown",
         if(key == 'e') setSelectedMaterial(Material.Empty);
         if(key == 'b') setSelectedMaterial(Material.BlackHole);
         if(key == 't') setSelectedMaterial(Material.Wood);
+        if(key == '1') penSize(1)
+        if(key == '2') penSize(-1)
     }
     , false)
 
@@ -319,5 +377,19 @@ dropdown = document.getElementById("tool");
         dropdown.add(option);
     }
 }
+
+radiusLabel = document.getElementById("penRadius");
+plus = document.getElementById("plus");
+minus = document.getElementById("minus");
+
+function penSize(x){
+    penRadius = Math.max(0, Math.min(grid_w, penRadius + x));
+    radiusLabel.innerHTML = penRadius;
+
+}
+
+plus.addEventListener("click", (e) => { penSize(1); });
+minus.addEventListener("click", (e) => { penSize(-1); });
+
 
 window.requestAnimationFrame(loop)
