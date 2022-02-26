@@ -10,9 +10,9 @@ function clone(obj) {
 }
 
 var Material = {
-    Empty: 'empty',
-    Sand: 'sand',
-    Water: 'water',
+    Empty: 'Empty',
+    Sand: 'Sand',
+    Water: 'Water',
 };
 
 class Tile {
@@ -153,6 +153,7 @@ class Grid {
 }
 
 function update(progress) {
+    setSelectedMaterial(Object.keys(Material)[dropdown.selectedIndex]);
 
     for(var i=0; i < grid_w; i++){
         for(var j=0; j < grid_h; j++){
@@ -243,6 +244,11 @@ canvas.addEventListener('mouseup', function(e) {
     mouse = false;
 })
 
+function setSelectedMaterial(mat){
+    selectedMaterial = mat;
+    dropdown.selectedIndex = Object.keys(Material).indexOf(mat);
+}
+
 function keydown(event) {
     var keyMap = {
       68: 'D',
@@ -251,9 +257,21 @@ function keydown(event) {
       83: 'S'
     }
     var key = keyMap[event.keyCode]
-    if(key == 'S') selectedMaterial = Material.Sand;
-    if(key == 'W') selectedMaterial = Material.Water;
+    if(key == 'S') setSelectedMaterial(Material.Sand);
+    if(key == 'W') setSelectedMaterial(Material.Water);
 }
 window.addEventListener("keydown", keydown, false)
+
+
+dropdown = document.getElementById("tool");
+
+{
+    const types = Object.keys(Material);
+    for(type of types){
+        let option = document.createElement("option");
+        option.text = type
+        dropdown.add(option);
+    }
+}
 
 window.requestAnimationFrame(loop)
