@@ -24,18 +24,29 @@
       - gets hot? makes steam?
 
       Ice
-      - melts due to fire next to it
-      but doesnt catch
       - can freeze water
-      - eventually melts
 
       */
+
       LIFETIME = 1000;
       AMBIENT_TEMP = 0.0; //22.22 is actual ambient
+
       function place_circle(x, y, r, m) {
         circle(x, y, r, (i, j) => {
           grid.place(i, j, m);
         });
+      }
+
+      function get_average_temp(x, y, r) {
+        var sum = AMBIENT_TEMP;
+        var count = 1;
+        circle(x, y, r, (i, j) => {
+          if (grid.in(i, j)) {
+            sum += grid.at(i, j).temperature;
+            count++;
+          }
+        });
+        return sum / count;
       }
 
       function circle(x, y, r, cb) {
@@ -128,7 +139,7 @@
         Oil: "Oil",
         Steam: "Steam",
         Ice: "Ice",
-        Flea: "Flea"
+        Lava: "Lava"
       };
 
       function objOfType(material) {
@@ -165,20 +176,12 @@
 
         updateTemperature(x, y, deltaMilliSeconds) {
           // Determine any heat sources or if ambient temp is higher or lower
-          let averageTemp = AMBIENT_TEMP;
-          let validTemps = 1;
-          for (var i = 0; i < 8; i++) {
-            if (grid.in(x + dx[i], y + dy[i])) {
-              averageTemp += grid.at(x + dx[i], y + dy[i]).temperature;
-              validTemps++;
-            }
-          }
-          averageTemp /= validTemps;
-
+          let averageTemp = get_average_temp(x, y, 5);
+          let delta = Math.abs(this.temperature - averageTemp);
           if (this.temperature < averageTemp) {
-            this.temperature += 0.1;
+            this.temperature += delta * 0.95;
           } else if (this.temperature > averageTemp) {
-            this.temperature -= 0.1;
+            this.temperature -= delta * 0.95;
           }
         }
 
@@ -366,6 +369,30 @@
         update(x, y, deltaMilliSeconds) {
           super.update(x, y, deltaMilliSeconds);
           this.update_flame(x, y, deltaMilliSeconds);
+          this.updateTemperature(x, y, deltaMilliSeconds);
+          if (this.temperature > 100.0) {
+            this.lifetime -= this.temperature * deltaMilliSeconds;
+          }
+          if (this.lifetime < 1.0) {
+            grid.place(x, y, Steam);
+          }
+        }
+      }
+
+      class Lava extends Liquid {
+        constructor() {
+          super();
+          this.density = 3.0;
+          this.temperature = 1500.0;
+        }
+        color() {
+          if (Math.random() < 0.03) {
+            return [150, 100, 0];
+          } else if (Math.random() < 0.33) {
+            return [200, 0, 0];
+          } else {
+            return [180, 50, 0];
+          }
         }
       }
 
@@ -585,32 +612,6 @@
           ) {
             grid.swap(x, y, x + 1, y + 1);
           }
-        }
-      }
-
-      class Flea extends Liquid {
-        constructor() {
-          super();
-          this.friction = 1;
-          this.density = 1;
-        }
-
-        update(x, y, deltaMilliSeconds) {
-          super.update(x, y, deltaMilliSeconds);
-          var empty = 0;
-          for (var i = 0; i < 8; i++) {
-            if (grid.empty(x + dx[i], y + dy[i])) {
-              empty += 1;
-            }
-          }
-
-          if (empty <= 2) {
-            this.lifetime -= 10;
-          }
-        }
-
-        color() {
-          return [52, 30, 17];
         }
       }
 
@@ -875,6 +876,7 @@
           if (key === "d") setSelectedMaterial(Material.Dirt);
           if (key === "a") setSelectedMaterial(Material.Oil);
           if (key === "i") setSelectedMaterial(Material.Ice);
+          if (key === "l") setSelectedMaterial(Material.Lava);
           if (key === "1") penSize(1);
           if (key === "2") penSize(-1);
         },
