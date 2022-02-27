@@ -32,7 +32,13 @@
       */
       LIFETIME = 1000;
       AMBIENT_TEMP = 0.0; //22.22 is actual ambient
-      function circle(x, y, r, m) {
+      function place_circle(x, y, r, m) {
+        circle(x, y, r, (i, j) => {
+          grid.place(i, j, m);
+        });
+      }
+
+      function circle(x, y, r, cb) {
         let top = y - r;
         let bottom = y + r;
         for (var j = top; j <= bottom; j++) {
@@ -42,7 +48,7 @@
           let right = Math.floor(x + xd);
 
           for (var i = left; i <= right; i++) {
-            grid.place(i, j, m);
+            cb(i, j);
           }
         }
       }
@@ -334,6 +340,7 @@
         constructor() {
           super();
           this.density = 1.0;
+          this.temperature = 2.0;
         }
         color() {
           return [0, 0, 250];
@@ -666,6 +673,9 @@
           super.update(x, y, deltaMilliSeconds);
           this.updateTemperature(x, y, deltaMilliSeconds);
           if (this.temperature > 1.0) {
+            this.lifetime -= this.temperature * deltaMilliSeconds;
+          }
+          if (this.lifetime < 1.0) {
             grid.place(x, y, Water);
           }
         }
@@ -762,7 +772,7 @@
         }
 
         if (mouse) {
-          circle(mp[0], mp[1], penRadius - 1, selectedMaterial);
+          place_circle(mp[0], mp[1], penRadius - 1, selectedMaterial);
         }
       }
 
