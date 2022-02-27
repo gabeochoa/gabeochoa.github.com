@@ -29,7 +29,7 @@
       - can freeze water
       - eventually melts
 
-      Alcohol
+      Oil
       - liquid but flammable
       */
       LIFETIME = 1000;
@@ -120,7 +120,8 @@
         Blackhole: "Blackhole",
         Fire: "Fire",
         Torch: "Torch",
-        Alcohol: "Alcohol"
+        Oil: "Oil",
+        Steam: "Steam"
       };
 
       function objOfType(material) {
@@ -150,12 +151,16 @@
           return false;
         }
 
+        hot_liquid() {
+          return Smoke;
+        }
+
         update_flame(x, y, deltaMilliSeconds) {
           if (this.onfire) {
             this.lifetime -= deltaMilliSeconds;
 
             for (var i = 0; i < 8; i++) {
-              if (place_if_empty(x + dx[i], y + dy[i], Smoke)) {
+              if (place_if_empty(x + dx[i], y + dy[i], this.hot_liquid())) {
                 break;
               }
             }
@@ -226,10 +231,11 @@
 
           if (
             grid.matching(x, gasPlacementYIndex, Empty) ||
-            grid.matching(x, gasPlacementYIndex, Smoke) ||
+            grid.matching(x, gasPlacementYIndex, Gas) ||
             grid.matching(x, gasPlacementYIndex, Cloud)
           ) {
             grid.clear(x, y);
+            // TODO why are we placing Smoke?
             grid.place(x, gasPlacementYIndex, Smoke);
           }
         }
@@ -307,9 +313,31 @@
         color() {
           return [0, 0, 250];
         }
+
+        hot_liquid() {
+          return Steam;
+        }
+
+        is_flammable() {
+          return true;
+        }
+
+        update_flame(x, y, deltaMilliSeconds) {
+          if (this.onfire) {
+            this.lifetime -= 10 * deltaMilliSeconds;
+          }
+          if (this.lifetime < 1) {
+            grid.place(x, y, Steam);
+          }
+        }
+
+        update(x, y, deltaMilliSeconds) {
+          super.update(x, y, deltaMilliSeconds);
+          this.update_flame(x, y, deltaMilliSeconds);
+        }
       }
 
-      class Alcohol extends Liquid {
+      class Oil extends Liquid {
         constructor() {
           super();
           this.density = 0.25;
@@ -325,7 +353,13 @@
         }
 
         color() {
-          return [220, 220, 220, 150];
+          if (Math.random() < 0.03) {
+            return [130, 130, 160, 155];
+          } else if (Math.random() < 0.33) {
+            return [30, 30, 60, 155];
+          } else {
+            return [10, 10, 20, 155];
+          }
         }
       }
 
@@ -438,6 +472,7 @@
         update(x, y, deltaMilliSeconds) {
           this.lifetime -= deltaMilliSeconds;
 
+          // TODO should there only be smoke when something is burning
           for (var i = 0; i < 8; i++) {
             if (Math.random() < 0.95) continue;
             if (place_if_empty(x + dx[i], y + dy[i], Smoke)) {
@@ -471,6 +506,21 @@
             return [40, 40, 40, 128];
           } else {
             return [60, 60, 60, 128];
+          }
+        }
+      }
+
+      class Steam extends Gas {
+        constructor() {
+          super();
+        }
+        color() {
+          if (Math.random() < 0.33) {
+            return [120, 120, 120, 128];
+          } else if (Math.random() < 0.66) {
+            return [140, 140, 140, 128];
+          } else {
+            return [160, 160, 160, 128];
           }
         }
       }
@@ -540,7 +590,7 @@
             }
             if (
               grid.matching(x, firePlacementYIndex, Empty) ||
-              grid.matching(x, firePlacementYIndex, Smoke)
+              grid.matching(x, firePlacementYIndex, Gas)
             ) {
               grid.place(x, firePlacementYIndex, Fire);
             }
@@ -740,7 +790,7 @@
           if (key === "c") setSelectedMaterial(Material.Cloud);
           if (key === "f") setSelectedMaterial(Material.Fire);
           if (key === "d") setSelectedMaterial(Material.Dirt);
-          if (key === "a") setSelectedMaterial(Material.Alcohol);
+          if (key === "a") setSelectedMaterial(Material.Oil);
           if (key === "1") penSize(1);
           if (key === "2") penSize(-1);
         },
@@ -777,4 +827,3 @@
     </script>
   </body>
 </html>
-:
