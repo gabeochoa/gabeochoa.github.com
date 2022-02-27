@@ -73,7 +73,8 @@
         Dirt: "Dirt",
         Smoke: "Smoke",
         Blackhole: "Blackhole",
-        Fire: "Fire"
+        Fire: "Fire",
+        Torch: "Torch"
       };
 
       function objOfType(material) {
@@ -101,7 +102,12 @@
           return false;
         }
       }
-      class Solid extends Element {}
+      class Solid extends Element {
+        constructor() {
+          super();
+          this.density = 1;
+        }
+      }
 
       class Gas extends Element {
         constructor() {
@@ -163,9 +169,9 @@
           } else if (grid.empty(x + 1, y - 1)) {
             grid.swap(x, y, x + 1, y - 1);
           } else if (
-            // if clouds are fire are above us...
-            grid.matching(x, y + 1, Cloud) ||
-            grid.matching(x, y + 1, Fire)
+            // if clouds or fire are above us...
+            grid.matching(x, y - 1, Cloud) ||
+            grid.matching(x, y - 1, Fire)
           ) {
             this.gas_moves_through(x, y, deltaMilliSeconds);
           } else {
@@ -288,7 +294,7 @@
               grid.matching(x, waterPlacementYIndex, Empty) ||
               grid.matching(x, waterPlacementYIndex, Smoke)
             ) {
-              grid.place(x, waterPlacementYIndex, Material.Water);
+              grid.place(x, waterPlacementYIndex, Water);
             }
           }
         }
@@ -428,6 +434,30 @@
         }
         color() {
           return [189, 183, 107];
+        }
+      }
+
+      class Torch extends Solid {
+        color() {
+          return [255, 165, 10];
+        }
+        update(x, y, deltaMilliSeconds) {
+          if (Math.random() > 0.9) {
+            let firePlacementYIndex = y - 1;
+            // Find the next non-cloud tile vertically below
+            while (
+              firePlacementYIndex >= 0 &&
+              grid.matching(x, firePlacementYIndex, Fire)
+            ) {
+              firePlacementYIndex--;
+            }
+            if (
+              grid.matching(x, firePlacementYIndex, Empty) ||
+              grid.matching(x, firePlacementYIndex, Smoke)
+            ) {
+              grid.place(x, firePlacementYIndex, Fire);
+            }
+          }
         }
       }
 
@@ -657,515 +687,6 @@
       });
 
       window.requestAnimationFrame(loop);
-
-      /*
-
-      LIFETIME = 100;
-
-      class Tile {
-        constructor() {
-          this.material = Material.Empty;
-          this.lifetime = LIFETIME;
-          this.updated = false;
-          this.heading = 0;
-        }
-
-        toward(x, y, a, b) {
-          // translate a,b to center
-          let nx = x - a;
-          let ny = y - b;
-
-          if (nx < 0) nx += 1;
-          else nx -= 1;
-
-          if (ny < 0) nx += 1;
-          else ny += 1;
-
-          return [nx + a, ny + b];
-        }
-
-        update_blackhole(x, y) {
-          var pullRange = 10;
-          var pullRadius = pullRange / 2;
-          for (var row = x - pullRadius; row <= x + pullRadius; row++) {
-            for (var col = y + pullRadius; col >= y - pullRadius; col--) {
-              if (!grid.in(row, col)) continue;
-              let tile = grid.at(row, col);
-              if (tile.material == Material.Empty) continue;
-              if (tile.material == Material.BlackHole) continue;
-              // Translate the tile in question towards the x,y
-
-              // A positive dx will imply the tile moves right.
-              let dx = 0;
-              // A negative dy will imply the tile moves up.
-              let dy = 0;
-
-              // 1. Determine horizontal translation.
-              // left of black hole
-              if (row < x) {
-                dx = 1;
-              }
-              // right of black hole
-              else if (row > x) {
-                dx = -1;
-              }
-
-              // 2. Determine vertical translation.
-              // below black hole
-              if (col > y) {
-                dy = -1;
-              }
-              // above black hole
-              else if (col < y) {
-                dy = 1;
-              }
-              if (row + dx != x || col + dy != y) {
-                let swappingTile = grid.at(row + dx, col + dy);
-                if (swappingTile.material == Material.BlackHole) continue;
-                if (Math.random() < 0.6) continue;
-                grid.swap(row, col, row + dx, col + dy);
-              }
-            }
-          }
-
-          // n is the 8 neighbors around the black hole
-          let n = [];
-          for (var i = 0; i < 8; i++) {
-            n.push([x + dx[i], y + dy[i]]);
-            // clear all the ones around the black hole
-            grid.clear(x + dx[i], y + dy[i]);
-          }
-        }
-
-        place_if_empty(x, y, m) {
-          if (grid.empty(x, y)) {
-            grid.place(x, y, m);
-            return true;
-          }
-          return false;
-        }
-
-        update_fire(x, y) {
-          this.lifetime--;
-
-          for (var i = 0; i < 8; i++) {
-            if (this.place_if_empty(x + dx[i], y + dy[i], Material.Smoke)) {
-              break;
-            }
-          }
-
-          // only burn if not our first update
-          if (this.lifetime > 0.9 * LIFETIME) {
-            return;
-          }
-
-          for (var i = 0; i < 8; i++) {
-            if (grid.matching(x + dx[i], y + dy[i], Material.Wood)) {
-              if (Math.random() > 0.9) {
-                grid.place(x + dx[i], y + dy[i], Material.Fire);
-              }
-            }
-          }
-        }
-
-        update_smoke(x, y) {
-          this.lifetime--;
-          if (grid.empty(x, y - 1)) {
-            grid.swap(x, y, x, y - 1);
-          } else if (grid.empty(x - 1, y - 1)) {
-            grid.swap(x, y, x - 1, y - 1);
-          } else if (grid.empty(x + 1, y - 1)) {
-            grid.swap(x, y, x + 1, y - 1);
-          } else {
-            if (this.heading == 0) {
-              let spread = grid_w;
-              let dir = Math.random() < 0.5;
-              this.heading = dir ? spread : -spread;
-            }
-            this.heading--;
-
-            // Check the tile in the direction we are heading
-            let step = Math.sign(this.heading);
-            // We hit a non empty tile, stop moving
-            if (!grid.empty(x + step, y)) {
-              this.heading = 0;
-              return;
-            }
-            // its empty move there
-            grid.swap(x, y, x + step, y);
-          }
-        }
-
-        update(x, y) {
-          if (this.updated) return;
-          this.updated = true;
-          switch (this.material) {
-            case Material.BlackHole:
-              this.update_blackhole(x, y);
-              break;
-            case Material.Dirt:
-              if (grid.empty(x, y + 1)) {
-                grid.swap(x, y, x, y + 1);
-              } else if (grid.matching(x, y + 1, Material.Water)) {
-                grid.swap(x, y, x, y + 1);
-              }
-              break;
-            case Material.Sand:
-              if (grid.empty(x, y + 1)) {
-                grid.swap(x, y, x, y + 1);
-              } else if (grid.empty(x - 1, y + 1)) {
-                grid.swap(x, y, x - 1, y + 1);
-              } else if (grid.empty(x + 1, y + 1)) {
-                grid.swap(x, y, x + 1, y + 1);
-              } else if (grid.matching(x, y + 1, Material.Water)) {
-                grid.swap(x, y, x, y + 1);
-              } else if (grid.matching(x - 1, y + 1, Material.Water)) {
-                grid.swap(x, y, x - 1, y + 1);
-              } else if (grid.matching(x + 1, y + 1, Material.Water)) {
-                grid.swap(x, y, x + 1, y + 1);
-              }
-              break;
-            case Material.Water:
-              if (grid.empty(x, y + 1)) {
-                grid.swap(x, y, x, y + 1);
-              } else if (grid.empty(x - 1, y + 1)) {
-                grid.swap(x, y, x - 1, y + 1);
-              } else if (grid.empty(x + 1, y + 1)) {
-                grid.swap(x, y, x + 1, y + 1);
-              } else if (grid.matching(x, y + 1, Material.Smoke)) {
-                grid.swap(x, y, x, y + 1);
-              } else if (grid.matching(x - 1, y + 1, Material.Smoke)) {
-                grid.swap(x, y, x - 1, y + 1);
-              } else if (grid.matching(x + 1, y + 1, Material.Smoke)) {
-                grid.swap(x, y, x + 1, y + 1);
-              } else if (grid.matching(x, y + 1, Material.Fire)) {
-                grid.place(x, y + 1, Material.Smoke);
-              } else if (grid.matching(x, y + 1, Material.Cloud)) {
-                let waterPlacementYIndex = y + 1;
-                // Find the next non-cloud tile vertically below
-                while (
-                  waterPlacementYIndex < grid_h &&
-                  grid.at(x, waterPlacementYIndex).material == Material.Cloud
-                ) {
-                  waterPlacementYIndex++;
-                }
-
-                if (
-                  grid.matching(x, waterPlacementYIndex, Material.Empty) ||
-                  grid.matching(x, waterPlacementYIndex, Material.Smoke)
-                ) {
-                  grid.clear(x, y);
-                  grid.place(x, waterPlacementYIndex, Material.Water);
-                }
-              } else {
-                if (this.heading == 0) {
-                  let spread = grid_w;
-                  let dir = Math.random() < 0.5;
-                  this.heading = dir ? spread : -spread;
-                }
-                this.heading--;
-
-                // Check the tile in the direction we are heading
-                let step = Math.sign(this.heading);
-                // We hit a non empty tile, stop moving
-                if (!grid.empty(x + step, y)) {
-                  this.heading = 0;
-                  return;
-                }
-                // its empty move there
-                grid.swap(x, y, x + step, y);
-              }
-              break;
-            case Material.Cloud:
-              {
-                if (Math.random() > 0.99) {
-                  let waterPlacementYIndex = y + 1;
-                  // Find the next non-cloud tile vertically below
-                  while (
-                    waterPlacementYIndex < grid_h &&
-                    grid.at(x, waterPlacementYIndex).material == Material.Cloud
-                  ) {
-                    waterPlacementYIndex++;
-                  }
-
-                  if (
-                    grid.matching(x, waterPlacementYIndex, Material.Empty) ||
-                    grid.matching(x, waterPlacementYIndex, Material.Smoke)
-                  ) {
-                    grid.place(x, waterPlacementYIndex, Material.Water);
-                  }
-                }
-              }
-              break;
-            case Material.Fire:
-              this.update_fire(x, y);
-              break;
-            case Material.Smoke:
-              this.update_smoke(x, y);
-              break;
-            case Material.Empty:
-            default:
-              break;
-          }
-        }
-
-        color() {
-          switch (this.material) {
-            default:
-            case Material.Empty:
-              return [0, 0, 0];
-            case Material.Sand:
-              return [189, 183, 107];
-            case Material.Water:
-              return [10, 10, 250];
-            case Material.BlackHole:
-              return [100, 10, 200];
-            case Material.Wood:
-              return [102, 50, 0];
-            case Material.Cloud:
-              return [255, 250, 250];
-            case Material.Fire:
-              return [255, 0, 0];
-            case Material.Smoke:
-              return [55, 55, 55];
-            case Material.Dirt:
-              return [55, 25, 0];
-          }
-        }
-      }
-
-      function circle(x, y, r, m) {
-        let top = y - r;
-        let bottom = y + r;
-        for (var j = top; j <= bottom; j++) {
-          let yd = j - y;
-          let xd = Math.sqrt(r * r - yd * yd);
-          let left = Math.ceil(x - xd);
-          let right = Math.floor(x + xd);
-
-          for (var i = left; i <= right; i++) {
-            grid.place(i, j, m);
-          }
-        }
-      }
-
-      class Grid {
-        constructor(w, h) {
-          this.w = w;
-          this.h = h;
-          this.data = new Array(w * h);
-
-          for (var i = 0; i < w * h; i++) {
-            this.data[i] = new Tile();
-          }
-        }
-
-        xy(x, y) {
-          return y * this.w + x;
-        }
-
-        at(x, y) {
-          return this.data[this.xy(x, y)];
-        }
-
-        in(x, y) {
-          return x >= 0 && y >= 0 && x < this.w && y < this.h;
-        }
-
-        place(x, y, p) {
-          if (!this.in(x, y)) return;
-          x = Math.floor(x);
-          y = Math.floor(y);
-          this.data[this.xy(x, y)].material = p;
-          this.data[this.xy(x, y)].lifetime = LIFETIME;
-        }
-
-        clear(x, y) {
-          if (!this.in(x, y)) return;
-          this.at(x, y).material = Material.Empty;
-        }
-
-        empty(x, y) {
-          if (!this.in(x, y)) return false;
-          return this.at(x, y).material == Material.Empty;
-        }
-
-        matching(x, y, mat) {
-          if (!this.in(x, y)) return false;
-          return this.at(x, y).material == mat;
-        }
-
-        swap(x, y, a, b) {
-          if (!this.in(x, y)) return false;
-          if (!this.in(a, b)) return false;
-          let me = this.at(x, y);
-          let them = this.at(a, b);
-          this.data[this.xy(x, y)] = clone(them);
-          this.data[this.xy(a, b)] = clone(me);
-        }
-      }
-
-      function setSelectedMaterial(mat) {
-        selectedMaterial = mat;
-        dropdown.selectedIndex = Object.keys(Material).indexOf(mat);
-      }
-
-      function update(progress) {
-        setSelectedMaterial(Object.keys(Material)[dropdown.selectedIndex]);
-
-        for (var i = 0; i < grid_w; i++) {
-          for (var j = 0; j < grid_h; j++) {
-            let x = grid.at(i, j);
-            if (x.updated) continue;
-            x.update(i, j);
-          }
-        }
-        for (var i = 0; i < grid_w; i++) {
-          for (var j = 0; j < grid_h; j++) {
-            let x = grid.at(i, j);
-            x.updated = false;
-            if (x.lifetime < 0) {
-              grid.place(i, j, Material.Empty);
-            }
-          }
-        }
-
-        if (mouse) {
-          circle(mp[0], mp[1], penRadius - 1, selectedMaterial);
-        }
-      }
-
-      function draw() {
-        var image = ctx.getImageData(0, 0, grid_w, grid_h);
-        var data = image.data;
-        var d = 0;
-        for (var i = 0; i < grid.data.length; i++) {
-          var [r, g, b, a] = grid.data[i].color();
-          data[d + 0] = r;
-          data[d + 1] = g;
-          data[d + 2] = b;
-          data[d + 3] = Math.floor((grid.data[i].lifetime / LIFETIME) * 255);
-          d += 4;
-        }
-        ctx.clearRect(0, 0, grid_w, grid_h);
-        ctx.putImageData(image, 0, 0);
-
-        //
-        outctx.clearRect(0, 0, grid_w, grid_h);
-        outctx.drawImage(canvas, 0, 0);
-      }
-
-      var lastRender = 0;
-      function loop(timestamp) {
-        var progress = timestamp - lastRender;
-        if (progress > 10) {
-          lastRender = timestamp;
-          update(progress);
-        }
-        draw();
-        frame++;
-        if (frame < 1000000) {
-          window.requestAnimationFrame(loop);
-        }
-      }
-
-      let scale = 10;
-
-      let iw = window.innerWidth;
-      let ih = window.innerHeight - 50;
-
-      let canvas = document.getElementById("src");
-      canvas.width = iw / scale;
-      canvas.height = ih / scale;
-      let ctx = canvas.getContext("2d");
-      canvas.style.display = "none";
-
-      let grid_w = canvas.width;
-      let grid_h = canvas.height;
-
-      let output = document.getElementById("dst");
-      output.width = iw;
-      output.height = ih;
-      let outctx = output.getContext("2d");
-      outctx.imageSmoothingEnabled = false;
-      outctx.scale(scale, scale);
-
-      let frame = 0;
-      let grid = new Grid(grid_w, grid_h);
-
-      let penRadius = 2;
-      let selectedMaterial = Material.Sand;
-
-      // a b c
-      // d e f
-      // g h i
-      //           a   b   c   d  f   g  h  i  e
-      const dx = [-1, 0, 1, -1, 1, -1, 0, 1, 0];
-      const dy = [-1, -1, -1, 0, 0, 1, 1, 1, 0];
-
-      let mouse = false;
-      let mp = [0, 0];
-      output.addEventListener("mousedown", function (e) {
-        mouse = true;
-      });
-
-      output.addEventListener("mousemove", function (e) {
-        const rect = output.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        mp = [Math.floor(x / scale), Math.floor(y / scale)];
-      });
-
-      output.addEventListener("mouseup", function (e) {
-        mouse = false;
-      });
-
-      window.addEventListener(
-        "keydown",
-        (event) => {
-          let key = event.key;
-          if (key === "s") setSelectedMaterial(Material.Sand);
-          if (key === "w") setSelectedMaterial(Material.Water);
-          if (key === "e") setSelectedMaterial(Material.Empty);
-          if (key === "b") setSelectedMaterial(Material.BlackHole);
-          if (key === "t") setSelectedMaterial(Material.Wood);
-          if (key === "c") setSelectedMaterial(Material.Cloud);
-          if (key === "f") setSelectedMaterial(Material.Fire);
-          if (key === "d") setSelectedMaterial(Material.Dirt);
-          if (key === "1") penSize(1);
-          if (key === "2") penSize(-1);
-        },
-        false
-      );
-
-      let dropdown = document.getElementById("tool");
-      {
-        const types = Object.keys(Material);
-        for (var type of types) {
-          let option = document.createElement("option");
-          option.text = type;
-          dropdown.add(option);
-        }
-      }
-
-      let radiusLabel = document.getElementById("penRadius");
-      let plus = document.getElementById("plus");
-      let minus = document.getElementById("minus");
-
-      function penSize(x) {
-        penRadius = Math.max(0, Math.min(grid_w, penRadius + x));
-        radiusLabel.innerHTML = penRadius;
-      }
-
-      plus.addEventListener("click", (e) => {
-        penSize(1);
-      });
-      minus.addEventListener("click", (e) => {
-        penSize(-1);
-      });
-
-      window.requestAnimationFrame(loop);
-      */
     </script>
   </body>
 </html>
