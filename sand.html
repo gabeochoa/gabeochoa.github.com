@@ -8,8 +8,26 @@
     <select id="tool"> </select>
     <label id="">Pen:</label>
     <label id="penRadius">2</label>
-    <button id="plus">+</button>
-    <button id="minus">-</button>
+    <input
+      type="range"
+      min="1"
+      max="20"
+      value="2"
+      class="slider"
+      id="radiusSlider"
+    />
+    <br />
+    <label id="hi">Ambient Temperature</label>
+    <label id="tempLabel">2</label>
+    <input
+      style="width: 100%;"
+      type="range"
+      min="-100"
+      max="200"
+      value="50"
+      class="slider"
+      id="tempSlider"
+    />
     <script>
       console.log("starting sand.js");
       /*
@@ -29,7 +47,7 @@
       */
 
       LIFETIME = 1000;
-      AMBIENT_TEMP = 0.0; //22.22 is actual ambient
+      AMBIENT_TEMP = 10.0; //22.22 is actual ambient
 
       function place_circle(x, y, r, m) {
         circle(x, y, r, (i, j) => {
@@ -367,15 +385,19 @@
         }
 
         update(x, y, deltaMilliSeconds) {
+          if (this.temperature > 100.0 || this.temperature < 1.0) {
+            this.lifetime -= 10.0 * deltaMilliSeconds;
+            if (this.lifetime < 1.0) {
+              if (this.temperature > 100.0) {
+                grid.place(x, y, Steam);
+              } else if (this.temperature < 1.0) {
+                grid.place(x, y, Ice);
+              }
+            }
+          }
           super.update(x, y, deltaMilliSeconds);
           this.update_flame(x, y, deltaMilliSeconds);
           this.updateTemperature(x, y, deltaMilliSeconds);
-          if (this.temperature > 100.0) {
-            this.lifetime -= this.temperature * deltaMilliSeconds;
-          }
-          if (this.lifetime < 1.0) {
-            grid.place(x, y, Steam);
-          }
         }
       }
 
@@ -664,7 +686,7 @@
           super();
           this.density = 0.917;
           this.friction = 0.5;
-          this.temperature = -10.0;
+          this.temperature = -100.0;
         }
 
         color() {
@@ -814,7 +836,7 @@
       let scale = 10;
 
       let iw = window.innerWidth;
-      let ih = window.innerHeight - 50;
+      let ih = window.innerHeight - 70;
 
       let canvas = document.getElementById("src");
       canvas.width = iw / scale;
@@ -877,8 +899,8 @@
           if (key === "a") setSelectedMaterial(Material.Oil);
           if (key === "i") setSelectedMaterial(Material.Ice);
           if (key === "l") setSelectedMaterial(Material.Lava);
-          if (key === "1") penSize(1);
-          if (key === "2") penSize(-1);
+          if (key === "1") penSize(penRadius + 1);
+          if (key === "2") penSize(penRadius - 1);
         },
         false
       );
@@ -894,19 +916,23 @@
       }
 
       let radiusLabel = document.getElementById("penRadius");
-      let plus = document.getElementById("plus");
-      let minus = document.getElementById("minus");
+      let radiusSlider = document.getElementById("radiusSlider");
+      let tempLabel = document.getElementById("tempLabel");
+      let tempSlider = document.getElementById("tempSlider");
 
       function penSize(x) {
-        penRadius = Math.max(0, Math.min(grid_w, penRadius + x));
+        penRadius = Math.max(0, Math.min(grid_w, x));
         radiusLabel.innerHTML = penRadius;
+        radiusSlider.value = penRadius;
       }
 
-      plus.addEventListener("click", (e) => {
-        penSize(1);
+      radiusSlider.addEventListener("change", (e) => {
+        penSize(parseInt(radiusSlider.value));
       });
-      minus.addEventListener("click", (e) => {
-        penSize(-1);
+
+      tempSlider.addEventListener("change", (e) => {
+        AMBIENT_TEMP = parseInt(tempSlider.value);
+        tempLabel.innerHTML = AMBIENT_TEMP;
       });
 
       window.requestAnimationFrame(loop);
