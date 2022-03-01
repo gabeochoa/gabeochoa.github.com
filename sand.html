@@ -103,6 +103,19 @@
         }
       }
 
+      function circle_outline(x, y, r, cb) {
+        let top = y - r;
+        let bottom = y + r;
+        for (var j = top; j <= bottom; j++) {
+          let yd = j - y;
+          let xd = Math.sqrt(r * r - yd * yd);
+          let left = Math.ceil(x - xd);
+          let right = Math.floor(x + xd);
+          cb(left, j);
+          cb(right, j);
+        }
+      }
+
       function clone(obj) {
         if (null == obj || "object" !== typeof obj) return obj;
         var copy = new obj.constructor();
@@ -956,10 +969,24 @@
         }
       }
 
+      function draw_cursor(data) {
+        circle_outline(mp[0], mp[1], penRadius, (i, j) => {
+          if (!grid.in(i, j)) return;
+          var idx = grid.xy(i, j);
+          var [r, g, b, a] = objOfType(selectedMaterial).color();
+          var d = j * grid_w * 4 + i * 4;
+          data[d + 0] = r;
+          data[d + 1] = g;
+          data[d + 2] = b;
+          data[d + 3] = 255;
+        });
+      }
+
       function draw() {
         var image = ctx.getImageData(0, 0, grid_w, grid_h);
         var data = image.data;
         var d = 0;
+
         for (var i = 0; i < grid.data.length; i++) {
           var [r, g, b, a] = grid.color(i);
           data[d + 0] = r;
@@ -968,6 +995,9 @@
           data[d + 3] = a ?? 255;
           d += 4;
         }
+
+        if (!mouse) draw_cursor(data);
+
         ctx.clearRect(0, 0, grid_w, grid_h);
         ctx.putImageData(image, 0, 0);
 
