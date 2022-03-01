@@ -29,6 +29,31 @@
       id="tempSlider"
     />
     <select id="view"> </select>
+    <button id="reset">Clear World</button>
+    <br />
+    <div style="width: 50%; float: left;">
+      <p>
+        Instructions <br />
+        s) Sand <br />
+        w) Water <br />
+        e) Empty <br />
+        b) Blackhole <br />
+        t) Wood <br />
+        c) Cloud <br />
+        f) Fire <br />
+        d) Dirt <br />
+        a) Oil <br />
+        i) Ice <br />
+        l) Lava <br />
+      </p>
+    </div>
+    <div style="width: 50%; float: left;">
+      <p>
+        Hold shift to draw a straight line <br />
+        1 (penRadius + 1) <br />
+        2 (penRadius - 1) <br />
+      </p>
+    </div>
     <script>
       console.log("starting sand.js");
       /*
@@ -849,7 +874,11 @@
           this.w = w;
           this.h = h;
           this.data = new Array(w * h);
-          for (var i = 0; i < w * h; i++) {
+          this.reset();
+        }
+
+        reset() {
+          for (var i = 0; i < this.w * this.h; i++) {
             this.data[i] = new Empty();
           }
         }
@@ -963,23 +992,65 @@
             }
           }
         }
+        if (shiftPressed) {
+          line = makeline(shiftmp, mp);
+        }
 
-        if (mouse) {
+        if (line.length && shouldPlaceMaterial) {
+          for (const m of line) {
+            place_circle(m[0], m[1], penRadius - 1, selectedMaterial);
+            place = false;
+          }
+          line = [];
+        }
+
+        if (shouldPlaceMaterial) {
           place_circle(mp[0], mp[1], penRadius - 1, selectedMaterial);
         }
       }
 
+      function makeline(p1, p2) {
+        var coords = new Array();
+        // Translate coordinates
+        var [x, y] = p1;
+        var [a, b] = p2;
+        // Define differences and error check
+        var dx = Math.abs(a - x);
+        var dy = Math.abs(b - y);
+        const sx = x < a ? 1 : -1;
+        const sy = y < b ? 1 : -1;
+        var err = dx - dy;
+        coords.push([x, y]);
+        while (!(x == a && y == b)) {
+          var e2 = err << 1;
+          if (e2 > -dy) (err -= dy), (x += sx);
+          if (e2 < dx) (err += dx), (y += sy);
+          coords.push([x, y]);
+        }
+        return coords;
+      }
+
       function draw_cursor(data) {
-        circle_outline(mp[0], mp[1], penRadius, (i, j) => {
-          if (!grid.in(i, j)) return;
-          var idx = grid.xy(i, j);
-          var [r, g, b, a] = objOfType(selectedMaterial).color();
-          var d = j * grid_w * 4 + i * 4;
-          data[d + 0] = r;
-          data[d + 1] = g;
-          data[d + 2] = b;
-          data[d + 3] = 255;
-        });
+        const draw_cursor_circle = (p) => {
+          circle_outline(p[0], p[1], penRadius - 1, (i, j) => {
+            if (!grid.in(i, j)) return;
+            var idx = grid.xy(i, j);
+            var [r, g, b, a] = objOfType(selectedMaterial).color();
+            var d = j * grid_w * 4 + i * 4;
+            data[d + 0] = r;
+            data[d + 1] = g;
+            data[d + 2] = b;
+            data[d + 3] = 255;
+          });
+        };
+
+        draw_cursor_circle(mp);
+
+        if (shiftPressed) {
+          for (const m of line) {
+            draw_cursor_circle(m);
+          }
+        }
       }
 
       function draw() {
@@ -996,7 +1067,7 @@
           d += 4;
         }
 
-        if (!mouse) draw_cursor(data);
+        draw_cursor(data);
 
         ctx.clearRect(0, 0, grid_w, grid_h);
         ctx.putImageData(image, 0, 0);
@@ -1056,10 +1127,17 @@
       const dx = [-1, 0, 1, -1, 1, -1, 0, 1, 0];
       const dy = [-1, -1, -1, 0, 0, 1, 1, 1, 0];
 
-      let mouse = false;
+      let mousePressed = false;
+      let shiftPressed = false;
+      let shouldPlaceMaterial = false;
+
+      let shiftmp = [0, 0];
+      let line = [];
       let mp = [0, 0];
+
       output.addEventListener("mousedown", function (e) {
-        mouse = true;
+        mousePressed = true;
+        shouldPlaceMaterial = true;
       });
 
       output.addEventListener("mousemove", function (e) {
@@ -1070,13 +1148,32 @@
       });
 
       output.addEventListener("mouseup", function (e) {
-        mouse = false;
+        mousePressed = false;
+        shouldPlaceMaterial = false;
+      });
+
+      window.addEventListener("keyup", (event) => {
+        let key = event.key;
+        if (key == "Shift") {
+          shiftPressed = false;
+          line = [];
+          return;
+        }
       });
 
       window.addEventListener(
         "keydown",
         (event) => {
           let key = event.key;
+          if (key == "Shift") {
+            shiftmp = mp;
+            shiftPressed = true;
+            if (shouldPlaceMaterial) {
+              shouldPlaceMaterial = false;
+            }
+            return;
+          }
+          // Please update the instructions if you add anything here.
           if (key === "s") setSelectedMaterial(Material.Sand);
           if (key === "w") setSelectedMaterial(Material.Water);
           if (key === "e") setSelectedMaterial(Material.Empty);
@@ -1132,6 +1229,11 @@
       tempSlider.addEventListener("change", (e) => {
         AMBIENT_TEMP = parseInt(tempSlider.value);
         tempLabel.innerHTML = AMBIENT_TEMP;
+      });
+
+      let resetButton = document.getElementById("reset");
+      resetButton.addEventListener("click", (e) => {
+        grid.reset();
       });
 
       window.requestAnimationFrame(loop);
