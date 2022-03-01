@@ -28,37 +28,45 @@
       class="slider"
       id="tempSlider"
     />
+    <select id="view"> </select>
     <script>
       console.log("starting sand.js");
       /*
 
-      Ideas / TODO
+            Ideas / TODO
 
-      Hot air rises
-      Soot Clouds
+            Hot air rises
+            Soot Clouds
 
-      Metal
-      - solid / cant burn
-      - gets hot? makes steam?
-
-
-      TODO - why does freezing water turn into steam...
-      Stone
-        - Lava + Water 
-
-      Sand + Lava
-      Dirt + Lava
-      Lava should catch wood/oil on fire 
-
-      Sand + Fire ? 
-
-      Oil keep the temperature from when the page loaded 
+            Metal
+            - solid / cant burn
+            - gets hot? makes steam?
 
 
-      */
+            TODO - why does freezing water turn into steam...
+            Stone
+              - Lava + Water
+
+            Sand + Lava
+            Dirt + Lava
+            Lava should catch wood/oil on fire
+
+            Sand + Fire ?
+
+            Oil keep the temperature from when the page loaded
+
+
+            */
 
       LIFETIME = 1000;
       AMBIENT_TEMP = 10.0; //22.22 is actual ambient
+      FRAME_MAX_TEMP = 0;
+      FRAME_MIN_TEMP = 0;
+
+      var View = {
+        Material: "Material",
+        Temperature: "Temperature"
+      };
 
       function place_circle(x, y, r, m) {
         circle(x, y, r, (i, j) => {
@@ -145,6 +153,88 @@
             defineProperty: (target, prop, desc) => false
           })
         );
+      }
+
+      function scaleRange(number, inMin, inMax, outMin, outMax) {
+        return (
+          ((number - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin
+        );
+      }
+
+      /**
+       * Converts an RGB color value to HSL. Conversion formula
+       * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
+       * Assumes r, g, and b are contained in the set [0, 255] and
+       * returns h, s, and l in the set [0, 1].
+       *
+       * @param   {number}  r       The red color value
+       * @param   {number}  g       The green color value
+       * @param   {number}  b       The blue color value
+       * @return  {Array}           The HSL representation
+       */
+      function rgbToHsl(r, g, b) {
+        (r /= 255), (g /= 255), (b /= 255);
+        var max = Math.max(r, g, b),
+          min = Math.min(r, g, b);
+        var h,
+          s,
+          l = (max + min) / 2;
+
+        if (max == min) {
+          h = s = 0; // achromatic
+        } else {
+          var d = max - min;
+          s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+          switch (max) {
+            case r:
+              h = (g - b) / d + (g < b ? 6 : 0);
+              break;
+            case g:
+              h = (b - r) / d + 2;
+              break;
+            case b:
+              h = (r - g) / d + 4;
+              break;
+          }
+          h /= 6;
+        }
+
+        return [h, s, l];
+      }
+      /**
+       * Converts an HSL color value to RGB. Conversion formula
+       * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
+       * Assumes h, s, and l are contained in the set [0, 1] and
+       * returns r, g, and b in the set [0, 255].
+       *
+       * @param   {number}  h       The hue
+       * @param   {number}  s       The saturation
+       * @param   {number}  l       The lightness
+       * @return  {Array}           The RGB representation
+       */
+      function hslToRgb(h, s, l) {
+        var r, g, b;
+
+        if (s == 0) {
+          r = g = b = l; // achromatic
+        } else {
+          var hue2rgb = function hue2rgb(p, q, t) {
+            if (t < 0) t += 1;
+            if (t > 1) t -= 1;
+            if (t < 1 / 6) return p + (q - p) * 6 * t;
+            if (t < 1 / 2) return q;
+            if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+            return p;
+          };
+
+          var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+          var p = 2 * l - q;
+          r = hue2rgb(p, q, h + 1 / 3);
+          g = hue2rgb(p, q, h);
+          b = hue2rgb(p, q, h - 1 / 3);
+        }
+
+        return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
       }
       /////// /////// /////// /////// ///////
       ///////        End Utils
@@ -325,6 +415,10 @@
         color() {
           return [0, 0, 0];
         }
+        update(x, y, deltaMilliSeconds) {
+          super.update(x, y, deltaMilliSeconds);
+          this.updateTemperature(x, y, deltaMilliSeconds);
+        }
       }
 
       class Liquid extends Element {
@@ -415,8 +509,8 @@
       class Lava extends Liquid {
         constructor() {
           super();
-          this.density = 3.0;
-          this.temperature = 1500.0;
+          this.density = 2.0;
+          this.temperature = 150.0; //1500.0;
         }
         color() {
           if (Math.random() < 0.03) {
@@ -511,6 +605,12 @@
       }
 
       class Cloud extends Solid {
+        constructor() {
+          super();
+          this.density = 0.9;
+          this.temperature = 1.0; //1500.0;
+        }
+
         color() {
           return [250, 250, 250];
         }
@@ -706,6 +806,7 @@
         update(x, y, deltaMilliSeconds) {
           super.update(x, y, deltaMilliSeconds);
           this.updateTemperature(x, y, deltaMilliSeconds);
+
           if (this.temperature > 1.0) {
             this.lifetime -= this.temperature * deltaMilliSeconds;
           }
@@ -727,6 +828,19 @@
           this.data = new Array(w * h);
           for (var i = 0; i < w * h; i++) {
             this.data[i] = new Empty();
+          }
+        }
+
+        color(i) {
+          switch (selectedView) {
+            case View.Material:
+              return this.data[i].color();
+            case View.Temperature:
+              // if (this.data[i] instanceof Empty) return [0, 0, 0];
+              var t = this.data[i].temperature;
+              var st = scaleRange(t, FRAME_MIN_TEMP, FRAME_MAX_TEMP, -30, 30);
+              var hue = (30 + (240 * (30 - st)) / 60) / 260;
+              return hslToRgb(1 - hue, 0.7, 0.5);
           }
         }
         xy(x, y) {
@@ -785,16 +899,39 @@
         dropdown.selectedIndex = Object.keys(Material).indexOf(mat);
       }
 
+      function setSelectedView(v) {
+        selectedView = v;
+        view_dropdown.selectedIndex = Object.keys(View).indexOf(v);
+      }
+
+      function single_update(i, j, dt) {
+        let x = grid.at(i, j);
+        if (x.updated) return;
+        x.update(i, j, dt);
+        FRAME_MAX_TEMP = Math.max(FRAME_MAX_TEMP, x.temperature);
+        FRAME_MIN_TEMP = Math.min(FRAME_MIN_TEMP, x.temperature);
+      }
+
       function update(progress) {
         setSelectedMaterial(Object.keys(Material)[dropdown.selectedIndex]);
+        setSelectedView(Object.keys(View)[view_dropdown.selectedIndex]);
+        FRAME_MAX_TEMP = 0;
+        FRAME_MIN_TEMP = 0;
 
-        for (var i = 0; i < grid_w; i++) {
-          for (var j = 0; j < grid_h; j++) {
-            let x = grid.at(i, j);
-            if (x.updated) continue;
-            x.update(i, j, progress);
+        if (Math.random() > 0.5) {
+          for (var i = 0; i < grid_w; i++) {
+            for (var j = 0; j < grid_h; j++) {
+              single_update(i, j, progress);
+            }
+          }
+        } else {
+          for (var i = grid_w - 1; i >= 0; i--) {
+            for (var j = grid_h - 1; j >= 0; j--) {
+              single_update(i, j, progress);
+            }
           }
         }
+
         for (var i = 0; i < grid_w; i++) {
           for (var j = 0; j < grid_h; j++) {
             let x = grid.at(i, j);
@@ -815,7 +952,7 @@
         var data = image.data;
         var d = 0;
         for (var i = 0; i < grid.data.length; i++) {
-          var [r, g, b, a] = grid.data[i].color();
+          var [r, g, b, a] = grid.color(i);
           data[d + 0] = r;
           data[d + 1] = g;
           data[d + 2] = b;
@@ -847,7 +984,7 @@
       let scale = 10;
 
       let iw = window.innerWidth;
-      let ih = window.innerHeight - 70;
+      let ih = window.innerHeight - 100;
 
       let canvas = document.getElementById("src");
       canvas.width = iw / scale;
@@ -870,6 +1007,7 @@
 
       let penRadius = 2;
       let selectedMaterial = Material.Sand;
+      let selectedView = View.Material;
 
       // a b c
       // d e f
@@ -923,6 +1061,16 @@
           let option = document.createElement("option");
           option.text = type;
           dropdown.add(option);
+        }
+      }
+
+      let view_dropdown = document.getElementById("view");
+      {
+        const types = Object.keys(View);
+        for (var type of types) {
+          let option = document.createElement("option");
+          option.text = type;
+          view_dropdown.add(option);
         }
       }
 
