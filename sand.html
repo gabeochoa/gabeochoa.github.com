@@ -1165,7 +1165,7 @@
         "keydown",
         (event) => {
           let key = event.key;
-          if (key == "Shift") {
+          if (key == "Shift" && !shiftPressed) {
             shiftmp = mp;
             shiftPressed = true;
             if (shouldPlaceMaterial) {
