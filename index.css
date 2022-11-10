@@ -79,6 +79,11 @@ html body
 
 .fblive {
     height: 20px;
+    margin-top: 4px;
+}
+
+.working_on {
+    padding-top: 8px;
 }
 
 #wrapper #div1 p
