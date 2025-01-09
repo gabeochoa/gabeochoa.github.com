@@ -85,6 +85,18 @@ html body
     margin-top: 4px;
 }
 
+.iconborder {
+        -webkit-filter: drop-shadow(1px 1px 0 #7e818b)
+                    drop-shadow(-1px 1px 0 #7e818b)
+                    drop-shadow(1px -1px 0 #7e818b)
+                    drop-shadow(-1px -1px 0 #7e818b);
+
+    filter: drop-shadow(1px 1px 0 #7e818b)
+            drop-shadow(-1px 1px 0 #7e818b)
+            drop-shadow(1px -1px 0 #7e818b)
+            drop-shadow(-1px -1px 0 #7e818b);
+}
+
 .working_on {
     padding-top: 8px;
 }
