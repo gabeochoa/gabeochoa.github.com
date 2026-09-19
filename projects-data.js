@@ -11,25 +11,25 @@ const PROJECTS = [
     "featured": false,
     "screenshots": [
       {
-        "src": "images/projects/2026-09/armchair-broadcast.webp",
-        "caption": "Playable browser prototype of the baseball broadcast",
-        "date": "2026-09-13",
+        "src": "images/projects/2026-09/armchair-tv-weather.webp",
+        "caption": "The dugout control panel idle while the broadcast runs a weather segment",
+        "date": "2026-09-18",
         "width": 1280,
         "height": 800
       },
       {
-        "src": "images/projects/2026-09/armchair_coach-02.webp",
-        "caption": "armchair_coach · armchair coach title",
-        "date": "2026-07-15",
+        "src": "images/projects/2026-09/armchair-infield.webp",
+        "caption": "Top-down infield view as the call comes in over the broadcast",
+        "date": "2026-09-18",
         "width": 1280,
-        "height": 720
+        "height": 800
       },
       {
-        "src": "images/projects/2026-09/armchair_coach-03.webp",
-        "caption": "armchair_coach · armchair coach ramp",
-        "date": "2026-07-15",
-        "width": 1600,
-        "height": 913
+        "src": "images/projects/2026-09/armchair-fastball.webp",
+        "caption": "Calling a fastball from the dugout and watching the play resolve",
+        "date": "2026-09-18",
+        "width": 1280,
+        "height": 800
       }
     ],
     "tags": [
@@ -49,32 +49,39 @@ const PROJECTS = [
     "featured": true,
     "screenshots": [
       {
-        "src": "images/projects/2026-09/floatinghotel-diff.webp",
-        "caption": "Commit review with an inline diff",
-        "date": "2026-09-13",
-        "width": 1600,
-        "height": 1100
+        "src": "images/projects/2026-09/fh-working-files.webp",
+        "caption": "Browsing working changes next to the full commit history",
+        "date": "2026-09-18",
+        "width": 1280,
+        "height": 832
       },
       {
-        "src": "images/projects/2026-09/floatinghotel-source.webp",
-        "caption": "Source file opened from a review",
-        "date": "2026-09-13",
-        "width": 1600,
-        "height": 1000
+        "src": "images/projects/2026-09/fh-commit-detail.webp",
+        "caption": "Opening a commit in its own tab to preview what changed",
+        "date": "2026-09-18",
+        "width": 1280,
+        "height": 832
       },
       {
-        "src": "images/projects/2026-09/floatinghotel-back.webp",
-        "caption": "Returning to the originating commit review",
-        "date": "2026-09-13",
-        "width": 1600,
-        "height": 1000
+        "src": "images/projects/2026-09/fh-diff-split.webp",
+        "caption": "Side-by-side diff with word-level highlighting on the changed line",
+        "date": "2026-09-18",
+        "width": 1280,
+        "height": 832
       },
       {
-        "src": "images/projects/2026-09/floatinghotel-zoom.webp",
-        "caption": "Wrapped code with larger text",
-        "date": "2026-09-13",
-        "width": 1600,
-        "height": 1100
+        "src": "images/projects/2026-09/fh-review-feedback.webp",
+        "caption": "Leaving inline review feedback on a hunk before it is staged",
+        "date": "2026-09-18",
+        "width": 1280,
+        "height": 832
+      },
+      {
+        "src": "images/projects/2026-09/fh-commit-dialog.webp",
+        "caption": "The commit dialog, offering to stage everything or commit only what is staged",
+        "date": "2026-09-18",
+        "width": 1280,
+        "height": 752
       }
     ],
     "tags": [
@@ -123,338 +130,86 @@ const PROJECTS = [
     "featured": true,
     "screenshots": [
       {
-        "src": "images/projects/2026-09/wm-chart.webp",
-        "caption": "Native chart example with synthetic timing data",
-        "date": "2026-09-13",
+        "src": "images/projects/2026-09/wm-kart-select.webp",
+        "caption": "Kart and racer select, a Mario Kart style grid",
+        "date": "2026-09-18",
         "width": 1280,
         "height": 720
       },
       {
-        "src": "images/projects/2026-09/wm-buttons.webp",
-        "caption": "Native button examples",
-        "date": "2026-09-13",
+        "src": "images/projects/2026-09/wm-marlo-kart.webp",
+        "caption": "Marlo Kart engine class select",
+        "date": "2026-09-18",
         "width": 1280,
         "height": 720
       },
       {
-        "src": "images/projects/2026-09/wm_afterhours-01.webp",
-        "caption": "Native UI example · absolute positioning",
-        "date": "2026-08-05",
+        "src": "images/projects/2026-09/wm-race-results.webp",
+        "caption": "Race results leaderboard with cup standings",
+        "date": "2026-09-18",
         "width": 1280,
         "height": 720
       },
       {
-        "src": "images/projects/2026-09/wm_afterhours-02.webp",
-        "caption": "Native UI example · accessibility",
-        "date": "2026-08-05",
+        "src": "images/projects/2026-09/wm-angry-birds-settings.webp",
+        "caption": "Chunky game settings dialog with toggles",
+        "date": "2026-09-18",
         "width": 1280,
         "height": 720
       },
       {
-        "src": "images/projects/2026-09/wm_afterhours-03.webp",
-        "caption": "Native UI example · adaptive scaling",
-        "date": "2026-08-05",
+        "src": "images/projects/2026-09/wm-empire-tycoon.webp",
+        "caption": "Idle tycoon dashboard with production and upgrades",
+        "date": "2026-09-18",
         "width": 1280,
         "height": 720
       },
       {
-        "src": "images/projects/2026-09/wm_afterhours-04.webp",
-        "caption": "Native UI example · advanced modals",
-        "date": "2026-08-05",
+        "src": "images/projects/2026-09/wm-cozy-cafe.webp",
+        "caption": "Cafe management screen with orders and customers",
+        "date": "2026-09-18",
         "width": 1280,
         "height": 720
       },
       {
-        "src": "images/projects/2026-09/wm_afterhours-05.webp",
-        "caption": "Native UI example · aim chat",
-        "date": "2026-08-05",
+        "src": "images/projects/2026-09/wm-rubber-bandits-menu.webp",
+        "caption": "Party game main menu with character lineup",
+        "date": "2026-09-18",
         "width": 1280,
         "height": 720
       },
       {
-        "src": "images/projects/2026-09/wm_afterhours-06.webp",
-        "caption": "Native UI example · angry birds settings",
-        "date": "2026-08-05",
+        "src": "images/projects/2026-09/wm-potion-crafting.webp",
+        "caption": "Alchemist workshop crafting and recipe book",
+        "date": "2026-09-18",
         "width": 1280,
         "height": 720
       },
       {
-        "src": "images/projects/2026-09/wm_afterhours-07.webp",
-        "caption": "Native UI example · animation basic",
-        "date": "2026-08-05",
+        "src": "images/projects/2026-09/wm-aim-chat.webp",
+        "caption": "AOL Instant Messenger recreation, windows and all",
+        "date": "2026-09-18",
         "width": 1280,
         "height": 720
       },
       {
-        "src": "images/projects/2026-09/wm_afterhours-08.webp",
-        "caption": "Native UI example · animation declarative",
-        "date": "2026-08-05",
+        "src": "images/projects/2026-09/wm-media-library.webp",
+        "caption": "Dark media library with cover art grid",
+        "date": "2026-09-18",
         "width": 1280,
         "height": 720
       },
       {
-        "src": "images/projects/2026-09/wm_afterhours-09.webp",
-        "caption": "Native UI example · animation interactive",
-        "date": "2026-08-05",
+        "src": "images/projects/2026-09/wm-chart-lab.webp",
+        "caption": "Frame timing chart with live series and tooltips",
+        "date": "2026-09-18",
         "width": 1280,
         "height": 720
       },
       {
-        "src": "images/projects/2026-09/wm_afterhours-10.webp",
-        "caption": "Native UI example · animation looping",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-11.webp",
-        "caption": "Native UI example · animation spring",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-12.webp",
-        "caption": "Native UI example · auto text color",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-13.webp",
-        "caption": "Native UI example · bevel borders",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-14.webp",
-        "caption": "Native UI example · button variants",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-15.webp",
-        "caption": "Native UI example · buttons",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-16.webp",
-        "caption": "Native UI example · cards",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-17.webp",
-        "caption": "Native UI example · casual settings",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-18.webp",
-        "caption": "Native UI example · checkboxes",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-19.webp",
-        "caption": "Native UI example · circular progress",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-20.webp",
-        "caption": "Native UI example · colors",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-21.webp",
-        "caption": "Native UI example · cozy cafe",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-22.webp",
-        "caption": "Native UI example · deadspace settings",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-23.webp",
-        "caption": "Native UI example · decorative frame",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-24.webp",
-        "caption": "Native UI example · decorators",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-25.webp",
-        "caption": "Native UI example · drag drop",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-26.webp",
-        "caption": "Native UI example · dropdowns",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-27.webp",
-        "caption": "Native UI example · empire tycoon",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-28.webp",
-        "caption": "Native UI example · example borders",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-29.webp",
-        "caption": "Native UI example · fighter menu",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-30.webp",
-        "caption": "Native UI example · file tree",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-31.webp",
-        "caption": "Native UI example · flex alignment",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-32.webp",
-        "caption": "Native UI example · flight options",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-33.webp",
-        "caption": "Native UI example · forms",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-34.webp",
-        "caption": "Native UI example · horizontal drag",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-35.webp",
-        "caption": "Native UI example · hstack showcase",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-36.webp",
-        "caption": "Native UI example · images",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-37.webp",
-        "caption": "Native UI example · islands trains settings",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-38.webp",
-        "caption": "Native UI example · kart select",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-39.webp",
-        "caption": "Native UI example · kirby options",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-40.webp",
-        "caption": "Native UI example · language demo",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-41.webp",
-        "caption": "Native UI example · layout",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-42.webp",
-        "caption": "Native UI example · layout bug repros",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-43.webp",
-        "caption": "Native UI example · layout patterns",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-44.webp",
-        "caption": "Native UI example · meters gauges",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-45.webp",
-        "caption": "Native UI example · mini motorways settings",
-        "date": "2026-08-05",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/wm_afterhours-46.webp",
-        "caption": "Native UI example · modals",
-        "date": "2026-08-05",
+        "src": "images/projects/2026-09/wm-meters-gauges.webp",
+        "caption": "Meters, gauges, and animated progress widgets",
+        "date": "2026-09-18",
         "width": 1280,
         "height": 720
       }
@@ -528,368 +283,74 @@ const PROJECTS = [
     "featured": true,
     "screenshots": [
       {
-        "src": "images/projects/2026-09/cartographer-04.webp",
-        "caption": "cartographer · audit gameplay hud",
-        "date": "2026-07-15",
+        "src": "images/projects/2026-09/cg-path-noon.webp",
+        "caption": "A tree-lined path along the park fence at midday, city skyline in the distance",
+        "date": "2026-09-18",
         "width": 1280,
-        "height": 720
+        "height": 686
       },
       {
-        "src": "images/projects/2026-09/cartographer-day-night.webp",
-        "caption": "cartographer · day and night cycle",
-        "date": "2026-07-15",
+        "src": "images/projects/2026-09/cg-path-dawn.webp",
+        "caption": "The same path in warm orange dawn haze, skyline glowing behind it",
+        "date": "2026-09-18",
         "width": 1280,
-        "height": 720
+        "height": 686
       },
       {
-        "src": "images/projects/2026-09/cartographer-02.webp",
-        "caption": "cartographer · audit boss letter",
-        "date": "2026-07-15",
+        "src": "images/projects/2026-09/cg-path-night.webp",
+        "caption": "The path again at night, deep blue-black with the skyline barely visible",
+        "date": "2026-09-18",
         "width": 1280,
-        "height": 720
+        "height": 686
       },
       {
-        "src": "images/projects/2026-09/cartographer-03.webp",
-        "caption": "cartographer · audit gameplay after map",
-        "date": "2026-07-15",
+        "src": "images/projects/2026-09/cg-exploring.webp",
+        "caption": "Exploring a stone path past a lamppost, with the prompt to open the map and submit",
+        "date": "2026-09-18",
         "width": 1280,
-        "height": 720
+        "height": 686
       },
       {
-        "src": "images/projects/2026-09/cartographer-05.webp",
-        "caption": "cartographer · audit main menu",
-        "date": "2026-07-15",
-        "width": 1600,
-        "height": 900
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-06.webp",
-        "caption": "cartographer · audit map default",
-        "date": "2026-07-15",
+        "src": "images/projects/2026-09/cg-switchbacks.webp",
+        "caption": "A stone switchback path climbing a grassy hill",
+        "date": "2026-09-18",
         "width": 1280,
-        "height": 720
+        "height": 686
       },
       {
-        "src": "images/projects/2026-09/cartographer-07.webp",
-        "caption": "cartographer · audit map eraser",
-        "date": "2026-07-15",
+        "src": "images/projects/2026-09/cg-lakeside.webp",
+        "caption": "A path along the lake edge, lined with a low stone wall and trees",
+        "date": "2026-09-18",
         "width": 1280,
-        "height": 720
+        "height": 686
       },
       {
-        "src": "images/projects/2026-09/cartographer-08.webp",
-        "caption": "cartographer · audit map straightedge",
-        "date": "2026-07-15",
+        "src": "images/projects/2026-09/cg-pond.webp",
+        "caption": "A wide pond ringed with bonsai-style trees",
+        "date": "2026-09-18",
         "width": 1280,
-        "height": 720
+        "height": 686
       },
       {
-        "src": "images/projects/2026-09/cartographer-09.webp",
-        "caption": "cartographer · audit map with pin",
-        "date": "2026-07-15",
+        "src": "images/projects/2026-09/cg-lamppost.webp",
+        "caption": "A lamppost and bench on a grassy hill, skyline hazy behind",
+        "date": "2026-09-18",
         "width": 1280,
-        "height": 720
+        "height": 686
       },
       {
-        "src": "images/projects/2026-09/cartographer-10.webp",
-        "caption": "cartographer · audit pause menu",
-        "date": "2026-07-15",
-        "width": 1600,
-        "height": 900
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-11.webp",
-        "caption": "cartographer · audit settings audio",
-        "date": "2026-07-15",
-        "width": 1600,
-        "height": 900
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-12.webp",
-        "caption": "cartographer · audit settings video",
-        "date": "2026-07-15",
-        "width": 1600,
-        "height": 900
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-13.webp",
-        "caption": "cartographer · birds eye raw",
-        "date": "2026-07-15",
+        "src": "images/projects/2026-09/cg-overhead.webp",
+        "caption": "Overhead view of the park: a compass-rose monument, a pond and bridge, and hedge-lined paths",
+        "date": "2026-09-18",
         "width": 1280,
-        "height": 720
+        "height": 1022
       },
       {
-        "src": "images/projects/2026-09/cartographer-14.webp",
-        "caption": "cartographer · boundary center",
-        "date": "2026-07-15",
+        "src": "images/projects/2026-09/cg-lantern.webp",
+        "caption": "A hanging lantern lamppost among the trees against a pale sky",
+        "date": "2026-09-18",
         "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-15.webp",
-        "caption": "cartographer · boundary east",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-16.webp",
-        "caption": "cartographer · boundary north",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-17.webp",
-        "caption": "cartographer · boundary south",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-18.webp",
-        "caption": "cartographer · boundary west",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-19.webp",
-        "caption": "cartographer · buildings birdseye",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-20.webp",
-        "caption": "cartographer · buildings east",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-21.webp",
-        "caption": "cartographer · buildings gate",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-22.webp",
-        "caption": "cartographer · buildings south",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-23.webp",
-        "caption": "cartographer · buildings west",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-24.webp",
-        "caption": "cartographer · celestial 01 morning sun",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-25.webp",
-        "caption": "cartographer · celestial 02 noon sun",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-26.webp",
-        "caption": "cartographer · celestial 03 golden hour sun",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-27.webp",
-        "caption": "cartographer · celestial 04 sunset sun",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-28.webp",
-        "caption": "cartographer · celestial 05 full moon",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-29.webp",
-        "caption": "cartographer · celestial 06 crescent moon",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-30.webp",
-        "caption": "cartographer · celestial 07 half moon",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-31.webp",
-        "caption": "cartographer · celestial 08 new moon",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-32.webp",
-        "caption": "cartographer · day night 01 noon",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-33.webp",
-        "caption": "cartographer · day night 02 dawn",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-34.webp",
-        "caption": "cartographer · day night 03 dusk",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-35.webp",
-        "caption": "cartographer · day night 04 night",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-36.webp",
-        "caption": "cartographer · day night 05 morning",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-37.webp",
-        "caption": "cartographer · day night 06 golden hour",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-38.webp",
-        "caption": "cartographer · fog gym props dawn",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-39.webp",
-        "caption": "cartographer · fog gym props dusk",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-40.webp",
-        "caption": "cartographer · fog gym props night",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-41.webp",
-        "caption": "cartographer · fog gym props noon",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-42.webp",
-        "caption": "cartographer · fog park fence dawn",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-43.webp",
-        "caption": "cartographer · fog park fence dusk",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-44.webp",
-        "caption": "cartographer · fog park fence night",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-45.webp",
-        "caption": "cartographer · fog park fence noon",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-46.webp",
-        "caption": "cartographer · fog park gate dawn",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-47.webp",
-        "caption": "cartographer · fog park gate dusk",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-48.webp",
-        "caption": "cartographer · fog park gate night",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-49.webp",
-        "caption": "cartographer · fog park gate noon",
-        "date": "2026-07-15",
-        "width": 1280,
-        "height": 720
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-50.webp",
-        "caption": "cartographer · gallery 01 main menu",
-        "date": "2026-07-15",
-        "width": 1600,
-        "height": 900
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-51.webp",
-        "caption": "cartographer · gallery 02 gallery open",
-        "date": "2026-07-15",
-        "width": 1600,
-        "height": 900
-      },
-      {
-        "src": "images/projects/2026-09/cartographer-52.webp",
-        "caption": "cartographer · gallery 03 back to menu",
-        "date": "2026-07-15",
-        "width": 1600,
-        "height": 900
+        "height": 686
       }
     ],
     "tags": [
@@ -1375,25 +836,32 @@ const PROJECTS = [
     "visibility": "public",
     "screenshots": [
       {
-        "src": "images/projects/2026-09/hanabi-transcript.webp",
-        "caption": "Native conversation view with sample conversations",
-        "date": "2026-09-13",
-        "width": 1100,
-        "height": 760
-      },
-      {
         "src": "images/projects/2026-09/hanabi-home.webp",
-        "caption": "Light theme with sample tasks",
-        "date": "2026-09-13",
-        "width": 1100,
-        "height": 760
+        "caption": "The home dashboard, threads grouped into waiting on you, finished, and self-running",
+        "date": "2026-09-18",
+        "width": 1280,
+        "height": 885
       },
       {
-        "src": "images/projects/2026-09/hanabi-split.webp",
-        "caption": "Two sample conversations side by side",
-        "date": "2026-09-13",
-        "width": 1100,
-        "height": 760
+        "src": "images/projects/2026-09/hanabi-transcript.webp",
+        "caption": "A thread transcript open in a tab, two sub-agents reconciling a payout discrepancy",
+        "date": "2026-09-18",
+        "width": 1280,
+        "height": 885
+      },
+      {
+        "src": "images/projects/2026-09/hanabi-tabs.webp",
+        "caption": "A full row of thread tabs for jumping between recurring jobs and one-off asks",
+        "date": "2026-09-18",
+        "width": 1280,
+        "height": 885
+      },
+      {
+        "src": "images/projects/2026-09/hanabi-streaming.webp",
+        "caption": "A conversation mid-reply while a sub-agent keeps running in the background",
+        "date": "2026-09-18",
+        "width": 1280,
+        "height": 885
       }
     ],
     "link": "https://github.com/gabeochoa/hanabi",
@@ -1500,8 +968,15 @@ const PROJECTS = [
     "screenshots": [
       {
         "src": "images/projects/2026-09/scrub-daddy.webp",
-        "caption": "Duck-cleaning game in the browser",
-        "date": "2026-09-13",
+        "caption": "The duck coated in dark iridescent oil, waiting to be scrubbed",
+        "date": "2026-09-18",
+        "width": 1280,
+        "height": 800
+      },
+      {
+        "src": "images/projects/2026-09/scrub-daddy-scrubbing.webp",
+        "caption": "Mid-scrub, a clean patch of yellow showing through the oil",
+        "date": "2026-09-18",
         "width": 1280,
         "height": 800
       }

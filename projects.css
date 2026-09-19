@@ -30,10 +30,10 @@ h1 { font-size: 28px; line-height: 1.2; margin: 0 0 12px; }
 label { display: block; font-size: 12px; font-weight: bold; margin-bottom: 5px; }
 input, select { border: 1px solid #aeb9cf; border-radius: 3px; background: #fff; color: #252a35; padding: 9px 10px; min-height: 44px; }
 input { width: 100%; }
-.filters { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
-.filter { min-height: 36px; border: 1px solid transparent; border-radius: 3px; padding: 5px 12px; background: transparent; color: #365899; }
-.filter:hover { background: #e1e6f1; }
-.filter[aria-pressed="true"] { background: #4c66a4; color: #fff; }
+.filters { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 14px; padding: 10px; border-radius: 8px; background: #556aa8; }
+.filter { min-height: 40px; border: 0; border-radius: 8px; padding: 8px 18px; font-size: 17px; background: transparent; color: #e4e9f6; }
+.filter:hover { background: rgb(255 255 255 / 12%); color: #fff; }
+.filter[aria-pressed="true"] { background: #8491c6; color: #fff; font-weight: 700; }
 .result-count { color: #586174; font-size: 13px; margin: 14px 0 22px; }
 h2 { margin: 26px 0 16px; font-size: 18px; }
 .featured-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 24px; }
