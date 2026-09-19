@@ -18,8 +18,10 @@ button { cursor: pointer; }
 .header-inner { min-height: 85px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .sitename { font-size: 30px; font-weight: 900; text-decoration: none; }
 .site-header a { color: #fff; }
-.site-header nav { display: flex; gap: 24px; font-size: 14px; }
-.site-header nav a[aria-current] { font-weight: bold; }
+.site-header nav { display: flex; flex-wrap: wrap; gap: 4px; font-size: 17px; }
+.site-header nav a { padding: 8px 18px; border-radius: 8px; color: #e4e9f6; text-decoration: none; }
+.site-header nav a:hover { background: rgb(255 255 255 / 12%); color: #fff; }
+.site-header nav a[aria-current] { background: #8491c6; color: #fff; font-weight: 700; }
 .intro { padding: 36px 0 28px; }
 h1 { font-size: 28px; line-height: 1.2; margin: 0 0 12px; }
 .intro p { max-width: 640px; margin: 8px 0; font-size: 16px; }
@@ -75,7 +77,8 @@ body:has(dialog[open]) { overflow: hidden; }
   .header-inner, main, .footer-inner { width: calc(100% - 32px); }
   .header-inner { min-height: 76px; gap: 16px; }
   .sitename { font-size: 24px; }
-  .site-header nav { gap: 14px; font-size: 12px; }
+  .site-header nav { gap: 2px; font-size: 14px; }
+  .site-header nav a { padding: 7px 12px; }
   .intro { padding: 28px 0; }
   h1 { font-size: 24px; }
   .intro p { font-size: 14px; }

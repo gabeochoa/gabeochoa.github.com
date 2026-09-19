@@ -54,80 +54,72 @@
       "caption": "Exploring a stone path past a lamppost, with the prompt to open the map and submit",
       "date": "2026-09-18",
       "width": 1280,
-      "height": 686,
-      "source": "/tmp/cg_final/04_central_path_exploration.png"
+      "height": 715,
+      "source": "/tmp/cg4/04_central_path_exploration.png"
     },
     {
       "src": "images/projects/2026-09/cg-lakeside.webp",
-      "caption": "A path along the lake edge, lined with a low stone wall and trees",
+      "caption": "A path along the lake edge, lined with a stone wall and trees",
       "date": "2026-09-18",
       "width": 1280,
-      "height": 686,
-      "source": "/tmp/cg_final/06_lakeside_path.png"
+      "height": 715,
+      "source": "/tmp/cg4/05_lakeside_path.png"
     },
     {
       "src": "images/projects/2026-09/cg-lamppost.webp",
       "caption": "A lamppost and bench on a grassy hill, skyline hazy behind",
       "date": "2026-09-18",
       "width": 1280,
-      "height": 686,
-      "source": "/tmp/cg_final/08_lamppost_hill.png"
+      "height": 715,
+      "source": "/tmp/cg4/07_lamppost_hill.png"
     },
     {
       "src": "images/projects/2026-09/cg-lantern.webp",
       "caption": "A hanging lantern lamppost among the trees against a pale sky",
       "date": "2026-09-18",
       "width": 1280,
-      "height": 686,
-      "source": "/tmp/cg_final/10_hanging_lantern.png"
+      "height": 715,
+      "source": "/tmp/cg4/09_hanging_lantern.png"
     },
     {
       "src": "images/projects/2026-09/cg-overhead.webp",
-      "caption": "Overhead view of the park: a compass-rose monument, a pond and bridge, and hedge-lined paths",
+      "caption": "Overhead view of the park: the compass monument, a pond and bridge, and hedge-lined paths",
       "date": "2026-09-18",
       "width": 1280,
-      "height": 1022,
-      "source": "/tmp/cg_final/09_birdseye_overhead.png"
+      "height": 864,
+      "source": "/tmp/cg4/08_birdseye_overhead.png"
     },
     {
       "src": "images/projects/2026-09/cg-path-dawn.webp",
-      "caption": "The same path in warm orange dawn haze, skyline glowing behind it",
+      "caption": "The same path in warm orange dawn light",
       "date": "2026-09-18",
       "width": 1280,
-      "height": 686,
-      "source": "/tmp/cg_final/02_park_path_dawn.png"
+      "height": 715,
+      "source": "/tmp/cg4/02_park_path_dawn.png"
     },
     {
       "src": "images/projects/2026-09/cg-path-night.webp",
-      "caption": "The path again at night, deep blue-black with the skyline barely visible",
+      "caption": "The path again at night, deep blue-black under the skyline",
       "date": "2026-09-18",
       "width": 1280,
-      "height": 686,
-      "source": "/tmp/cg_final/03_park_path_night.png"
+      "height": 715,
+      "source": "/tmp/cg4/03_park_path_night.png"
     },
     {
       "src": "images/projects/2026-09/cg-path-noon.webp",
       "caption": "A tree-lined path along the park fence at midday, city skyline in the distance",
       "date": "2026-09-18",
       "width": 1280,
-      "height": 686,
-      "source": "/tmp/cg_final/01_park_path_noon.png"
+      "height": 715,
+      "source": "/tmp/cg4/01_park_path_noon.png"
     },
     {
       "src": "images/projects/2026-09/cg-pond.webp",
       "caption": "A wide pond ringed with bonsai-style trees",
       "date": "2026-09-18",
       "width": 1280,
-      "height": 686,
-      "source": "/tmp/cg_final/07_pond_bonsai_trees.png"
-    },
-    {
-      "src": "images/projects/2026-09/cg-switchbacks.webp",
-      "caption": "A stone switchback path climbing a grassy hill",
-      "date": "2026-09-18",
-      "width": 1280,
-      "height": 686,
-      "source": "/tmp/cg_final/05_hillside_switchbacks.png"
+      "height": 715,
+      "source": "/tmp/cg4/06_pond_bonsai_trees.png"
     },
     {
       "src": "images/projects/2026-09/fh-commit-detail.webp",
