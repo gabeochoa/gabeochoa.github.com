@@ -24,6 +24,9 @@ html body
     margin:0px auto;
     padding:0px;
     height:85px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 #header li
 {
@@ -34,7 +37,32 @@ html body
 }
 #header #sitename
 {
-    margin-top:25px;
+    margin-top:0;
+}
+#sitenav
+{
+    display:flex;
+    flex-wrap:wrap;
+    gap:4px;
+    font-size:17px;
+}
+#sitenav a
+{
+    padding:8px 18px;
+    border-radius:8px;
+    color:#e4e9f6;
+    text-decoration:none;
+}
+#sitenav a:hover
+{
+    background:rgb(255 255 255 / 12%);
+    color:white;
+}
+#sitenav a[aria-current]
+{
+    background:#8491c6;
+    color:white;
+    font-weight:700;
 }
 #header #sitename a
 {

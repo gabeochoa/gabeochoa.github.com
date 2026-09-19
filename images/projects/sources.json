@@ -274,68 +274,68 @@
       "source": "floatinghotel/output/projects-refresh/webhelper.png"
     },
     {
-      "src": "images/projects/2026-09/wm-aim-chat.webp",
-      "caption": "AOL Instant Messenger recreation, windows and all",
+      "src": "images/projects/2026-09/wm-animation-declarative.webp",
+      "caption": "Declarative animations, each defined by a trigger and a property",
       "date": "2026-09-18",
       "width": 1280,
       "height": 720,
-      "source": "/Users/gabeochoa/p/wm_afterhours/output/aim_chat_720p.png"
+      "source": "/Users/gabeochoa/p/wm_afterhours/output/animation_declarative_720p.png"
     },
     {
-      "src": "images/projects/2026-09/wm-angry-birds-settings.webp",
-      "caption": "Chunky game settings dialog with toggles",
+      "src": "images/projects/2026-09/wm-animation-interactive.webp",
+      "caption": "Interactive animations driven by press, hover, and release",
       "date": "2026-09-18",
       "width": 1280,
       "height": 720,
-      "source": "/Users/gabeochoa/p/wm_afterhours/output/angry_birds_settings_720p.png"
+      "source": "/Users/gabeochoa/p/wm_afterhours/output/animation_interactive_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm-animation-spring.webp",
+      "caption": "Spring animation variants, each with its own damping and stiffness",
+      "date": "2026-09-18",
+      "width": 1280,
+      "height": 720,
+      "source": "/Users/gabeochoa/p/wm_afterhours/output/animation_spring_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm-cards.webp",
+      "caption": "Cards and panels gallery, including nested and semi-transparent styles",
+      "date": "2026-09-18",
+      "width": 1280,
+      "height": 720,
+      "source": "/Users/gabeochoa/p/wm_afterhours/output/cards_720p.png"
     },
     {
       "src": "images/projects/2026-09/wm-chart-lab.webp",
-      "caption": "Frame timing chart with live series and tooltips",
+      "caption": "Frame timing chart with live series, tooltips, and edge cases",
       "date": "2026-09-18",
       "width": 1280,
       "height": 720,
       "source": "/Users/gabeochoa/p/wm_afterhours/output/chart_lab_720p.png"
     },
     {
-      "src": "images/projects/2026-09/wm-cozy-cafe.webp",
-      "caption": "Cafe management screen with orders and customers",
+      "src": "images/projects/2026-09/wm-circular-progress.webp",
+      "caption": "Circular progress indicators at a range of sizes and thicknesses",
       "date": "2026-09-18",
       "width": 1280,
       "height": 720,
-      "source": "/Users/gabeochoa/p/wm_afterhours/output/cozy_cafe_720p.png"
+      "source": "/Users/gabeochoa/p/wm_afterhours/output/circular_progress_720p.png"
     },
     {
-      "src": "images/projects/2026-09/wm-empire-tycoon.webp",
-      "caption": "Idle tycoon dashboard with production and upgrades",
+      "src": "images/projects/2026-09/wm-colors.webp",
+      "caption": "Theme color swatches with semantic roles and contrast values",
       "date": "2026-09-18",
       "width": 1280,
       "height": 720,
-      "source": "/Users/gabeochoa/p/wm_afterhours/output/empire_tycoon_720p.png"
+      "source": "/Users/gabeochoa/p/wm_afterhours/output/colors_720p.png"
     },
     {
-      "src": "images/projects/2026-09/wm-kart-select.webp",
-      "caption": "Kart and racer select, a Mario Kart style grid",
+      "src": "images/projects/2026-09/wm-forms.webp",
+      "caption": "Form components: sliders, checkboxes, progress bars, and a live preview",
       "date": "2026-09-18",
       "width": 1280,
       "height": 720,
-      "source": "/Users/gabeochoa/p/wm_afterhours/output/kart_select_720p.png"
-    },
-    {
-      "src": "images/projects/2026-09/wm-marlo-kart.webp",
-      "caption": "Marlo Kart engine class select",
-      "date": "2026-09-18",
-      "width": 1280,
-      "height": 720,
-      "source": "/Users/gabeochoa/p/wm_afterhours/output/marlo_kart_720p.png"
-    },
-    {
-      "src": "images/projects/2026-09/wm-media-library.webp",
-      "caption": "Dark media library with cover art grid",
-      "date": "2026-09-18",
-      "width": 1280,
-      "height": 720,
-      "source": "/Users/gabeochoa/p/wm_afterhours/output/media_library_720p.png"
+      "source": "/Users/gabeochoa/p/wm_afterhours/output/forms_720p.png"
     },
     {
       "src": "images/projects/2026-09/wm-meters-gauges.webp",
@@ -346,28 +346,28 @@
       "source": "/Users/gabeochoa/p/wm_afterhours/output/meters_gauges_720p.png"
     },
     {
-      "src": "images/projects/2026-09/wm-potion-crafting.webp",
-      "caption": "Alchemist workshop crafting and recipe book",
+      "src": "images/projects/2026-09/wm-rolling-number.webp",
+      "caption": "Numbers in motion, rolling digits with a softened landing",
       "date": "2026-09-18",
       "width": 1280,
       "height": 720,
-      "source": "/Users/gabeochoa/p/wm_afterhours/output/potion_crafting_720p.png"
+      "source": "/Users/gabeochoa/p/wm_afterhours/output/rolling_number_720p.png"
     },
     {
-      "src": "images/projects/2026-09/wm-race-results.webp",
-      "caption": "Race results leaderboard with cup standings",
+      "src": "images/projects/2026-09/wm-text-input-sizes.webp",
+      "caption": "Text inputs across sizes, with native sizing rules alongside",
       "date": "2026-09-18",
       "width": 1280,
       "height": 720,
-      "source": "/Users/gabeochoa/p/wm_afterhours/output/race_results_720p.png"
+      "source": "/Users/gabeochoa/p/wm_afterhours/output/text_input_sizes_720p.png"
     },
     {
-      "src": "images/projects/2026-09/wm-rubber-bandits-menu.webp",
-      "caption": "Party game main menu with character lineup",
+      "src": "images/projects/2026-09/wm-typography-composition.webp",
+      "caption": "A big type composition, showing text layout at display sizes",
       "date": "2026-09-18",
       "width": 1280,
       "height": 720,
-      "source": "/Users/gabeochoa/p/wm_afterhours/output/rubber_bandits_menu_720p.png"
+      "source": "/Users/gabeochoa/p/wm_afterhours/output/typography_composition_720p.png"
     }
   ]
 }
