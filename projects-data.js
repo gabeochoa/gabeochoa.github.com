@@ -906,25 +906,39 @@ const PROJECTS = [
     "visibility": "private",
     "screenshots": [
       {
-        "src": "images/projects/2026-09/broadcast-canvas.webp",
-        "caption": "Native broadcast graph and signal connections",
-        "date": "2026-09-06",
-        "width": 1600,
-        "height": 900
-      },
-      {
         "src": "images/projects/2026-09/broadcast-title.webp",
-        "caption": "Broadcast Operator title screen",
-        "date": "2026-09-06",
+        "caption": "The signal direction system home screen, with a live camera preview",
+        "date": "2026-09-18",
         "width": 1280,
         "height": 720
       },
       {
-        "src": "images/projects/2026-09/broadcast-modules.webp",
-        "caption": "Broadcast modules on the workbench",
-        "date": "2026-08-30",
-        "width": 1600,
-        "height": 900
+        "src": "images/projects/2026-09/broadcast-data-jack.webp",
+        "caption": "A finished graph cutting between two cameras through a clock-driven gate",
+        "date": "2026-09-18",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "src": "images/projects/2026-09/broadcast-signal-drift.webp",
+        "caption": "Routing a camera through a delay module to correct a drifting feed",
+        "date": "2026-09-18",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "src": "images/projects/2026-09/broadcast-caption.webp",
+        "caption": "A caption module placed on the picture, wired camera to caption to output",
+        "date": "2026-09-18",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "src": "images/projects/2026-09/broadcast-late-graphic.webp",
+        "caption": "A five-module graph compositing a live feed with a delayed lower-third graphic",
+        "date": "2026-09-18",
+        "width": 1280,
+        "height": 720
       }
     ],
     "link": "https://github.com/gabeochoa/broadcast_operator",

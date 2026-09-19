@@ -60,8 +60,7 @@ function projectCard(project) {
 function render() {
   const query = search.value.trim().toLocaleLowerCase();
   const projects = REST.filter(project => {
-    const matchesCategory = category === 'all' ||
-      (category === 'private' ? project.visibility === 'private' : project.tags.includes(category));
+    const matchesCategory = category === 'all' || project.tags.includes(category);
     return matchesCategory && `${project.name} ${project.title || ''} ${project.desc} ${project.lang.join(' ')}`.toLocaleLowerCase().includes(query);
   }).sort((a, b) => {
     if (sort.value === 'name') return a.name.localeCompare(b.name);

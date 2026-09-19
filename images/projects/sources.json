@@ -26,28 +26,44 @@
       "source": "/tmp/shots-web/armchair-1-nosignal.png"
     },
     {
-      "src": "images/projects/2026-09/broadcast-canvas.webp",
-      "caption": "Native broadcast graph and signal connections",
-      "date": "2026-09-06",
-      "width": 1600,
-      "height": 900,
-      "source": "armchair_coach/puzzle/output/ver_canvas.png"
+      "src": "images/projects/2026-09/broadcast-caption.webp",
+      "caption": "A caption module placed on the picture, wired camera to caption to output",
+      "date": "2026-09-18",
+      "width": 1280,
+      "height": 720,
+      "source": "/Users/gabeochoa/p/armchair_coach/puzzle/output/screenshots/gallery_p8_caption.png"
     },
     {
-      "src": "images/projects/2026-09/broadcast-modules.webp",
-      "caption": "Broadcast modules on the workbench",
-      "date": "2026-08-30",
-      "width": 1600,
-      "height": 900,
-      "source": "armchair_coach/puzzle/output/all_modules_wide.png"
+      "src": "images/projects/2026-09/broadcast-data-jack.webp",
+      "caption": "A finished graph cutting between two cameras through a clock-driven gate",
+      "date": "2026-09-18",
+      "width": 1280,
+      "height": 720,
+      "source": "/Users/gabeochoa/p/armchair_coach/puzzle/output/screenshots/gallery_p6_data_jack.png"
+    },
+    {
+      "src": "images/projects/2026-09/broadcast-late-graphic.webp",
+      "caption": "A five-module graph compositing a live feed with a delayed lower-third graphic",
+      "date": "2026-09-18",
+      "width": 1280,
+      "height": 720,
+      "source": "/Users/gabeochoa/p/armchair_coach/puzzle/output/screenshots/gallery_p10_late_graphic.png"
+    },
+    {
+      "src": "images/projects/2026-09/broadcast-signal-drift.webp",
+      "caption": "Routing a camera through a delay module to correct a drifting feed",
+      "date": "2026-09-18",
+      "width": 1280,
+      "height": 720,
+      "source": "/Users/gabeochoa/p/armchair_coach/puzzle/output/screenshots/gallery_p7_signal_drift.png"
     },
     {
       "src": "images/projects/2026-09/broadcast-title.webp",
-      "caption": "Broadcast Operator title screen",
-      "date": "2026-09-06",
+      "caption": "The signal direction system home screen, with a live camera preview",
+      "date": "2026-09-18",
       "width": 1280,
       "height": 720,
-      "source": "armchair_coach/puzzle/output/title_screen.png"
+      "source": "/Users/gabeochoa/p/armchair_coach/puzzle/output/screenshots/gallery_title.png"
     },
     {
       "src": "images/projects/2026-09/cg-exploring.webp",
