@@ -1,0 +1,1288 @@
+{
+  "reviewed": "2026-09-13",
+  "screenshots": [
+    {
+      "src": "images/projects/2026-09/armchair_coach-02.webp",
+      "caption": "armchair_coach \u00b7 armchair coach title",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/armchair_coach_title.png"
+    },
+    {
+      "src": "images/projects/2026-09/armchair_coach-03.webp",
+      "caption": "armchair_coach \u00b7 armchair coach ramp",
+      "date": "2026-07-15",
+      "width": 1600,
+      "height": 913,
+      "source": "gabeochoa.github.com/images/projects/armchair_coach_ramp.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-01.webp",
+      "caption": "Native UI example \u00b7 absolute positioning",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/absolute_positioning_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-02.webp",
+      "caption": "Native UI example \u00b7 accessibility",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/accessibility_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-03.webp",
+      "caption": "Native UI example \u00b7 adaptive scaling",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/adaptive_scaling_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-04.webp",
+      "caption": "Native UI example \u00b7 advanced modals",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/advanced_modals_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-05.webp",
+      "caption": "Native UI example \u00b7 aim chat",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/aim_chat_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-06.webp",
+      "caption": "Native UI example \u00b7 angry birds settings",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/angry_birds_settings_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-07.webp",
+      "caption": "Native UI example \u00b7 animation basic",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/animation_basic_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-08.webp",
+      "caption": "Native UI example \u00b7 animation declarative",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/animation_declarative_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-09.webp",
+      "caption": "Native UI example \u00b7 animation interactive",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/animation_interactive_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-10.webp",
+      "caption": "Native UI example \u00b7 animation looping",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/animation_looping_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-11.webp",
+      "caption": "Native UI example \u00b7 animation spring",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/animation_spring_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-12.webp",
+      "caption": "Native UI example \u00b7 auto text color",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/auto_text_color_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-13.webp",
+      "caption": "Native UI example \u00b7 bevel borders",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/bevel_borders_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-14.webp",
+      "caption": "Native UI example \u00b7 button variants",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/button_variants_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-15.webp",
+      "caption": "Native UI example \u00b7 buttons",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/buttons_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-16.webp",
+      "caption": "Native UI example \u00b7 cards",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/cards_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-17.webp",
+      "caption": "Native UI example \u00b7 casual settings",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/casual_settings_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-18.webp",
+      "caption": "Native UI example \u00b7 checkboxes",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/checkboxes_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-19.webp",
+      "caption": "Native UI example \u00b7 circular progress",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/circular_progress_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-20.webp",
+      "caption": "Native UI example \u00b7 colors",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/colors_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-21.webp",
+      "caption": "Native UI example \u00b7 cozy cafe",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/cozy_cafe_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-22.webp",
+      "caption": "Native UI example \u00b7 deadspace settings",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/deadspace_settings_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-23.webp",
+      "caption": "Native UI example \u00b7 decorative frame",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/decorative_frame_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-24.webp",
+      "caption": "Native UI example \u00b7 decorators",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/decorators_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-25.webp",
+      "caption": "Native UI example \u00b7 drag drop",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/drag_drop_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-26.webp",
+      "caption": "Native UI example \u00b7 dropdowns",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/dropdowns_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-27.webp",
+      "caption": "Native UI example \u00b7 empire tycoon",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/empire_tycoon_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-28.webp",
+      "caption": "Native UI example \u00b7 example borders",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/example_borders_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-29.webp",
+      "caption": "Native UI example \u00b7 fighter menu",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/fighter_menu_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-30.webp",
+      "caption": "Native UI example \u00b7 file tree",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/file_tree_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-31.webp",
+      "caption": "Native UI example \u00b7 flex alignment",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/flex_alignment_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-32.webp",
+      "caption": "Native UI example \u00b7 flight options",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/flight_options_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-33.webp",
+      "caption": "Native UI example \u00b7 forms",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/forms_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-34.webp",
+      "caption": "Native UI example \u00b7 horizontal drag",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/horizontal_drag_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-35.webp",
+      "caption": "Native UI example \u00b7 hstack showcase",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/hstack_showcase_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-36.webp",
+      "caption": "Native UI example \u00b7 images",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/images_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-37.webp",
+      "caption": "Native UI example \u00b7 islands trains settings",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/islands_trains_settings_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-38.webp",
+      "caption": "Native UI example \u00b7 kart select",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/kart_select_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-39.webp",
+      "caption": "Native UI example \u00b7 kirby options",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/kirby_options_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-40.webp",
+      "caption": "Native UI example \u00b7 language demo",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/language_demo_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-41.webp",
+      "caption": "Native UI example \u00b7 layout",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/layout_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-42.webp",
+      "caption": "Native UI example \u00b7 layout bug repros",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/layout_bug_repros_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-43.webp",
+      "caption": "Native UI example \u00b7 layout patterns",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/layout_patterns_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-44.webp",
+      "caption": "Native UI example \u00b7 meters gauges",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/meters_gauges_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-45.webp",
+      "caption": "Native UI example \u00b7 mini motorways settings",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/mini_motorways_settings_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm_afterhours-46.webp",
+      "caption": "Native UI example \u00b7 modals",
+      "date": "2026-08-05",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/modals_720p.png"
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-02.webp",
+      "caption": "cartographer \u00b7 audit boss letter",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/audit_boss_letter.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-03.webp",
+      "caption": "cartographer \u00b7 audit gameplay after map",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/audit_gameplay_after_map.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-04.webp",
+      "caption": "cartographer \u00b7 audit gameplay hud",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/audit_gameplay_hud.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-05.webp",
+      "caption": "cartographer \u00b7 audit main menu",
+      "date": "2026-07-15",
+      "width": 1600,
+      "height": 900,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/audit_main_menu.png",
+      "crop": [
+        0,
+        0,
+        2560,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-06.webp",
+      "caption": "cartographer \u00b7 audit map default",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/audit_map_default.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-07.webp",
+      "caption": "cartographer \u00b7 audit map eraser",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/audit_map_eraser.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-08.webp",
+      "caption": "cartographer \u00b7 audit map straightedge",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/audit_map_straightedge.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-09.webp",
+      "caption": "cartographer \u00b7 audit map with pin",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/audit_map_with_pin.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-10.webp",
+      "caption": "cartographer \u00b7 audit pause menu",
+      "date": "2026-07-15",
+      "width": 1600,
+      "height": 900,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/audit_pause_menu.png",
+      "crop": [
+        0,
+        0,
+        2560,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-11.webp",
+      "caption": "cartographer \u00b7 audit settings audio",
+      "date": "2026-07-15",
+      "width": 1600,
+      "height": 900,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/audit_settings_audio.png",
+      "crop": [
+        0,
+        0,
+        2560,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-12.webp",
+      "caption": "cartographer \u00b7 audit settings video",
+      "date": "2026-07-15",
+      "width": 1600,
+      "height": 900,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/audit_settings_video.png",
+      "crop": [
+        0,
+        0,
+        2560,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-13.webp",
+      "caption": "cartographer \u00b7 birds eye raw",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/birds_eye_raw.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-14.webp",
+      "caption": "cartographer \u00b7 boundary center",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/boundary_center.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-15.webp",
+      "caption": "cartographer \u00b7 boundary east",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/boundary_east.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-16.webp",
+      "caption": "cartographer \u00b7 boundary north",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/boundary_north.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-17.webp",
+      "caption": "cartographer \u00b7 boundary south",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/boundary_south.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-18.webp",
+      "caption": "cartographer \u00b7 boundary west",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/boundary_west.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-19.webp",
+      "caption": "cartographer \u00b7 buildings birdseye",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/buildings_birdseye.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-20.webp",
+      "caption": "cartographer \u00b7 buildings east",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/buildings_east.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-21.webp",
+      "caption": "cartographer \u00b7 buildings gate",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/buildings_gate.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-22.webp",
+      "caption": "cartographer \u00b7 buildings south",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/buildings_south.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-23.webp",
+      "caption": "cartographer \u00b7 buildings west",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/buildings_west.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-24.webp",
+      "caption": "cartographer \u00b7 celestial 01 morning sun",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/celestial_01_morning_sun.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-25.webp",
+      "caption": "cartographer \u00b7 celestial 02 noon sun",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/celestial_02_noon_sun.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-26.webp",
+      "caption": "cartographer \u00b7 celestial 03 golden hour sun",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/celestial_03_golden_hour_sun.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-27.webp",
+      "caption": "cartographer \u00b7 celestial 04 sunset sun",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/celestial_04_sunset_sun.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-28.webp",
+      "caption": "cartographer \u00b7 celestial 05 full moon",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/celestial_05_full_moon.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-29.webp",
+      "caption": "cartographer \u00b7 celestial 06 crescent moon",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/celestial_06_crescent_moon.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-30.webp",
+      "caption": "cartographer \u00b7 celestial 07 half moon",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/celestial_07_half_moon.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-31.webp",
+      "caption": "cartographer \u00b7 celestial 08 new moon",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/celestial_08_new_moon.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-32.webp",
+      "caption": "cartographer \u00b7 day night 01 noon",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/day_night_01_noon.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-33.webp",
+      "caption": "cartographer \u00b7 day night 02 dawn",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/day_night_02_dawn.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-34.webp",
+      "caption": "cartographer \u00b7 day night 03 dusk",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/day_night_03_dusk.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-35.webp",
+      "caption": "cartographer \u00b7 day night 04 night",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/day_night_04_night.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-36.webp",
+      "caption": "cartographer \u00b7 day night 05 morning",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/day_night_05_morning.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-37.webp",
+      "caption": "cartographer \u00b7 day night 06 golden hour",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/day_night_06_golden_hour.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-38.webp",
+      "caption": "cartographer \u00b7 fog gym props dawn",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/fog_gym_props_dawn.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-39.webp",
+      "caption": "cartographer \u00b7 fog gym props dusk",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/fog_gym_props_dusk.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-40.webp",
+      "caption": "cartographer \u00b7 fog gym props night",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/fog_gym_props_night.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-41.webp",
+      "caption": "cartographer \u00b7 fog gym props noon",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/fog_gym_props_noon.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-42.webp",
+      "caption": "cartographer \u00b7 fog park fence dawn",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/fog_park_fence_dawn.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-43.webp",
+      "caption": "cartographer \u00b7 fog park fence dusk",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/fog_park_fence_dusk.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-44.webp",
+      "caption": "cartographer \u00b7 fog park fence night",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/fog_park_fence_night.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-45.webp",
+      "caption": "cartographer \u00b7 fog park fence noon",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/fog_park_fence_noon.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-46.webp",
+      "caption": "cartographer \u00b7 fog park gate dawn",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/fog_park_gate_dawn.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-47.webp",
+      "caption": "cartographer \u00b7 fog park gate dusk",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/fog_park_gate_dusk.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-48.webp",
+      "caption": "cartographer \u00b7 fog park gate night",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/fog_park_gate_night.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-49.webp",
+      "caption": "cartographer \u00b7 fog park gate noon",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/fog_park_gate_noon.png",
+      "crop": [
+        0,
+        720,
+        1280,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-50.webp",
+      "caption": "cartographer \u00b7 gallery 01 main menu",
+      "date": "2026-07-15",
+      "width": 1600,
+      "height": 900,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/gallery_01_main_menu.png",
+      "crop": [
+        0,
+        0,
+        2560,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-51.webp",
+      "caption": "cartographer \u00b7 gallery 02 gallery open",
+      "date": "2026-07-15",
+      "width": 1600,
+      "height": 900,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/gallery_02_gallery_open.png",
+      "crop": [
+        0,
+        0,
+        2560,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-52.webp",
+      "caption": "cartographer \u00b7 gallery 03 back to menu",
+      "date": "2026-07-15",
+      "width": 1600,
+      "height": 900,
+      "source": "gabeochoa.github.com/images/projects/cartographer_all/gallery_03_back_to_menu.png",
+      "crop": [
+        0,
+        0,
+        2560,
+        1440
+      ]
+    },
+    {
+      "src": "images/projects/2026-09/mailboy-01.webp",
+      "caption": "mailboy \u00b7 mailboy gym",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/mailboy_gym.png"
+    },
+    {
+      "src": "images/projects/2026-09/mailboy-02.webp",
+      "caption": "mailboy \u00b7 mailboy win",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "gabeochoa.github.com/images/projects/mailboy_win.png"
+    },
+    {
+      "src": "images/projects/2026-09/floatinghotel-diff.webp",
+      "caption": "Commit review with an inline diff",
+      "date": "2026-09-13",
+      "width": 1600,
+      "height": 1100,
+      "source": "floatinghotel/docs/reading-navigation-evidence/step60/width-after.png"
+    },
+    {
+      "src": "images/projects/2026-09/floatinghotel-source.webp",
+      "caption": "Source file opened from a review",
+      "date": "2026-09-13",
+      "width": 1600,
+      "height": 1000,
+      "source": "floatinghotel/docs/reading-navigation-evidence/step60/reading-source.png"
+    },
+    {
+      "src": "images/projects/2026-09/floatinghotel-back.webp",
+      "caption": "Returning to the originating commit review",
+      "date": "2026-09-13",
+      "width": 1600,
+      "height": 1000,
+      "source": "floatinghotel/docs/reading-navigation-evidence/step60/reading-back.png"
+    },
+    {
+      "src": "images/projects/2026-09/floatinghotel-zoom.webp",
+      "caption": "Wrapped code with larger text",
+      "date": "2026-09-13",
+      "width": 1600,
+      "height": 1100,
+      "source": "floatinghotel/docs/reading-navigation-evidence/step60/width-140.png"
+    },
+    {
+      "src": "images/projects/2026-09/hanabi-transcript.webp",
+      "caption": "Native conversation view with sample conversations",
+      "date": "2026-09-13",
+      "width": 1100,
+      "height": 760,
+      "source": "hanabi/docs/screenshots/baselines/03_transcript_dark.png"
+    },
+    {
+      "src": "images/projects/2026-09/hanabi-home.webp",
+      "caption": "Light theme with sample tasks",
+      "date": "2026-09-13",
+      "width": 1100,
+      "height": 760,
+      "source": "hanabi/docs/screenshots/baselines/02_home_light.png"
+    },
+    {
+      "src": "images/projects/2026-09/hanabi-split.webp",
+      "caption": "Two sample conversations side by side",
+      "date": "2026-09-13",
+      "width": 1100,
+      "height": 760,
+      "source": "hanabi/docs/screenshots/baselines/22_split_view_dark.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm-chart.webp",
+      "caption": "Native chart example with synthetic timing data",
+      "date": "2026-09-13",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/wm-followthrough/windowed-verified/workload/08_switch_2_chart_lab.png"
+    },
+    {
+      "src": "images/projects/2026-09/wm-buttons.webp",
+      "caption": "Native button examples",
+      "date": "2026-09-13",
+      "width": 1280,
+      "height": 720,
+      "source": "wm_afterhours/output/wm-followthrough/windowed-verified/workload/07_switch_2_buttons.png"
+    },
+    {
+      "src": "images/projects/2026-09/broadcast-canvas.webp",
+      "caption": "Native broadcast graph and signal connections",
+      "date": "2026-09-06",
+      "width": 1600,
+      "height": 900,
+      "source": "armchair_coach/puzzle/output/ver_canvas.png"
+    },
+    {
+      "src": "images/projects/2026-09/broadcast-title.webp",
+      "caption": "Broadcast Operator title screen",
+      "date": "2026-09-06",
+      "width": 1280,
+      "height": 720,
+      "source": "armchair_coach/puzzle/output/title_screen.png"
+    },
+    {
+      "src": "images/projects/2026-09/broadcast-modules.webp",
+      "caption": "Broadcast modules on the workbench",
+      "date": "2026-08-30",
+      "width": 1600,
+      "height": 900,
+      "source": "armchair_coach/puzzle/output/all_modules_wide.png"
+    },
+    {
+      "src": "images/projects/2026-09/movie-day.webp",
+      "caption": "Movie-a-day presentation built from Letterboxd history",
+      "date": "2026-09-13",
+      "width": 1280,
+      "height": 800,
+      "source": "floatinghotel/output/projects-refresh/movie-day.png"
+    },
+    {
+      "src": "images/projects/2026-09/last-mile-game.webp",
+      "caption": "Delivery routes and fleet upgrades",
+      "date": "2026-09-13",
+      "width": 1280,
+      "height": 800,
+      "source": "floatinghotel/output/projects-refresh/last-mile-game.png"
+    },
+    {
+      "src": "images/projects/2026-09/last-mile-title.webp",
+      "caption": "Last Mile title screen",
+      "date": "2026-09-13",
+      "width": 1280,
+      "height": 800,
+      "source": "floatinghotel/output/projects-refresh/last-mile.png"
+    },
+    {
+      "src": "images/projects/2026-09/scrub-daddy.webp",
+      "caption": "Duck-cleaning game in the browser",
+      "date": "2026-09-13",
+      "width": 1280,
+      "height": 800,
+      "source": "floatinghotel/output/projects-refresh/scrub-daddy.png"
+    },
+    {
+      "src": "images/projects/2026-09/armchair-broadcast.webp",
+      "caption": "Playable browser prototype of the baseball broadcast",
+      "date": "2026-09-13",
+      "width": 1280,
+      "height": 800,
+      "source": "floatinghotel/output/projects-refresh/armchair.png"
+    },
+    {
+      "src": "images/projects/2026-09/webhelper-browser.webp",
+      "caption": "Playable browser prototype of the spider helper",
+      "date": "2026-09-13",
+      "width": 1280,
+      "height": 800,
+      "source": "floatinghotel/output/projects-refresh/webhelper.png"
+    },
+    {
+      "src": "images/projects/2026-09/food-browser.webp",
+      "caption": "Colony simulation in the browser",
+      "date": "2026-09-13",
+      "width": 400,
+      "height": 300,
+      "source": "floatinghotel/output/projects-refresh/food.png"
+    },
+    {
+      "src": "images/projects/2026-09/mine-browser.webp",
+      "caption": "Resource gathering in the browser",
+      "date": "2026-09-13",
+      "width": 400,
+      "height": 300,
+      "source": "floatinghotel/output/projects-refresh/mine.png"
+    },
+    {
+      "src": "images/projects/2026-09/cartographer-day-night.webp",
+      "caption": "cartographer \u00b7 day and night cycle",
+      "date": "2026-07-15",
+      "width": 1280,
+      "height": 720,
+      "source": "cartographer/tests/screenshots/day_night_*.png",
+      "processing": "Animation assembled from six captures, with empty capture borders removed"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Games, native apps, and web experiments by Gabe Ochoa. Browse projects and screenshots.">
+  <title>projects · gabeochoa</title>
+  <link rel="stylesheet" href="projects.css">
+  <script src="projects-data.js" defer></script>
+  <script src="projects.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">skip to projects</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="sitename" href="index.html">gabeochoa</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">home</a>
+        <a href="projects.html" aria-current="page">projects</a>
+        <a href="https://github.com/gabeochoa">github</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="intro">
+      <div>
+        <h1>things i'm building</h1>
+        <p>Games, tools, and little web experiments. A lot of C++ and my <a href="https://github.com/gabeochoa/afterhours">afterhours</a> framework, with some JavaScript mixed in.</p>
+        <p>Click a screenshot to take a closer look.</p>
+        <p class="updated">Updated September 13, 2026.</p>
+      </div>
+    </div>
+    <section aria-labelledby="featured-heading">
+      <h2 id="featured-heading">a few favorites</h2>
+      <div class="featured-grid" id="featured-grid"></div>
+    </section>
+    <section class="toolbar" aria-label="Find a project">
+      <div class="controls">
+        <div class="search-control">
+          <label for="search">search everything else</label>
+          <input id="search" type="search" placeholder="name, language, or description" autocomplete="off">
+        </div>
+        <div class="sort-control">
+          <label for="sort">sort by</label>
+          <select id="sort">
+            <option value="recent">recent activity</option>
+            <option value="name">name, A to Z</option>
+            <option value="oldest">oldest activity</option>
+          </select>
+        </div>
+      </div>
+      <div class="filters" role="group" aria-label="Project categories">
+        <button type="button" class="filter" data-filter="all" aria-pressed="true">all projects</button>
+        <button type="button" class="filter" data-filter="game" aria-pressed="false">games</button>
+        <button type="button" class="filter" data-filter="tool" aria-pressed="false">tools</button>
+        <button type="button" class="filter" data-filter="web" aria-pressed="false">web</button>
+        <button type="button" class="filter" data-filter="private" aria-pressed="false">private projects</button>
+      </div>
+    </section>
+    <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
+    <section id="projects-section" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">everything else</h2>
+      <div class="project-list" id="project-list"></div>
+    </section>
+    <div class="empty" id="empty" hidden>
+      <p>No projects match. Try another name or category — favorites above are always shown and aren't searched.</p>
+      <button type="button" id="reset">show all projects</button>
+    </div>
+    <noscript><p>Turn on JavaScript to search the project list and open screenshots. You can also <a href="https://github.com/gabeochoa?tab=repositories">browse my repositories on GitHub</a>.</p></noscript>
+  </main>
+  <dialog id="gallery" closedby="any" aria-labelledby="gallery-title" aria-describedby="gallery-caption">
+    <div class="gallery-header">
+      <h2 id="gallery-title"></h2>
+      <button type="button" id="gallery-close" autofocus aria-label="Close screenshots">close ×</button>
+    </div>
+    <img class="gallery-image" id="gallery-image" alt="">
+    <p class="gallery-caption" id="gallery-caption"></p>
+    <div class="gallery-controls">
+      <button type="button" id="gallery-previous" aria-label="Previous screenshot">← previous</button>
+      <span id="gallery-position" aria-live="polite"></span>
+      <button type="button" id="gallery-next" aria-label="Next screenshot">next →</button>
+    </div>
+  </dialog>
+  <footer>
+    <div class="footer-inner">
+      <nav aria-label="Elsewhere">
+        <a href="index.html">home</a>
+        <a href="https://instagram.com/gabeochoa">instagram</a>
+        <a href="https://letterboxd.com/choicehoney/">letterboxd</a>
+        <a href="https://github.com/gabeochoa">github</a>
+      </nav>
+      <a href="#main">back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>

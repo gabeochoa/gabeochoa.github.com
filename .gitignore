@@ -4,3 +4,5 @@
 *.md
 *.log
 .DS_Store
+.claude/
+.config/
