@@ -2,6 +2,8 @@
 *.swp
 *.aux
 *.md
+!CORRECT.md
+!CLAUDE.md
 *.log
 .DS_Store
 .claude/
